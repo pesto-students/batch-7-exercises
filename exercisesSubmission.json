@@ -1,0 +1,12 @@
+{
+  "day": "day-19",
+  "segmentName": "segment-2",
+  "exercises": {
+    "basic-mongo-two": {
+      "completed": false
+    },
+    "basic-mongo-three": {
+      "completed": false
+    }
+  }
+}
