@@ -1,0 +1,1 @@
+Create the output as shown in the image use flexbox wherever you can.
