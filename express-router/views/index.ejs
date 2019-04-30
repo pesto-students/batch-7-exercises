@@ -1,0 +1,13 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<h1>My favorite programming languages!</h1>
+<a href="/languages/new">Add a new favorite language!</a>
+<ul>
+  <% languages.forEach((language) => { %>
+    <li><%= language.name %> &nbsp;
+      <a href=<%= '/languages/' + language.id  + '/edit' %>>Edit</a>
+    </li>
+  <% }) %>
+</ul>

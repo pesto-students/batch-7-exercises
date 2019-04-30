@@ -1,0 +1,8 @@
+<form action=<%= '/languages/' + language.id + '?_method=PATCH' %> method="POST">
+  <input type="text" name="name" placeholder="name" value=<%= language.name %> />
+  <input type="submit" value="Done" />
+</form>
+
+<form action=<%= '/languages/' + language.id + '?_method=DELETE' %> method="POST">
+  <input type="submit" value="X" />
+</form>
