@@ -1,0 +1,21 @@
+.new-color {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, red, orange);
+  align-items: center;
+  justify-content: center;
+}
+
+.new-color form {
+  width: 60%;
+  background-color: white;
+  padding: 50px;
+  border-radius: 12px;
+}
+
+.new-color form div {
+  padding: 15px;
+}
