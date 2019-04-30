@@ -29,7 +29,8 @@ class Stack {
   peek() {
     return this.items.slice(-1)[0];
   }
-}
+  }
+
 
 describe('stack test', () => {
   let myStack;
@@ -41,7 +42,7 @@ describe('stack test', () => {
   });
 
   test('should push elements to stack in order', () => {
-    const actual = myStack.items;
+    const actual = myStack;
     const expected = [3, 2, 1];
 
     expect(actual).toEqual(expected);

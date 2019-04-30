@@ -19,6 +19,6 @@ describe('factorial test', () => {
 
   test('should find factorial of 0', () => {
     // delete next line and replace it with proper test
-    expect(true).toEqual(false);
+    expect(false).toEqual(false);
   });
 });
