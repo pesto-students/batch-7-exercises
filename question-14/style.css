@@ -1,0 +1,65 @@
+* {
+  margin: 0%;
+  padding: 0px;
+  text-align: center;
+}
+
+.box1{
+  height: 30vh;
+  background-color: #00c49f;
+}
+.box2{
+  height: 30vh;
+  background-color: #e7db68;
+}
+.box3{
+  height: 30vh;
+  background-color: #5ea2f0;
+}
+.box4{
+  height: 30vh;
+  background-color: #beda71;
+}
+.box5{
+  height: 30vh;
+  background-color: #e9688f;
+}
+
+.loader {
+  margin: 20px auto;
+}
+
+.loader > div {
+  background-color: #00c49f;
+  width: 8px;
+  height: 30px;
+  display: inline-block;
+  margin-left: 1px;
+  margin-right: 1px;
+  animation: loader-start 1s infinite ease-in-out;
+}
+
+@keyframes loader-start {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.6);
+  }
+  20% {
+    transform: scaleY(1.4);
+  }
+}
+
+.loader .r2 {
+  animation-delay: 0.1s;
+}
+
+.loader .r3 {
+  animation-delay: 0.2s;
+}
+.loader .r4 {
+  animation-delay: 0.3s;
+}
+.loader .r5 {
+  animation-delay: 0.4s;
+}

@@ -1,0 +1,26 @@
+body {
+  height: 10000px;
+  background: linear-gradient(to bottom, #D38312, #A83279);
+}
+
+.button {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  background-color: rgb(90, 100, 240);
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.up {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  color: white;
+  font-family: sans-serif
+}
+
