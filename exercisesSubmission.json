@@ -1,0 +1,12 @@
+{
+  "day": "day-5",
+  "segmentName": "segment-2",
+  "exercises": {
+    "permutate-without-repetitions": {
+      "completed": false
+    },
+    "fix-eslint-errors": {
+      "completed": false
+    }
+  }
+}
