@@ -1,0 +1,15 @@
+{
+  "day": "day-19",
+  "segmentName": "segment-1",
+  "exercises": {
+    "matcher": {
+      "completed": false
+    },
+    "split-lines": {
+      "completed": false
+    },
+    "basic-mongo-one": {
+      "completed": false
+    }
+  }
+}
