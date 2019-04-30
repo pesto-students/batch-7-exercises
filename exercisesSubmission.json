@@ -1,0 +1,18 @@
+{
+  "day": "day-16",
+  "segmentName": "segment-1",
+  "exercises": {
+    "simple-post": {
+      "completed": false
+    },
+    "shortest-common-supersequence": {
+      "completed": false
+    },
+    "last-index-of": {
+      "completed": false
+    },
+    "update-object": {
+      "completed": false
+    }
+  }
+}
