@@ -7,7 +7,7 @@ function getName(name) {
 describe('throwError test', () => {
   test('should return string with given name', () => {
     const actual = getName('Martin Garrix');
-    const expected = /Ramu/;
+    const expected = /Martin Garrix/;
     expect(actual).toMatch(expected);
   });
 

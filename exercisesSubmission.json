@@ -1,42 +1,42 @@
 {
-  "day": "day-2",
-  "segmentName": "segment-2",
-  "exercises": {
-    "array-sum-test": {
-      "completed": false
-    },
-    "create-object-test": {
-      "completed": false
-    },
-    "every-nth-test": {
-      "completed": false
-    },
-    "factorial-test": {
-      "completed": false
-    },
-    "get-name-test": {
-      "completed": false
-    },
-    "logical-operators": {
-      "completed": false
-    },
-    "number-sum-test": {
-      "completed": false
-    },
-    "return-a-function-test": {
-      "completed": false
-    },
-    "return-a-string-test": {
-      "completed": false
-    },
-    "return-true-test": {
-      "completed": false
-    },
-    "stack-test": {
-      "completed": false
-    },
-    "sum-test": {
-      "completed": false
+    "day": "day-2",
+    "segmentName": "segment-2",
+    "exercises": {
+        "array-sum-test": {
+            "completed": true
+        },
+        "create-object-test": {
+            "completed": true
+        },
+        "every-nth-test": {
+            "completed": true
+        },
+        "factorial-test": {
+            "completed": true
+        },
+        "get-name-test": {
+            "completed": false
+        },
+        "logical-operators": {
+            "completed": true
+        },
+        "number-sum-test": {
+            "completed": false
+        },
+        "return-a-function-test": {
+            "completed": false
+        },
+        "return-a-string-test": {
+            "completed": true
+        },
+        "return-true-test": {
+            "completed": false
+        },
+        "stack-test": {
+            "completed": true
+        },
+        "sum-test": {
+            "completed": true
+        }
     }
-  }
 }
