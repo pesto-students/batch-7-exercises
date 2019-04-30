@@ -1,37 +1,90 @@
-# Pesto Exercises Repository
+# ES6 questions
 
-- This repository contains exercises.
-- The branches are named using the convention **DAY**-**SEGMENT**. For example, `day-4-segment-2`
-- You can see all the branches using `git branch -a`
+1. What is the value of `p3` here?
 
-## How to do the exercises
+  ```js
+    let phonetic = ['sierra', 'charlie'];
+    let [p1, p2, p3] = phonetic;
+  ```
 
-- Click on 'Fork' and make an repository in your account.
-- Clone your version of the exercise repository.
+   How do you think you could _default_ `p3` to a suitable value?
+   Try it.
+
+2. Given this array:
+
+  ```js
+    let arr2 = ['one', 'two', ['three', ['four', ['five', 'six', 'seven']], 'eight']];
   ```
-    git clone <link to forked repo>
+
+   Create a destructuring pattern to give this result:
+
+  ```js
+    console.log(m, n, o);       // two six eight
   ```
-- Install all dependencies
+
+3. Assume you have this object:
+
+      ```js
+        let stats = {
+          packetForwarded: 5345,
+          redirectSent: 427,
+          forwardCacheHit: 4821,
+          forwardCacheMiss: 524,
+        };
+      ```
+
+   1. Use destructuring to assign variables such that:
+
+      ```js
+        console.log(hits);            // 4821
+        console.log(misses);          // 524
+      ```
+
+    2. What happens when this line is executed? Why, and how would you fix it?
+
+      ```js
+        { forwardCacheHit: myhits, forwardCacheMiss: mymisses } = stats;
+      ```
+
+4. What will happen when this code is executed? Why?
+
+  ```js
+    {
+      console.log(i);
+      let i = 5;
+    }
   ```
-    yarn
+
+5. What will this code output?
+
+  ```js
+    let invoiceId = 647;
+      for (let invoiceId = 0; invoiceId < 5; invoiceId++) {
+      }
+    console.log(invoiceId);
   ```
-- To do the exercises in branch `day-2-segment-1`
-  ```
-    git checkout day-2-segment-1
-  ```
-- Do all the questions of a particular segment and make sure that all the tests pass.
-- For example, if the folder name is `your-name`, then it will contain one file `yourName.test.js`. 
-- You need to create another file `yourName.js`. (**Make sure that the filename is correct.**)
-- Make the required function or class and export it. **Don't use default exports. Only named exports are allowed.**
-- Do your work and then push to the branch
-  ```
-    git add .
-    git commit -m "your commit message"
-    git push origin segment-1
-  ```
-- The commit message should be in the format 
-```
-Complete Day 3 Segment 1
-```
-- Push your code to your version of the exercise repository.
-- Make a Pull Request to the original repository. **Ensure that you are setting up the correct base.**
+
+6. What will be the output of this code snippet?
+
+    ```js
+      const N_PROC;
+      console.log(N_PROC);
+      N_PROC = 4;
+      console.log(N_PROC);
+    ```
+
+    1. TypeError
+    2. ReferenceError
+    3. undefined 4
+    4. SyntaxError
+
+7. Can default parameter expressions be computed? Is this function valid? Try it.
+
+    ```js
+      function getTotalPrice(price, tax = price * 0.2) {
+        return price + tax;
+      }
+    ```
+
+    1. Does the order of the parameters matter?
+    2. Could the `0.2` be replaced by another variable or function call?
