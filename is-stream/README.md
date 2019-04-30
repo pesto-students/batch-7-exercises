@@ -1,0 +1,1 @@
+Determine if an object is standard Node.js Stream
