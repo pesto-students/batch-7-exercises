@@ -1,0 +1,24 @@
+{
+  "day": "day-15",
+  "segmentName": "segment-1",
+  "exercises": {
+    "path-satisfies": {
+      "completed": false
+    },
+    "reject": {
+      "completed": false
+    },
+    "test-basics": {
+      "completed": false
+    },
+    "test-forms": {
+      "completed": false
+    },
+    "test-lifecycle": {
+      "completed": false
+    },
+    "test-redux": {
+      "completed": false
+    }
+  }
+}

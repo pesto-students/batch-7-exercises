@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Form /> matches saved snapshot 1`] = `
+<form
+  data-testid="addUserForm"
+>
+  <h2>
+    Request Information
+  </h2>
+  <input
+    data-testid="name"
+    placeholder="Name"
+    type="text"
+    value=""
+  />
+  <div>
+    <input
+      data-testid="checked"
+      type="checkbox"
+    />
+    <p
+      className="promotions"
+      data-testid="promotionsP"
+    >
+      Receive Promotions
+    </p>
+  </div>
+  <button
+    data-testid="submitButton"
+    type="submit"
+  >
+    Submit
+  </button>
+</form>
+`;
