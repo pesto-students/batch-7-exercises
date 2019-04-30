@@ -1,37 +1,51 @@
-# Pesto Exercises Repository
+# Questions (Segment 1)
 
-- This repository contains exercises.
-- The branches are named using the convention **DAY**-**SEGMENT**. For example, `day-4-segment-2`
-- You can see all the branches using `git branch -a`
+1) What will be the output of the code below?
+  ```js
+    var y = 1;
+    if (function f(){}) {
+      y += typeof f;
+    }
+    console.log(y);
+  ```
 
-## How to do the exercises
+2) Assuming obj is an “empty” object in scope, say:
+  ```js
+    var obj = {};
+    
+    // What is accomplished using the following code?
 
-- Click on 'Fork' and make an repository in your account.
-- Clone your version of the exercise repository.
+    ['JS', 'C++'].forEach(function(k) {
+      obj[k] = undefined;
+    });
   ```
-    git clone <link to forked repo>
+
+3) What will the code below output to the console and why?
+  ```js
+    (function() {
+      var a = b = 3;
+    })();
+
+    console.log("a defined? " + (typeof a !== 'undefined'));
+    console.log("b defined? " + (typeof b !== 'undefined'));
   ```
-- Install all dependencies
+
+4) What will the following code output and why?
+  ```js
+    var b = 1;
+    function outer() {
+      var b = 2
+      function inner() {
+        b++;
+        var b = 3;
+        console.log(b)
+      }
+      inner();
+    }
+    outer();
   ```
-    yarn
+
+5) What will the following code output and why?
+  ```js
+    console.log(typeof typeof 1);
   ```
-- To do the exercises in branch `day-2-segment-1`
-  ```
-    git checkout day-2-segment-1
-  ```
-- Do all the questions of a particular segment and make sure that all the tests pass.
-- For example, if the folder name is `your-name`, then it will contain one file `yourName.test.js`. 
-- You need to create another file `yourName.js`. (**Make sure that the filename is correct.**)
-- Make the required function or class and export it. **Don't use default exports. Only named exports are allowed.**
-- Do your work and then push to the branch
-  ```
-    git add .
-    git commit -m "your commit message"
-    git push origin segment-1
-  ```
-- The commit message should be in the format 
-```
-Complete Day 3 Segment 1
-```
-- Push your code to your version of the exercise repository.
-- Make a Pull Request to the original repository. **Ensure that you are setting up the correct base.**
