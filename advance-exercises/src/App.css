@@ -1,0 +1,33 @@
+body {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.nav li a {
+  font-size: 1.4em;
+}
+
+.link--active {
+  color: red;
+}
+
+
+/* 03-HigherOrder */
+.container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 100px;
+  left: 0px;
+  padding: 0 20px;
+  cursor: url(./images/mouse.png), auto;
+}
