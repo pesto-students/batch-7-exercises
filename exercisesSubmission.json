@@ -1,51 +1,51 @@
 {
-  "day": "day-3",
-  "segmentName": "segment-1",
-  "exercises": {
-    "factorial": {
-      "completed": false
-    },
-    "is-odd": {
-      "completed": false
-    },
-    "is-even": {
-      "completed": false
-    },
-    "is-triangle": {
-      "completed": false
-    },
-    "counter": {
-      "completed": false
-    },
-    "counter-factory": {
-      "completed": false
-    },
-    "limit-function-call-count": {
-      "completed": false
-    },
-    "cache-function": {
-      "completed": false
-    },
-    "apply-operator": {
-      "completed": false
-    },
-    "boo-who": {
-      "completed": false
-    },
-    "sum-fibs": {
-      "completed": false
-    },
-    "sum-primes": {
-      "completed": false
-    },
-    "rectangle-diagonal": {
-      "completed": false
-    },
-    "three-sum": {
-      "completed": false
-    },
-    "sum-of-perfect-squares": {
-      "completed": false
+    "day": "day-3",
+    "segmentName": "segment-1",
+    "exercises": {
+        "factorial": {
+            "completed": false
+        },
+        "is-odd": {
+            "completed": true
+        },
+        "is-even": {
+            "completed": true
+        },
+        "is-triangle": {
+            "completed": true
+        },
+        "counter": {
+            "completed": false
+        },
+        "counter-factory": {
+            "completed": false
+        },
+        "limit-function-call-count": {
+            "completed": false
+        },
+        "cache-function": {
+            "completed": false
+        },
+        "apply-operator": {
+            "completed": false
+        },
+        "boo-who": {
+            "completed": false
+        },
+        "sum-fibs": {
+            "completed": false
+        },
+        "sum-primes": {
+            "completed": false
+        },
+        "rectangle-diagonal": {
+            "completed": false
+        },
+        "three-sum": {
+            "completed": false
+        },
+        "sum-of-perfect-squares": {
+            "completed": false
+        }
     }
-  }
 }
