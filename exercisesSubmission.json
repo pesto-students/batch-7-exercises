@@ -33,13 +33,13 @@
             "completed": false
         },
         "sum-fibs": {
-            "completed": false
+            "completed": true
         },
         "sum-primes": {
             "completed": false
         },
         "rectangle-diagonal": {
-            "completed": false
+            "completed": true
         },
         "three-sum": {
             "completed": false
