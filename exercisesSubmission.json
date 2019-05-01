@@ -30,7 +30,7 @@
             "completed": true
         },
         "bouncer": {
-            "completed": false
+            "completed": true
         },
         "sum-all": {
             "completed": false
