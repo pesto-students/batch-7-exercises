@@ -1,8 +1,6 @@
-
-function isEven(...args) {
-  return args;
+function isEven(num) {
+  if ((num & 1) === 0) return true;
+  return false;
 }
 
-export {
-  isEven,
-};
+export { isEven };
