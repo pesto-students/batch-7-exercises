@@ -35,9 +35,9 @@ describe('stack test', () => {
   let myStack;
   beforeEach(() => {
     myStack = new Stack();
-    myStack.push(1);
-    myStack.push(2);
     myStack.push(3);
+    myStack.push(2);
+    myStack.push(1);
   });
 
   test('should push elements to stack in order', () => {
