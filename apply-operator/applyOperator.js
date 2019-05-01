@@ -27,12 +27,12 @@ function applyOperator(...args) {
       output = parseInt(output * 10000) / 10000;
       break;
     case '%':
-    //   if (args[1] !== undefined) {
-    //     let x = [],
-    //       first = 0;
-    //     [first, output, ...x] = args;
-    //   }
-
+      //   if (args[1] !== undefined) {
+      //     let x = [],
+      //       first = 0;
+      //     [first, output, ...x] = args;
+      //   }
+      output = args[1];
       for (let i = 2; i < args.length; i += 1) {
         output %= args[i];
       }
