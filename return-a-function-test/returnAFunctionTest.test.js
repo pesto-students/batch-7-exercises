@@ -2,6 +2,6 @@ const fun = () => {};
 
 describe('returnAFunction', () => {
   test('should return a Function', () => {
-    expect(fun).toBeInstanceOf({});
+    expect(fun).toBeInstanceOf(Function);
   });
 });
