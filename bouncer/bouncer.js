@@ -1,6 +1,7 @@
 
 function bouncer(...args) {
-  return args;
+	const elements=args[0];
+	return elements.filter((element)=> !!element);
 }
 
 export {
