@@ -1,6 +1,6 @@
 
-function isOdd(...args) {
-  return args;
+function isOdd(a) {
+  return a%2!=0 ? true : false;
 }
 
 export {
