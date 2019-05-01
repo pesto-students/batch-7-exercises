@@ -42,8 +42,7 @@ describe('stack test', () => {
 
   test('should push elements to stack in order', () => {
     const actual = myStack.items;
-    const expected = [3, 2, 1];
-
+    const expected = [1, 2, 3]
     expect(actual).toEqual(expected);
   });
 });
