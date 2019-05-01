@@ -20,7 +20,7 @@ describe('factorial test', () => {
   test('should find factorial of 0', () => {
     // delete next line and replace it with proper test
     const actual = factorial(0);
-    const expected = 0;
+    const expected = 1;
 
     expect(actual).toEqual(expected);
     // expect(true).toEqual(false);
