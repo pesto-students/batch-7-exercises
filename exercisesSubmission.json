@@ -9,7 +9,7 @@
             "completed": false
         },
         "is-even": {
-            "completed": false
+            "completed": true
         },
         "is-triangle": {
             "completed": true
