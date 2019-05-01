@@ -2,7 +2,7 @@
 function repeatStringNumTimes(...args) {
   var str = args[0];
   var number = args[1];
-  // To store the n no of times repeated string
+  // To store the string which is repeated n number of times as specified
   var finalString = str;
     if(number < 0 ){
       return '';
