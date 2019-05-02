@@ -1,6 +1,7 @@
 
-function findElement(...args) {
-  return args;
+function findElement(array,inputFunction) {
+  
+  return array.filter(inputFunction)
 }
 
 export {
