@@ -24,7 +24,7 @@
             "completed": false
         },
         "cache-function": {
-            "completed": false
+            "completed": true
         },
         "apply-operator": {
             "completed": true
