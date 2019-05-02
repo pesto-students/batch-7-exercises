@@ -1,6 +1,6 @@
 
 function isOdd(...args) {
-  return args;
+  return ( !( !(args & 1)) );
 }
 
 export {

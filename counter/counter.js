@@ -1,14 +1,11 @@
 
 function counter(...args) {
-  const newCounter = counter();
-  return (
-    function(){
-      return newCounter(); // 1
-//newCounter(); // 2
-
-    }
-  );
+  let counter = 0;
+  
+  let increment = () => counter += 1;
+  return increment;
 }
+    
 
 export {
   counter,
