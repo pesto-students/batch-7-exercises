@@ -1,23 +1,15 @@
-function isPalindrome(inputString) {
-  // Removes symbols [ '_', '-', '/', ' ' ] from inputString
-  const filteredInputString = inputString
-    .toString()
-    .replace(/[_,-/\s+]/g, '')
-    .replace(')', '(');
+function isPalindrome(input) {
+  const inputString = input.toString();
 
-  const lastIndexOfString = filteredInputString.length - 1;
+  // Removes unnecessary charecters from inputString
+  const filteredInputString = inputString.toLowerCase().replace(/[\W_]/g, '');
 
-  for (let i = 0; i < filteredInputString.length / 2; i += 1) {
-    const char1 = filteredInputString.charAt(i).toUpperCase();
-    const char2 = filteredInputString
-      .charAt(lastIndexOfString - i)
-      .toUpperCase();
+  const reversedInputString = filteredInputString
+    .split('')
+    .reverse()
+    .join('');
 
-    if (char1 !== char2) {
-      return false;
-    }
-  }
-  return true;
+  return filteredInputString === reversedInputString;
 }
 
 export { isPalindrome };
