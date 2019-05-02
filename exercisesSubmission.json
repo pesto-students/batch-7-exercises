@@ -21,7 +21,7 @@
             "completed": false
         },
         "truth-check": {
-            "completed": false
+            "completed": true
         },
         "orbital-period": {
             "completed": false
