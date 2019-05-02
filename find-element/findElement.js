@@ -12,7 +12,7 @@ function findElement(...args) {
       f=1;
     }
     }
-    if( f=== 0)
+    if( f === 0)
     return undefined;
 }
 
