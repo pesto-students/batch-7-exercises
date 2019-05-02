@@ -1,6 +1,6 @@
 
-function isTriangle(a,b,c) {
-  return ((a+b) > c) &&  ((b +c)>a) && ((c+a) > b);
+function isTriangle(side1,side2,side3) {
+  return ((side1+side2) > side3) &&  ((side2 +side3)>side1) && ((side3+side1) > side2);
 }
 
 export {

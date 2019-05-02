@@ -1,10 +1,6 @@
 
 function booWho(a) {
-  if (typeof a === 'boolean') {
-    return true;
-  } else {
-    return false;
-  }
+return typeof a === 'boolean'
 }
 
 export {
