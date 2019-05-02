@@ -14,6 +14,7 @@ describe('mapObject', () => {
       x: 2,
       y: 5,
       z: 10,
+      
     };
     const result = mapObject(obj, n => (n * n));
     expect(result).toEqual({ x: 4, y: 25, z: 100 });
