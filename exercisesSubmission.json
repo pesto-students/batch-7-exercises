@@ -12,7 +12,7 @@
             "completed": false
         },
         "drop-elements": {
-            "completed": false
+            "completed": true
         },
         "update-inventory": {
             "completed": false
