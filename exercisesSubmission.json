@@ -27,22 +27,22 @@
             "completed": false
         },
         "object-keys": {
-            "completed": false
+            "completed": true
         },
         "object-values": {
-            "completed": false
+            "completed": true
         },
         "map-object": {
             "completed": false
         },
         "object-pairs": {
-            "completed": false
+            "completed": true
         },
         "object-invert": {
-            "completed": false
+            "completed": true
         },
         "object-defaults": {
-            "completed": false
+            "completed": true
         },
         "user-check-password": {
             "completed": false
