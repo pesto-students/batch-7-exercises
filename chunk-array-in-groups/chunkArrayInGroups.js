@@ -1,8 +1,12 @@
+function chunkArrayInGroups(array, number) {
+  const outputArray = [];
 
-function chunkArrayInGroups(...args) {
-  return args;
+  let index = 0;
+  for (let i = 0; i < array.length; i += number) {
+    outputArray[index] = array.slice(i, i + number);
+    index += 1;
+  }
+  return outputArray;
 }
 
-export {
-  chunkArrayInGroups,
-};
+export { chunkArrayInGroups };
