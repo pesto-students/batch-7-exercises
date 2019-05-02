@@ -1,51 +1,51 @@
 {
-  "day": "day-4",
-  "segmentName": "segment-1",
-  "exercises": {
-    "slasher": {
-      "completed": false
-    },
-    "chunk-array-in-groups": {
-      "completed": false
-    },
-    "find-element": {
-      "completed": false
-    },
-    "drop-elements": {
-      "completed": false
-    },
-    "update-inventory": {
-      "completed": false
-    },
-    "smallest-commons": {
-      "completed": false
-    },
-    "truth-check": {
-      "completed": false
-    },
-    "orbital-period": {
-      "completed": false
-    },
-    "object-keys": {
-      "completed": false
-    },
-    "object-values": {
-      "completed": false
-    },
-    "map-object": {
-      "completed": false
-    },
-    "object-pairs": {
-      "completed": false
-    },
-    "object-invert": {
-      "completed": false
-    },
-    "object-defaults": {
-      "completed": false
-    },
-    "user-check-password": {
-      "completed": false
+    "day": "day-4",
+    "segmentName": "segment-1",
+    "exercises": {
+        "slasher": {
+            "completed": false
+        },
+        "chunk-array-in-groups": {
+            "completed": true
+        },
+        "find-element": {
+            "completed": false
+        },
+        "drop-elements": {
+            "completed": true
+        },
+        "update-inventory": {
+            "completed": false
+        },
+        "smallest-commons": {
+            "completed": false
+        },
+        "truth-check": {
+            "completed": false
+        },
+        "orbital-period": {
+            "completed": false
+        },
+        "object-keys": {
+            "completed": false
+        },
+        "object-values": {
+            "completed": false
+        },
+        "map-object": {
+            "completed": false
+        },
+        "object-pairs": {
+            "completed": false
+        },
+        "object-invert": {
+            "completed": false
+        },
+        "object-defaults": {
+            "completed": false
+        },
+        "user-check-password": {
+            "completed": false
+        }
     }
-  }
 }
