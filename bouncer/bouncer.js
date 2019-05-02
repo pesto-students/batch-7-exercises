@@ -1,23 +1,22 @@
-
 function bouncer(array) {
-  var falsyValueArray = [false, null, 0, undefined, ''];
-  falsyValueArray.forEach(falseValue => {
-    while(array.length > 0) {
-      var index = array.indexOf(falseValue);
-      if(index==-1)
-        break;
-        array.splice(index,1);
+  var nonFalsyValueArray = array.filter(element => {
+    var isNumber = element => {
+      return typeof element == "number";
+    };
+    var isString = element => {
+      return typeof element == "string";
+    };
+    var isObject = element => {
+      return typeof element == "object";
+    };
+    if (
+      (isNumber(element) || isString(element) || isObject(element)) &&
+      element
+    ) {
+      return element;
     }
   });
-  //  Remove NaN from array
-  for (var i = 0; i < array.length; i++) {
-      if(Number.isNaN(array[i])) {
-        array.splice(i,1);
-      }
-  }
-  return array;
+  return nonFalsyValueArray;
 }
 
-export {
-  bouncer,
-};
+export { bouncer };

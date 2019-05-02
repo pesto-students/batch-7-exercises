@@ -3,28 +3,28 @@
     "segmentName": "segment-2",
     "exercises": {
         "reverse-string": {
-            "completed": false
+            "completed": true
         },
         "is-palindrome": {
             "completed": false
         },
         "diff-array": {
-            "completed": false
+            "completed": true
         },
         "longest-word-in-string": {
-            "completed": false
+            "completed": true
         },
         "telephone-check": {
             "completed": false
         },
         "rot13": {
-            "completed": false
+            "completed": true
         },
         "get-index-to-ins": {
-            "completed": false
+            "completed": true
         },
         "repeat-string-num-times": {
-            "completed": false
+            "completed": true
         },
         "binary-agent": {
             "completed": true
@@ -36,13 +36,13 @@
             "completed": false
         },
         "pairwise": {
-            "completed": false
+            "completed": true
         },
         "convert-to-roman": {
             "completed": false
         },
         "large-of-four": {
-            "completed": false
+            "completed": true
         },
         "steamroll-array": {
             "completed": false
