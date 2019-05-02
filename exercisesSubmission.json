@@ -42,7 +42,7 @@
             "completed": false
         },
         "object-defaults": {
-            "completed": false
+            "completed": true
         },
         "user-check-password": {
             "completed": false
