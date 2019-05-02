@@ -19,10 +19,6 @@ function getIndexToIns(array , value) {
   ;    if (isGreaterThanPrevious && islessThanCurrentElement) {
         indexToInsert = i;
       }
-      // if (isGreaterThanPrevious && isGreaterToCurrentElement) {
-      //   console.log("was here");
-      //   continue;
-      // }
     }
   } 
   return indexToInsert;
