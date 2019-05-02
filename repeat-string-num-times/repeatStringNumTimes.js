@@ -1,8 +1,12 @@
+function repeatStringNumTimes(stringValue,numberOfTimes) {
 
-function repeatStringNumTimes(...args) {
-  return args;
+  if(numberOfTimes > 0){
+   var valueToBePrinted = stringValue.repeat(numberOfTimes)
+    return valueToBePrinted
+  }
+  else
+  return;
 }
-
 export {
   repeatStringNumTimes,
 };
