@@ -1,8 +1,9 @@
-
-function counter(...args) {
-  return args;
+function counter() {
+  let counts = 0;
+  return () => {
+    counts += 1;
+    return counts;
+  };
 }
 
-export {
-  counter,
-};
+export { counter };
