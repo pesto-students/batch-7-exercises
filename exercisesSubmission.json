@@ -39,10 +39,10 @@
             "completed": false
         },
         "object-invert": {
-            "completed": false
+            "completed": true
         },
         "object-defaults": {
-            "completed": false
+            "completed": true
         },
         "user-check-password": {
             "completed": false
