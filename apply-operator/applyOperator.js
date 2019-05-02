@@ -1,47 +1,49 @@
+import { error } from "util";
 
-function applyOperator(op,...args) {
-
-  var ans;
-  switch(op){
-    case '+':
-      ans = 0;
-          args.forEach(element => {
-            ans = ans + element;
-        });
-      break;
-    case '-':
-      ans = 0;
-          args.forEach(element => {
-            ans = ans - element;
-        });
-      break;
-    case '*':
-      ans = 1;
-          args.forEach(element => {
-            ans = ans * element;
-        });
-      break;
-    case '/':
-      ans = args[0];
-        args.forEach(element => {
-          ans = ans / element;
+function applyOperator(operator, ...args) {
+  var answer;
+  switch (operator) {
+    case "+": {
+      answer = 0;
+      args.forEach(element => {
+        answer = answer + element;
       });
-      ans = parseFloat(ans.toFixed(4));
-
       break;
-    case '%':
-      ans = args[0];
-       for(var i=1; i< args.length;i++){
-         ans = ans % args[i];
-       }
+    }
+    case "-": {
+      answer = 0;
+      args.forEach(element => {
+        answer = answer - element;
+      });
       break;
-    default :
-       throw error;
+    }
+    case "*": {
+      answer = 1;
+      args.forEach(element => {
+        answer = answer * element;
+      });
+      break;
+    }
+    case "/": {
+      answer = args[0];
+      args.forEach(element => {
+        answer = answer / element;
+      });
+      answer = parseFloat(answer.toFixed(4));
+      break;
+    }
+    case "%": {
+      answer = args[0];
+      for (var i = 1; i < args.length; i++) {
+        answer = answer % args[i];
+      }
+      break;
+    }
+    default:
+      throw error;
   }
 
-  return ans;
+  return answer;
 }
 
-export {
-  applyOperator,
-};
+export { applyOperator };

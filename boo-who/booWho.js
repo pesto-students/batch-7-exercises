@@ -1,11 +1,5 @@
-
 function booWho(args) {
-  if(typeof(args) =="boolean")
-    return true;
-  else 
-    return false;
+  return typeof args == "boolean";
 }
 
-export {
-  booWho,
-};
+export { booWho };

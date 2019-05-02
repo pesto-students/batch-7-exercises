@@ -1,8 +1,5 @@
-
-function isOdd(...args) {
-  return args;
+function isOdd(number) {
+  return 1 & number ? true : false;
 }
 
-export {
-  isOdd,
-};
+export { isOdd };

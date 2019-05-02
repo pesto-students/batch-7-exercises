@@ -3,25 +3,25 @@
     "segmentName": "segment-1",
     "exercises": {
         "factorial": {
-            "completed": false
+            "completed": true
         },
         "is-odd": {
-            "completed": false
+            "completed": true
         },
         "is-even": {
-            "completed": false
+            "completed": true
         },
         "is-triangle": {
-            "completed": false
+            "completed": true
         },
         "counter": {
-            "completed": false
+            "completed": true
         },
         "counter-factory": {
-            "completed": false
+            "completed": true
         },
         "limit-function-call-count": {
-            "completed": false
+            "completed": true
         },
         "cache-function": {
             "completed": true
@@ -33,19 +33,19 @@
             "completed": true
         },
         "sum-fibs": {
-            "completed": false
+            "completed": true
         },
         "sum-primes": {
-            "completed": false
+            "completed": true
         },
         "rectangle-diagonal": {
-            "completed": false
+            "completed": true
         },
         "three-sum": {
-            "completed": false
+            "completed": true
         },
         "sum-of-perfect-squares": {
-            "completed": false
+            "completed": true
         }
     }
 }
