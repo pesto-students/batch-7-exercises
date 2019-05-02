@@ -3,7 +3,7 @@
     "segmentName": "segment-1",
     "exercises": {
         "factorial": {
-            "completed": false
+            "completed": true
         },
         "is-odd": {
             "completed": false
