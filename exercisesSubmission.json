@@ -21,7 +21,7 @@
             "completed": true
         },
         "limit-function-call-count": {
-            "completed": false
+            "completed": true
         },
         "cache-function": {
             "completed": true
@@ -39,7 +39,7 @@
             "completed": false
         },
         "rectangle-diagonal": {
-            "completed": false
+            "completed": true
         },
         "three-sum": {
             "completed": false
