@@ -1,8 +1,8 @@
-var assert = require("assert");
+const assert = require('assert');
 
 function promised(val) {
-    return new Promise(function(f) {
-        setTimeout(function() {
+  return new Promise(function (f) {
+        setTimeout(function () {
             f(val);
         }, 1);
     });
@@ -10,9 +10,9 @@ function promised(val) {
 
 function thenabled(val, arr) {
     return {
-        then: function(f){
+        then:function(f){
             setTimeout(function() {
-                if (arr) arr.push(val);
+                if(arr) arr.push(val);
                 f(val);
             }, 1);
         }
@@ -22,13 +22,13 @@ function thenabled(val, arr) {
 describe("Promise.each", function() {
 
     it("should return the array's values mapped", function() {
-        var a = [promised(1), promised(2), promised(3)];
+        let a = [promised(1), promised(2), promised(3)];
         var b = [];
         return Promise.resolve(a).mapSeries(function(val) {
-            b.push(3-val);
+            b.push(3 - val);
             return val + 2;
         }).then(function(ret) {
-            assert.deepEqual(ret, [3,4,5]);
+            assert.deepEqual(ret, [3, 4, 5]);
             assert.deepEqual(b, [2, 1, 0]);
         });
     });
@@ -39,7 +39,7 @@ describe("Promise.each", function() {
         var b = [];
         return Promise.resolve(a).each(function(value, index, length) {
             b.push(value, index, length);
-        }).then(function(ret) {
+        }).then(function() {
             assert.deepEqual(b, [1, 0, 3, 2, 1, 3, 3, 2, 3]);
         });
     });
@@ -52,8 +52,8 @@ describe("Promise.each", function() {
             return Promise.delay(1).then(function(){
                 b.push(value*2);
             });
-        }).then(function(ret) {
-            assert.deepEqual(b, [1,2,2,4,3,6]);
+        }).then(function() {
+            assert.deepEqual(b, [1, 2, 2, 4, 3, 6]);
         });
     });
 
@@ -63,7 +63,7 @@ describe("Promise.each", function() {
         return Promise.resolve(a).each(function(val) {
             b.push(val * 50);
             return thenabled(val * 500, b);
-        }).then(function(ret) {
+        }).then(function() {
             assert.deepEqual(b, [1, 2, 3, 50, 500, 100, 1000, 150, 1500]);
         });
     });
