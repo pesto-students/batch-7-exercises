@@ -1,17 +1,9 @@
 
 function abbreviateString(stringToAbbreviate) {
-  var firstSpace = stringToAbbreviate.indexOf(" ");
-  var lastSpace = stringToAbbreviate.lastIndexOf(" ");
-  var firstHalf = sliceString(stringToAbbreviate,0,firstSpace);
-  var secondHalf = sliceString(stringToAbbreviate,lastSpace,lastSpace+2).toUpperCase();
-   var abbreviatedString =  firstHalf + secondHalf + '.';
-    return abbreviatedString;
-  }
-
-  function sliceString(stringToSlice,lb,up)
-  {
-    return stringToSlice.slice(lb,up);
-  }
+  var stringArray  =  stringToAbbreviate.split(" ");
+  var abbreviatedString = stringArray[0]+" "+stringArray[stringArray.length-1].substr(0, 1).toUpperCase();
+  return abbreviatedString + ".";
+  } 
 
 export {
   abbreviateString,
