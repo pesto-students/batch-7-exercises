@@ -16,6 +16,7 @@ function abbreviateString(stringToAbbreviate) {
        }
      }
   })
+  return abbreviateString
 }
 
 }
