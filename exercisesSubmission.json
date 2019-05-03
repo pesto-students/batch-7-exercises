@@ -3,10 +3,10 @@
     "segmentName": "segment-1",
     "exercises": {
         "boolean": {
-            "completed": false
+            "completed": true
         },
         "days-in-month": {
-            "completed": false
+            "completed": true
         },
         "json-parse": {
             "completed": false
