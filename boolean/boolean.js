@@ -1,8 +1,5 @@
-
-function boolean(...args) {
-  return args;
+function boolean(literal) {
+  return Boolean.prototype.valueOf(literal);
 }
 
-export {
-  boolean,
-};
+export { boolean };
