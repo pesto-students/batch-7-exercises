@@ -1,10 +1,7 @@
 import { error } from "util";
 
-function isAString(string){
-  return (typeof(string) === 'string');
-}
 function abbreviateString(str) {
-  if(isAString(str)){
+  if(typeof(str) === 'string'){
     str = str.split(" ");
     var firstWord = str[0];
     var lastWord = str[str.length -1];

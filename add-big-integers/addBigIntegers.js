@@ -1,7 +1,6 @@
 //[WIP]:
 function addBigIntegers(...arr) {
-  var length = arr[0];
-    
+  return arr;
 }
 
 // export {
