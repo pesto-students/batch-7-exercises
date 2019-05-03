@@ -9,10 +9,10 @@
             "completed": true
         },
         "json-parse": {
-            "completed": false
+            "completed": true
         },
         "lowercase-keys": {
-            "completed": false
+            "completed": true
         },
         "math-fns": {
             "completed": false
