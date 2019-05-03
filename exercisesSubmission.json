@@ -9,10 +9,10 @@
             "completed": false
         },
         "request-validator": {
-            "completed": false
+            "completed": true
         },
         "memoize": {
-            "completed": false
+            "completed": true
         },
         "curry": {
             "completed": true
