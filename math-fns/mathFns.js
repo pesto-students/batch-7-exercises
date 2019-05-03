@@ -1,8 +1,15 @@
+function sqrt(number) {
+	return Math.sqrt(number);
+}
 
-function mathFns(...args) {
-  return args;
+function power(number,power) {
+	return Math.pow(number,power);
+}
+
+function round(number) {
+	return Math.round(number);
 }
 
 export {
-  mathFns,
+  sqrt, power, round
 };

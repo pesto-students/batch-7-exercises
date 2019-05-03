@@ -15,7 +15,7 @@
             "completed": false
         },
         "math-fns": {
-            "completed": false
+            "completed": true
         },
         "parse-ms": {
             "completed": false
@@ -27,7 +27,7 @@
             "completed": false
         },
         "abbreviate-string": {
-            "completed": false
+            "completed": true
         },
         "add-big-integers": {
             "completed": false
