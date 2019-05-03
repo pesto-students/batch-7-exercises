@@ -27,7 +27,7 @@
             "completed": false
         },
         "object-keys": {
-            "completed": false
+            "completed": true
         },
         "object-values": {
             "completed": false
@@ -39,7 +39,7 @@
             "completed": false
         },
         "object-invert": {
-            "completed": false
+            "completed": true
         },
         "object-defaults": {
             "completed": false
