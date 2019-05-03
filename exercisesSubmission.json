@@ -15,10 +15,10 @@
             "completed": false
         },
         "curry": {
-            "completed": false
+            "completed": true
         },
         "account-dataset": {
-            "completed": false
+            "completed": true
         },
         "alternating-characters": {
             "completed": true
