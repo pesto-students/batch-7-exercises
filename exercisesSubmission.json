@@ -1,45 +1,45 @@
 {
-  "day": "day-5",
-  "segmentName": "segment-1",
-  "exercises": {
-    "boolean": {
-      "completed": false
-    },
-    "days-in-month": {
-      "completed": false
-    },
-    "json-parse": {
-      "completed": false
-    },
-    "lowercase-keys": {
-      "completed": false
-    },
-    "math-fns": {
-      "completed": false
-    },
-    "parse-ms": {
-      "completed": false
-    },
-    "round-to": {
-      "completed": false
-    },
-    "time-was": {
-      "completed": false
-    },
-    "abbreviate-string": {
-      "completed": false
-    },
-    "add-big-integers": {
-      "completed": false
-    },
-    "alien-alphabet": {
-      "completed": false
-    },
-    "permutate-with-repetitions": {
-      "completed": false
-    },
-    "throw-errors": {
-      "completed": false
+    "day": "day-5",
+    "segmentName": "segment-1",
+    "exercises": {
+        "boolean": {
+            "completed": false
+        },
+        "days-in-month": {
+            "completed": false
+        },
+        "json-parse": {
+            "completed": false
+        },
+        "lowercase-keys": {
+            "completed": false
+        },
+        "math-fns": {
+            "completed": false
+        },
+        "parse-ms": {
+            "completed": false
+        },
+        "round-to": {
+            "completed": false
+        },
+        "time-was": {
+            "completed": false
+        },
+        "abbreviate-string": {
+            "completed": true
+        },
+        "add-big-integers": {
+            "completed": false
+        },
+        "alien-alphabet": {
+            "completed": false
+        },
+        "permutate-with-repetitions": {
+            "completed": false
+        },
+        "throw-errors": {
+            "completed": false
+        }
     }
-  }
 }
