@@ -1,6 +1,6 @@
 
-function isOdd(...args) {
-  return args;
+function isOdd(number) {
+  return !Number.isInteger(number / 2);
 }
 
 export {

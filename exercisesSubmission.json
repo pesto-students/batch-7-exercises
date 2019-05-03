@@ -6,10 +6,10 @@
             "completed": true
         },
         "is-odd": {
-            "completed": false
+            "completed": true
         },
         "is-even": {
-            "completed": false
+            "completed": true
         },
         "is-triangle": {
             "completed": false
