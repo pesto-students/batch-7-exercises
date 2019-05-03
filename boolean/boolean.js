@@ -1,8 +1,5 @@
-
-function boolean(...args) {
-  return args;
+function boolean(input) {
+  return input ? true : false;
 }
 
-export {
-  boolean,
-};
+export { boolean };
