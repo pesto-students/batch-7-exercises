@@ -1,6 +1,5 @@
 
 function alternatingCharacters(...args) {
-  
   return args;
 } 
 
