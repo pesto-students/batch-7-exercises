@@ -2,7 +2,7 @@ var assert = require("assert");
 
 function promised(val) {
     return new Promise(function(f) {
-        setTimeout(function() {
+        setTimeout(function()  {
             f(val);
         }, 1);
     });
