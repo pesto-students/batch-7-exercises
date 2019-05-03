@@ -5,6 +5,7 @@ function squareNumbersArray(...arr) {
     throw Error('My custom error');
   } 
 }
+
 function isANumber(num){
   if(typeof(num) === 'number'){
     return true;

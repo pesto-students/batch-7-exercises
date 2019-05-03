@@ -1,8 +1,9 @@
 
-function alternatingCharacters(...args) {
-  return args;
+function alternatingCharacters(args) {
+  console.log(args) ;
 }
 
-export {
-  alternatingCharacters,
-};
+// export {
+//   alternatingCharacters,
+// };
+alternatingCharacters(['AAAA', 'BBBBB', 'ABABABAB', 'BABABA', 'AAABBB']);
