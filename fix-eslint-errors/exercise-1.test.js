@@ -1,15 +1,15 @@
-var assert = require("assert");
+const assert = require('assert');
 
 function promised(val) {
-    return new Promise(function(f) {
-        setTimeout(function() {
+  return new Promise (function(f) {
+    setTimeout(function() {
             f(val);
         }, 1);
-    });
+  });
 }
 
 function thenabled(val, arr) {
-    return {
+  return {
         then: function(f){
             setTimeout(function() {
                 if (arr) arr.push(val);
