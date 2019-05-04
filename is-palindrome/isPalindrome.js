@@ -2,7 +2,8 @@ function isPalindrome(data) {
   var string;
   if (typeof data == "string") {
     string = data.toLowerCase();
-    string = string.replace(/[^\w]/gi, "");
+    var regexExpToGetAlphaNumeric = /[^a-zA-Z0-9]/gi;
+    string = string.replace(regexExpToGetAlphaNumeric, "");
   } else {
     string = data.toString();
   }
