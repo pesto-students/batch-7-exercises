@@ -7,7 +7,11 @@ function threeSum(numericArray, targetSum) {
     numericArray.length < 3 ||
     typeof targetSum != "number"
   ) {
-    throwError;
+    return () => {
+      throw new Error(
+        `Invalid Input, Required Number, Provided ${typeof targetSum}`
+      );
+    };
   }
   var hashmap = {};
   for (var i = 0; i < numericArray.length; i++) {
@@ -18,7 +22,7 @@ function threeSum(numericArray, targetSum) {
       hashmap[element]++;
     }
   }
-
+  //numericArray.sort();
   for (var i = 0; i < numericArray.length; i++) {
     element = numericArray[i];
     var resultTripletArray = [];
@@ -33,7 +37,6 @@ function threeSum(numericArray, targetSum) {
       if (element != 0 && hashmapClone[element] && hashmapClone[element] != 0) {
         hashmapClone[element]--;
         resultTripletArray.push(element);
-
         if (
           sum - element != 0 &&
           hashmapClone[sum - element] &&
