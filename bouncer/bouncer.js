@@ -17,6 +17,7 @@ function bouncer(array) {
     }
   });
   return nonFalsyValueArray;
+
 }
 
 export { bouncer };
