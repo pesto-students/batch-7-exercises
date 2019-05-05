@@ -15,13 +15,13 @@
             "completed": true
         },
         "math-fns": {
-            "completed": false
+            "completed": true
         },
         "parse-ms": {
             "completed": false
         },
         "round-to": {
-            "completed": false
+            "completed": true
         },
         "time-was": {
             "completed": false
