@@ -33,7 +33,7 @@
             "completed": true
         },
         "sum-fibs": {
-            "completed": false
+            "completed": true
         },
         "sum-primes": {
             "completed": false
