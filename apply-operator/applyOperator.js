@@ -1,69 +1,46 @@
 
-function applyOperator(operator,operands) {
-  var result = 0;
+function applyOperator(operator,...operands) {
+  var result = 0; 
   
-  if(operands == undefined)
-  {
+
+  if(operands.length == 0 && operator != undefined) {
     return 0;
-  } 
-  
-  switch(expression) {
+  }
+
+  switch(operator) {
     case '+':
     {
-      for(var i=0;i<operands.length;i++)
-      {
-        result = result + operands[i];
-      }
+      result = operands.reduce((accumulator, currentValue) => {
+        return accumulator + currentValue 
+      });
       break;
     } 
     case '-':
     {
-      for(var i=0;i<operands.length;i++)
-      {
-        result = result - operands[i];
-      }
+      result = operands.reduce((accumulator, currentValue) => {
+        return accumulator - currentValue 
+      },0);
       break;
     }
     case '%':
     {
-      for(var i=0;i<operands.length;i++)
-      {
-        if(i==0)
-        {
-          result = operands[i];
-        }
-        else
-        {
-          result = result % operands[i];
-        } 
-      }
+      result = operands.reduce((accumulator, currentValue) => {
+        return accumulator % currentValue 
+      });
       break;
     }
     case '/':
     {
-      if(i==0)
-      {
-        result = operands[i];
-      }
-      else
-      {
-        result = result / operands[i];
-      } 
+      result = parseFloat(operands.reduce((accumulator, currentValue) => {
+        return accumulator / currentValue 
+      }).toFixed(4));
       break;
     }
     case '*':
     {
-      for(var i=0;i<operands.length;i++)
-      {
-        if(i==0)
-        {
-          result = operands[i];
-        }
-        else
-        {
-          result = result * operands[i];
-        } 
-      }
+      result = operands.reduce((accumulator, currentValue) => {
+        return accumulator * currentValue 
+      });
       break;
     }
     default:
@@ -71,6 +48,7 @@ function applyOperator(operator,operands) {
       throw Error;
      }
   }
+
   return result;
 }
 

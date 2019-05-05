@@ -1,7 +1,28 @@
-
-function sumPrimes(...args) {
-  return args;
+function isPrime(num)
+{
+  for(let i=2;i <= Math.sqrt(num);i++)
+  {
+    if(num % i == 0){ 
+      return false;
+    }
+  }
+  return num > 1;
 }
+
+function sumPrimes(n) {
+  debugger;
+  let sumOfPrimes = 0;
+  while(n!=1) {
+    if(isPrime(n)) { 
+      sumOfPrimes = sumOfPrimes + n;
+    }
+   n--;
+  }
+
+  return sumOfPrimes;
+}
+
+
 
 export {
   sumPrimes,

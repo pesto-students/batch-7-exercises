@@ -24,10 +24,10 @@
             "completed": false
         },
         "cache-function": {
-            "completed": false
+            "completed": true
         },
         "apply-operator": {
-            "completed": false
+            "completed": true
         },
         "boo-who": {
             "completed": true
@@ -36,7 +36,7 @@
             "completed": true
         },
         "sum-primes": {
-            "completed": false
+            "completed": true
         },
         "rectangle-diagonal": {
             "completed": true
