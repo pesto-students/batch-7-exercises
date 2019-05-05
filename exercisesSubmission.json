@@ -15,16 +15,16 @@
             "completed": true
         },
         "update-inventory": {
-            "completed": false
+            "completed": true
         },
         "smallest-commons": {
-            "completed": false
+            "completed": true
         },
         "truth-check": {
             "completed": true
         },
         "orbital-period": {
-            "completed": false
+            "completed": true
         },
         "object-keys": {
             "completed": true
@@ -45,7 +45,7 @@
             "completed": true
         },
         "user-check-password": {
-            "completed": false
+            "completed": true
         }
     }
 }
