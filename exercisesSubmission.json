@@ -39,7 +39,7 @@
             "completed": true
         },
         "rectangle-diagonal": {
-            "completed": false
+            "completed": true
         },
         "three-sum": {
             "completed": false
