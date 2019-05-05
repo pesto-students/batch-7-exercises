@@ -1,7 +1,7 @@
 
 function daysInMonth(year, month) {
 
-  var daysInMonth = {
+  let daysInMonth = {
     '1' :31,
     '2' : 28,
     '3' : 31,
@@ -15,8 +15,8 @@ function daysInMonth(year, month) {
     '11' : 30,
     '12' : 31
   }
-  var isLeapYear = (year % 4 === 0) && (year % 100 !=0);
-  if (isLeapYear && month ==2) {
+  let isLeapYear = (year % 4 === 0) && (year % 100 != 0);
+  if (isLeapYear && month == 2) {
     return 29;
   }
     return daysInMonth[month];
