@@ -1,8 +1,12 @@
 
 function reverseString(stringValue) {
-  for(i=stringValue.length;i<=0;i--){
-    
+  var splittedArray = stringValue.split('')
+  var reversedString = ""
+  for(let i = splittedArray.length - 1; i >= 0; i--) {
+    reversedString += splittedArray[i]
+    console.log(reversedString)
   }
+  return reversedString
 }
 
 export {

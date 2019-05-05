@@ -1,7 +1,11 @@
 
-function largeOfFour(array1,array2,array3,array4) {
+function largeOfFour(masterArray) {
   var largestArray = []
   var largestValue = 0
+  var array1 = [] = masterArray[0]
+  var array2 = [] = masterArray[1]
+  var array3 = [] = masterArray[2]
+  var array4 = [] = masterArray[3]
   //finding the largest number in Array1
   array1.map((value)=>{
     if(value > largestValue){
