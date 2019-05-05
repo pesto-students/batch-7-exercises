@@ -1,6 +1,9 @@
 
-function limitFunctionCallCount(...args) {
-  return args;
+function limitFunctionCallCount(functionDef,limitCount) {
+  
+  return () =>{
+
+  }
 }
 
 export {

@@ -1,12 +1,10 @@
 
 function factorial(numberValue) {
-  var factorialValue = 1;
-  for(var i = 1; i<=numberValue; i++){
-    factorialValue = factorialValue * i
+  if(numberValue === 0){
+    return 1
   }
-  return factorialValue;
+  return numberValue * factorial(numberValue - 1)
 }
-
 export {
   factorial,
 };
