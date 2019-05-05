@@ -1,12 +1,3 @@
-
-
-function sumPrimes(args) {
-  var sum = 0;
-  for( var i = 1; i <= args; i++ ){
-    sum = sum + isPrime(i);
-  }
-  return sum;
-}
 function isPrime(n){
   var c= 0;
   for( var i = 1; i <= n; i++){
@@ -19,6 +10,15 @@ function isPrime(n){
   else
   return n;
 }
+
+function sumPrimes(args) {
+  var sum = 0;
+  for( var i = 1; i <= args; i++ ){
+    sum = sum + isPrime(i);
+  }
+  return sum;
+}
+
 
 export {
   sumPrimes,
