@@ -9,7 +9,7 @@
             "completed": false
         },
         "diff-array": {
-            "completed": false
+            "completed": true
         },
         "longest-word-in-string": {
             "completed": true
@@ -21,16 +21,16 @@
             "completed": false
         },
         "get-index-to-ins": {
-            "completed": false
+            "completed": true
         },
         "repeat-string-num-times": {
             "completed": true
         },
         "binary-agent": {
-            "completed": false
+            "completed": true
         },
         "bouncer": {
-            "completed": false
+            "completed": true
         },
         "sum-all": {
             "completed": true
@@ -39,7 +39,7 @@
             "completed": false
         },
         "convert-to-roman": {
-            "completed": false
+            "completed": true
         },
         "large-of-four": {
             "completed": true
@@ -48,7 +48,7 @@
             "completed": false
         },
         "rotated-string": {
-            "completed": false
+            "completed": true
         }
     }
 }

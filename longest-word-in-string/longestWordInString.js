@@ -1,6 +1,6 @@
 
-function longestWordInString(args) {
-  var strSplit = args.split(' ');
+function longestWordInString(str) {
+  var strSplit = str.split(' ');
   var longestWord = 0;
   for(var i = 0; i < strSplit.length; i++){
     if(strSplit[i].length > longestWord){
