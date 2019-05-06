@@ -1,6 +1,17 @@
+const footballTeam = [
+  'Rooney',
+  'Ronaldo',
+  'Messi',
+  'Pogba',
+];
 
-function templateLiterals(...args) {
-  return args;
+const getNamesOfFootballTeam = () => footballTeam.join(', ');
+
+function templateLiterals() {
+  const message = `There are ${footballTeam.length} people on the football team.`
+    + ` Their names are ${getNamesOfFootballTeam()}.`;
+
+  return message;
 }
 
 export {
