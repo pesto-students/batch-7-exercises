@@ -1,6 +1,8 @@
 
 function joinArrays(...args) {
-  return args;
+  let joinedArray = []
+  joinedArray.concat(...args)
+  return joinedArray
 }
 
 export {
