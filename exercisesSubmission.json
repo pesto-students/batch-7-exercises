@@ -3,7 +3,7 @@
     "segmentName": "segment-2",
     "exercises": {
         "reverse-string": {
-            "completed": false
+            "completed": true
         },
         "is-palindrome": {
             "completed": true
