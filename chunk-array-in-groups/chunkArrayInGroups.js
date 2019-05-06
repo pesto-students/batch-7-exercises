@@ -1,16 +1,11 @@
 
 function chunkArrayInGroups(inputArray,arrayLength) {
-  var inputArrayLength = inputArray.length
-  var length
+ 
   var outputArray = []
-  for(i=0;i<inputArrayLength;i++){
-      if( i < arrayLength){
-           length +=1;
-      }
-      else{
-         outputArray.push(inputArray.slice(i))
-      }
+  for(let i = 0;i < inputArray.length;i += arrayLength){
+      outputArray.push(inputArray.slice(i, (i + arrayLength)))
   }
+  return outputArray
 }
 
 export {
