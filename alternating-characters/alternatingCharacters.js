@@ -1,19 +1,18 @@
 
 function alternatingCharacters(arr) {
-  arr.map((element)=>{
-        var characterArray =  element.split()
-        var previousCharacter
+  arr.map((element)=> {
+        var characterArray =  element.split("")
         var charExtractionCount = 0
-        characterArray.map((character)=>{
-            if(character == previousCharacter){
-               charExtractionCount += 1
-               previousCharacter = character
-            }
-            return charExtractionCount
-        })
+        for(let i =0; i <= characterArray.length - 1; i++) {
+          if(characterArray[i] === characterArray[i + 1]) {
+            charExtractionCount += 1
+          }  
+        }
+        return charExtractionCount
+        
+        
   })
 }
-
 export {
   alternatingCharacters,
 };
