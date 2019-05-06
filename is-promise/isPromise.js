@@ -1,8 +1,8 @@
-
-function isPromise(...args) {
-  return args;
+function isPromise(promise) {
+  if (promise instanceof Promise) {
+    return true;
+  }
+  return false;
 }
 
-export {
-  isPromise,
-};
+export { isPromise };
