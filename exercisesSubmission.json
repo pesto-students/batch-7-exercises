@@ -18,13 +18,13 @@
             "completed": true
         },
         "parse-ms": {
-            "completed": false
+            "completed": true
         },
         "round-to": {
             "completed": true
         },
         "time-was": {
-            "completed": false
+            "completed": true
         },
         "abbreviate-string": {
             "completed": true
@@ -33,13 +33,13 @@
             "completed": true
         },
         "alien-alphabet": {
-            "completed": false
+            "completed": true
         },
         "permutate-with-repetitions": {
-            "completed": false
+            "completed": true
         },
         "throw-errors": {
-            "completed": false
+            "completed": true
         }
     }
 }
