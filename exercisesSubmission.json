@@ -24,7 +24,7 @@
             "completed": true
         },
         "repeat-string-num-times": {
-            "completed": false
+            "completed": true
         },
         "binary-agent": {
             "completed": true
@@ -33,10 +33,10 @@
             "completed": true
         },
         "sum-all": {
-            "completed": false
+            "completed": true
         },
         "pairwise": {
-            "completed": false
+            "completed": true
         },
         "convert-to-roman": {
             "completed": false
