@@ -1,14 +1,14 @@
 
-function doubleOddNumbers(arr) {
-   arr = arr.filter((el)=> {
-    if(el%2 !== 0) {
+function doubleOddNumbers(numberArray) {
+   numberArray = numberArray.filter((el)=> {
+    if(el%2 === 1) {
       return (el);
     }
   });
-  arr = arr.map(el => {
+  numberArray = numberArray.map(el => {
     return (el * 2);
   })
-  return (arr);
+  return (numberArray);
 }
 
 export {
