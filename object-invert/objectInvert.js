@@ -1,10 +1,17 @@
 
-function objectInvert(...args) {
+function objectInvert(args) {
   
-  var newData = Object.keys(args).reduce(function(obj,key){
-    obj[ args[key] ] = key;
-    return obj;
- },{});
+//   var newData = Object.keys(args).reduce(function(obj,key){
+//     obj[args[key]] = key;
+//  },{});
+var temp;
+
+for( var keys in args) {
+  temp = keys;
+  keys = args[keys];
+  args[keys] = temp;
+}
+console.log(args);
 }
 
 // export {

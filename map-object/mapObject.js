@@ -1,19 +1,12 @@
 
+
 function mapObject(obj, el) {
-  var arrayOfValues = Object.values(obj);
-  arrayOfValues = arrayOfValues.map(el);
-  var arrayOfKeys = Object.keys(obj);
-  //obj = Object.assign(arrayOfValues);
-  
-  
+ for( let attribute in obj) {
+   obj[attribute] = el(obj[attribute]);
+ }
+  return obj;
 }
 
-// export {
-//   mapObject,
-// };
-const obj = {
-  x: 2,
-  y: 5,
-  z: 10,
+export {
+  mapObject,
 };
-mapObject(obj, n => (n * n));
