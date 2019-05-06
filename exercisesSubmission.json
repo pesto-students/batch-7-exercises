@@ -3,7 +3,7 @@
     "segmentName": "segment-2",
     "exercises": {
         "alphabetic-shift": {
-            "completed": false
+            "completed": true
         },
         "all-promises": {
             "completed": true
