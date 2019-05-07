@@ -21,7 +21,7 @@
             "completed": true
         },
         "is-iterable-empty": {
-            "completed": false
+            "completed": true
         },
         "range-iter": {
             "completed": false
