@@ -12,25 +12,25 @@
             "completed": true
         },
         "reject-promise": {
-            "completed": false
+            "completed": true
         },
         "queue": {
-            "completed": false
+            "completed": true
         },
         "person": {
-            "completed": false
+            "completed": true
         },
         "sequential-promise": {
-            "completed": false
+            "completed": true
         },
         "timeout": {
             "completed": false
         },
         "is-promise": {
-            "completed": false
+            "completed": true
         },
         "promise-all-props": {
-            "completed": false
+            "completed": true
         },
         "sleep-promise": {
             "completed": false

@@ -7,8 +7,8 @@ function alphabeticShift(string) {
       shiftedString += (char === 'z' ? 'a' : 'A');
     } else {
       const asciiValue = char.charCodeAt(0);
-      const shiftedChar = String.fromCharCode(asciiValue + 1);
-      shiftedString += shiftedChar;
+      const shiftedCharByOne = String.fromCharCode(asciiValue + 1);
+      shiftedString += shiftedCharByOne;
     }
   }
   return shiftedString;
