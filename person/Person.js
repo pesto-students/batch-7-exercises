@@ -1,4 +1,4 @@
-const isNumber = char => /^\d+$/.test(char);
+const isNumber = char => /^\d$/.test(char);
 
 class Person {
   constructor(firstName, lastName, dateOfBirth) {
