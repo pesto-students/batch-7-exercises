@@ -9,6 +9,7 @@ function arrayAddition(arr1,arr2) {
   const addedArray = arr1.map((number,index)=> {
     number + arr2[index]
   })
+  return addedArray
 }
 
 export {
