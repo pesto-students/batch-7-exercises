@@ -1,12 +1,10 @@
 
 //[WIP]:
 
-function isPromise(...args) {
-  return args;
+function isPromise(promise) {
+  console.log(promise instanceof Promise);
 }
 
-// export {
-//   isPromise,
-// };
-isPromise(promise);
-const promise = Promise.resolve(1);
+export {
+  isPromise,
+};
