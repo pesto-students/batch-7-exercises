@@ -6,8 +6,13 @@ class Cycled {
   }
 
   set index(value) {
-    if (value === -1) {
-      this._index = this.array.length - 1;
+    if (value < 0) {
+      value = -1 * value % this.array.length;
+      if (value === 0) {
+        this._index = 0;
+      } else {
+        this._index = this.array.length - value;
+      }
     } else {
       this._index = (value % this.array.length);
     }
@@ -18,7 +23,11 @@ class Cycled {
   }
 
   [Symbol.iterator]() {
-    return this;
+    return {
+      next() {
+        return { value: this._next(), done: false };
+      }
+    };
   }
   next() {
     if (!this.isReversed) {
@@ -56,6 +65,12 @@ class Cycled {
     this.index--;
     return this.array[this.index];
   }
+
+  step(moveBy) {
+    this.index += moveBy;
+    return this.array[this.index];
+  }
+
 }
 
 export {
