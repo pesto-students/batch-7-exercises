@@ -12,7 +12,7 @@
             "completed": true
         },
         "reject-promise": {
-            "completed": false
+            "completed": true
         },
         "queue": {
             "completed": true
