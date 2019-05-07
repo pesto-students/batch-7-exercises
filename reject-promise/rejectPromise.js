@@ -1,6 +1,10 @@
+import { resolve } from "uri-js";
+import { reject } from "rsvp";
 
-function rejectPromise(...args) {
-  return args;
+function rejectPromise() {
+  return new Promise(function(resolve){
+    return resolve('REJECTED!');
+  })   
 }
 
 export {

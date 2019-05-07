@@ -12,7 +12,7 @@
             "completed": false
         },
         "reject-promise": {
-            "completed": false
+            "completed": true
         },
         "queue": {
             "completed": false
@@ -30,10 +30,10 @@
             "completed": true
         },
         "promise-all-props": {
-            "completed": false
+            "completed": true
         },
         "sleep-promise": {
-            "completed": false
+            "completed": true
         }
     }
 }

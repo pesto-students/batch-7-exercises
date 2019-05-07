@@ -7,8 +7,8 @@ if(args === undefined){
      resolve();
   })
 } 
-Promise.all([args[0], args[1], args[2]]).then(values => {
-  return values;
+Promise.all([args[0], args[1], args[2]]).then(resolve => {
+  return resolve;
 }); 
 }
 
