@@ -21,10 +21,10 @@
             "completed": true
         },
         "sequential-promise": {
-            "completed": false
+            "completed": true
         },
         "timeout": {
-            "completed": false
+            "completed": true
         },
         "is-promise": {
             "completed": true
