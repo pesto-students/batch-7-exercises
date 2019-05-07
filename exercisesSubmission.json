@@ -15,7 +15,7 @@
             "completed": true
         },
         "queue": {
-            "completed": false
+            "completed": true
         },
         "person": {
             "completed": true
