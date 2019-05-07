@@ -1,13 +1,13 @@
 
 function doubleOddNumbers(numberArray) {
-  let oddNumbersArray = []
-  oddNumbersArray = numberArray.filter((number) => {
-    if((number % 2) != 0) {
-      //number is a Odd Number
-        return number * 2;
-    }
+  
+  const OddNumbersArray = numberArray.filter((number) => {
+    number % 2 !== 0
   })
-  return oddNumbersArray
+  const doubledOddNumbersArray = OddNumbersArray.map((number)=> {
+    number * 2
+  })
+  return doubleOddNumbers
 }
 
 export {
