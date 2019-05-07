@@ -20,15 +20,14 @@ function animalSort(arr) {
         return 1;
       }
     });
-    console.log(arr);
-
+    return (arr);
   }
   
 
 
-export {
-  animalSort,
-};
+// export {
+//   animalSort,
+// };
 // const arr = [
 //   { name: 'Dog', numberOfLegs: 4 },
 //   { name: 'Bird', numberOfLegs: 2 },
