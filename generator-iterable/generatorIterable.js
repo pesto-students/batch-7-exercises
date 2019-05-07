@@ -8,7 +8,7 @@ function generatorIterable(...args) {
           return{ value : i,done : false}
         }
         else {
-          return{ done : false}
+          return{ done : true}
         }
     }
   }
