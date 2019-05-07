@@ -1,7 +1,7 @@
 
 function sortByName(a,b){
-  var animalA = a.name.toUpperCase();
-  var animalB = b.name.toUpperCase();
+  const animalA = a.name.toUpperCase();
+  const animalB = b.name.toUpperCase();
   if (animalA < animalB) {
     return -1;
   }
