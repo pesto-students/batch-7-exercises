@@ -1,6 +1,8 @@
+import { Promise } from "rsvp";
 
-function sequentialPromise(...args) {
-  return args;
+function sequentialPromise(promises) {
+  return promises.reduce((acc, currentPromise) => (acc.then(currentPromise)), Promise.resolve());
+ 
 }
 
 export {
