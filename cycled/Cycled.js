@@ -1,44 +1,60 @@
 class Cycled {
   constructor(_array) {
     this.array = _array;
-    this.index = 0;
+    this._index = 0;
     this.isReversed = false;
   }
 
   set index(value) {
     if (value === -1) {
-      this.index = this.array.length - 1;
+      this._index = this.array.length - 1;
     } else {
-      this.index = (value % this.array.length);
+      this._index = (value % this.array.length);
     }
+  }
+
+  get index() {
+    return this._index;
   }
 
   [Symbol.iterator]() {
     return this;
   }
   next() {
-    if (this.isReversed) {
-      this.index++;
-      return this.array[this.index];
+    if (!this.isReversed) {
+      return this._next();
     }
     else {
-      previous();
+      return this._previous();
     }
   }
   current() {
     return this.array[this.index];
   }
   previous() {
-    if (this.isReversed) {
-      this.index--;
-      return this.array[this.index];
+    if (!this.isReversed) {
+      return this._previous();
     }
     else {
-      next();
+      return this._next();
     }
   }
-  reverse() {
+  reversed() {
     this.isReversed = !this.isReversed;
+  }
+
+  indexOf(value) {
+    return this.array.indexOf(value);
+  }
+
+  _next() {
+    this.index++;
+    return this.array[this.index];
+  }
+
+  _previous() {
+    this.index--;
+    return this.array[this.index];
   }
 }
 
