@@ -1,6 +1,6 @@
 
-function isIterableEmpty(...args) {
-  return args;
+function isIterableEmpty(iteratorObj) { 
+  return iteratorObj.next().done;
 }
 
 export {
