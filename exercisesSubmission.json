@@ -1,39 +1,39 @@
 {
-  "day": "day-6",
-  "segmentName": "segment-2",
-  "exercises": {
-    "alphabetic-shift": {
-      "completed": false
-    },
-    "all-promises": {
-      "completed": false
-    },
-    "greet": {
-      "completed": false
-    },
-    "reject-promise": {
-      "completed": false
-    },
-    "queue": {
-      "completed": false
-    },
-    "person": {
-      "completed": false
-    },
-    "sequential-promise": {
-      "completed": false
-    },
-    "timeout": {
-      "completed": false
-    },
-    "is-promise": {
-      "completed": false
-    },
-    "promise-all-props": {
-      "completed": false
-    },
-    "sleep-promise": {
-      "completed": false
+    "day": "day-6",
+    "segmentName": "segment-2",
+    "exercises": {
+        "alphabetic-shift": {
+            "completed": true
+        },
+        "all-promises": {
+            "completed": true
+        },
+        "greet": {
+            "completed": true
+        },
+        "reject-promise": {
+            "completed": true
+        },
+        "queue": {
+            "completed": true
+        },
+        "person": {
+            "completed": true
+        },
+        "sequential-promise": {
+            "completed": true
+        },
+        "timeout": {
+            "completed": true
+        },
+        "is-promise": {
+            "completed": true
+        },
+        "promise-all-props": {
+            "completed": true
+        },
+        "sleep-promise": {
+            "completed": false
+        }
     }
-  }
 }
