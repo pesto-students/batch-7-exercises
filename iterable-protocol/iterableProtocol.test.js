@@ -8,9 +8,9 @@ describe('A simple iterable without items inside, implementing the right protoco
     it('the object must have a function assigned to a key `next`', () => {
       expect(typeof iteratorFunction().next).toBe('function');
     });
-    it('calling `next()` must return an object with `{done: true}`', () => {
+    it('calling `next()` must return an object with `{done: false}`', () => {
       expect(iteratorFunction().next()).toEqual({
-        done: true,
+        done: false,
       });
     });
   });
