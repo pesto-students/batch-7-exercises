@@ -3,7 +3,7 @@
     "segmentName": "segment-2",
     "exercises": {
         "built-in-iterables": {
-            "completed": false
+            "completed": true
         },
         "ackermann": {
             "completed": true
