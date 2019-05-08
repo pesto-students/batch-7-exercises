@@ -1,8 +1,9 @@
 
-function arithmeticExpressionEvaluator(...args) {
-  return args;
+function arithmeticExpressionEvaluator(str) {
+  console.log(str.split(''));
 }
 
-export {
-  arithmeticExpressionEvaluator,
-};
+// export {
+//   arithmeticExpressionEvaluator,
+// };
+arithmeticExpressionEvaluator('1 + 3 * 5');

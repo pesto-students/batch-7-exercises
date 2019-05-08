@@ -19,6 +19,7 @@ function animalSort(arr) {
       else {
         return 1;
       }
+      return difference;
     });
     return (arr);
   }
