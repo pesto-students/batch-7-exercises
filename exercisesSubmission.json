@@ -1,51 +1,51 @@
 {
-  "day": "day-9",
-  "segmentName": "segment-1",
-  "exercises": {
-    "hamming-distance": {
-      "completed": false
-    },
-    "knuth-morris-pratt": {
-      "completed": false
-    },
-    "longest-common-substring": {
-      "completed": false
-    },
-    "binary-search": {
-      "completed": false
-    },
-    "primality-test": {
-      "completed": false
-    },
-    "boolean-expression-evaluator": {
-      "completed": false
-    },
-    "debugging-html": {
-      "completed": false
-    },
-    "form-attributes": {
-      "completed": false
-    },
-    "form": {
-      "completed": false
-    },
-    "html-classes": {
-      "completed": false
-    },
-    "html-text-formatting": {
-      "completed": false
-    },
-    "iframe": {
-      "completed": false
-    },
-    "navigation-menu-start": {
-      "completed": false
-    },
-    "strikeout": {
-      "completed": false
-    },
-    "tooltip": {
-      "completed": false
+    "day": "day-9",
+    "segmentName": "segment-1",
+    "exercises": {
+        "hamming-distance": {
+            "completed": true
+        },
+        "knuth-morris-pratt": {
+            "completed": false
+        },
+        "longest-common-substring": {
+            "completed": false
+        },
+        "binary-search": {
+            "completed": false
+        },
+        "primality-test": {
+            "completed": false
+        },
+        "boolean-expression-evaluator": {
+            "completed": true
+        },
+        "debugging-html": {
+            "completed": false
+        },
+        "form-attributes": {
+            "completed": false
+        },
+        "form": {
+            "completed": false
+        },
+        "html-classes": {
+            "completed": false
+        },
+        "html-text-formatting": {
+            "completed": false
+        },
+        "iframe": {
+            "completed": false
+        },
+        "navigation-menu-start": {
+            "completed": false
+        },
+        "strikeout": {
+            "completed": false
+        },
+        "tooltip": {
+            "completed": false
+        }
     }
-  }
 }
