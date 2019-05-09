@@ -6,13 +6,13 @@
             "completed": false
         },
         "is-palindrome": {
-            "completed": false
+            "completed": true
         },
         "diff-array": {
-            "completed": false
+            "completed": true
         },
         "longest-word-in-string": {
-            "completed": false
+            "completed": true
         },
         "telephone-check": {
             "completed": false
@@ -21,7 +21,7 @@
             "completed": false
         },
         "get-index-to-ins": {
-            "completed": false
+            "completed": true
         },
         "repeat-string-num-times": {
             "completed": false
@@ -33,7 +33,7 @@
             "completed": true
         },
         "sum-all": {
-            "completed": false
+            "completed": true
         },
         "pairwise": {
             "completed": false
@@ -42,7 +42,7 @@
             "completed": false
         },
         "large-of-four": {
-            "completed": false
+            "completed": true
         },
         "steamroll-array": {
             "completed": false
