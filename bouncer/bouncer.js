@@ -1,4 +1,3 @@
-
 function bouncer(args) {
   var isTruthy = args.filter((val) => {
     if(Boolean(val)){
@@ -7,6 +6,7 @@ function bouncer(args) {
   })
   return isTruthy;
 } 
+ 
 
 export {
   bouncer,
