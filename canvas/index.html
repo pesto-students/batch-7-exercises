@@ -1,1 +1,43 @@
-Make some complex figures using canvas.
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Canvas</title>
+    <script type="application/javascript">
+      function drawCanvas() {
+        const canvas = document.getElementById("rectangleCanvas");
+        if (canvas.getContext) {
+          var ctx = canvas.getContext("2d");
+
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.moveTo(250, 0);
+          ctx.lineTo(5, 500);
+          ctx.moveTo(250, 0);
+          ctx.lineTo(500, 500);
+          ctx.moveTo(0, 500);
+          ctx.lineTo(900, 500);
+          ctx.moveTo(371, 250);
+          ctx.lineTo(550, 0);
+          ctx.moveTo(550, 0);
+          ctx.lineTo(900, 500);
+          ctx.closePath();
+
+          ctx.stroke();
+          ctx.fillStyle = "#FFCC00";
+          ctx.arc(400, 85, 50, 0, 2 * Math.PI);
+
+          ctx.fill();
+        }
+      }
+    </script>
+  </head>
+  <body onload="drawCanvas()">
+    <canvas id="rectangleCanvas" width="2000" height="2000">
+      Your browser can't support the canvas, please upadate it to latest
+      version.
+    </canvas>
+  </body>
+</html>
