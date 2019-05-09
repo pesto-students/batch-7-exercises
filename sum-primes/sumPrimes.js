@@ -9,8 +9,7 @@ function isPrime(num)
   return num > 1;
 }
 
-function sumPrimes(n) {
-  debugger;
+function sumPrimes(n) { 
   let sumOfPrimes = 0;
   while(n!=1) {
     if(isPrime(n)) { 

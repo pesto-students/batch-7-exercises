@@ -21,7 +21,7 @@
             "completed": true
         },
         "limit-function-call-count": {
-            "completed": false
+            "completed": true
         },
         "cache-function": {
             "completed": true
