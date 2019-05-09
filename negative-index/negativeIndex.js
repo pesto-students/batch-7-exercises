@@ -1,9 +1,9 @@
 
-function negativeIndex(fixture) {
-  if (!(fixture instanceof Array)) {
+function negativeIndex(target) {
+  if (!(target instanceof Array)) {
     throw new TypeError ('TypeError, /Only arrays are supported/');
   }
-  const proxy = new Proxy(fixture,{
+  const proxy = new Proxy(target,{
     get (target, prop) {
       if (!isNaN(prop)) {
         prop = parseInt (prop, 10);
@@ -12,8 +12,12 @@ function negativeIndex(fixture) {
         }
       }
       return target[prop];
-    }
-  });
+    } 
+  }
+  set () {
+    
+  }
+  );
   return proxy;
 }
 
