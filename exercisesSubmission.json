@@ -1,48 +1,48 @@
 {
-  "day": "day-8",
-  "segmentName": "segment-2",
-  "exercises": {
-    "search-sorted-matrix": {
-      "completed": false
-    },
-    "unnest": {
-      "completed": false
-    },
-    "uniq": {
-      "completed": false
-    },
-    "uncurry-n": {
-      "completed": false
-    },
-    "union": {
-      "completed": false
-    },
-    "slice": {
-      "completed": false
-    },
-    "split-every": {
-      "completed": false
-    },
-    "substitution-cipher": {
-      "completed": false
-    },
-    "sudan-fn": {
-      "completed": false
-    },
-    "summable": {
-      "completed": false
-    },
-    "theatre": {
-      "completed": false
-    },
-    "tiles": {
-      "completed": false
-    },
-    "to-pairs": {
-      "completed": false
-    },
-    "type-js": {
-      "completed": false
+    "day": "day-8",
+    "segmentName": "segment-2",
+    "exercises": {
+        "search-sorted-matrix": {
+            "completed": true
+        },
+        "unnest": {
+            "completed": false
+        },
+        "uniq": {
+            "completed": false
+        },
+        "uncurry-n": {
+            "completed": false
+        },
+        "union": {
+            "completed": false
+        },
+        "slice": {
+            "completed": false
+        },
+        "split-every": {
+            "completed": false
+        },
+        "substitution-cipher": {
+            "completed": false
+        },
+        "sudan-fn": {
+            "completed": false
+        },
+        "summable": {
+            "completed": false
+        },
+        "theatre": {
+            "completed": false
+        },
+        "tiles": {
+            "completed": false
+        },
+        "to-pairs": {
+            "completed": false
+        },
+        "type-js": {
+            "completed": false
+        }
     }
-  }
 }
