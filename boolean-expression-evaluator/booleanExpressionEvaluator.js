@@ -1,6 +1,6 @@
 
-function booleanExpressionEvaluator(...args) {
-  return args;
+function booleanExpressionEvaluator(boolExpression) {
+  return Boolean(boolExpression);
 }
 
 export {
