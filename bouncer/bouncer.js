@@ -1,13 +1,12 @@
-
-function bouncer(...args) {
-  let inputArray = args[0];
-  let answerArray = inputArray.filter(function(element) {
-    if (element != false) {
-      return element;
-    }
-  });
-  return answerArray;
-}
+function bouncer(args) {
+  var isTruthy = args.filter((val) => {
+    if(Boolean(val)){
+      return val;
+    } 
+  })
+  return isTruthy;
+} 
+ 
 
 export {
   bouncer,

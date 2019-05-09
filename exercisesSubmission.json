@@ -1,54 +1,54 @@
 {
-  "day": "day-3",
-  "segmentName": "segment-2",
-  "exercises": {
-    "reverse-string": {
-      "completed": false
-    },
-    "is-palindrome": {
-      "completed": false
-    },
-    "diff-array": {
-      "completed": false
-    },
-    "longest-word-in-string": {
-      "completed": false
-    },
-    "telephone-check": {
-      "completed": false
-    },
-    "rot13": {
-      "completed": false
-    },
-    "get-index-to-ins": {
-      "completed": false
-    },
-    "repeat-string-num-times": {
-      "completed": false
-    },
-    "binary-agent": {
-      "completed": false
-    },
-    "bouncer": {
-      "completed": false
-    },
-    "sum-all": {
-      "completed": false
-    },
-    "pairwise": {
-      "completed": false
-    },
-    "convert-to-roman": {
-      "completed": false
-    },
-    "large-of-four": {
-      "completed": false
-    },
-    "steamroll-array": {
-      "completed": false
-    },
-    "rotated-string": {
-      "completed": false
+    "day": "day-3",
+    "segmentName": "segment-2",
+    "exercises": {
+        "reverse-string": {
+            "completed": false
+        },
+        "is-palindrome": {
+            "completed": true
+        },
+        "diff-array": {
+            "completed": true
+        },
+        "longest-word-in-string": {
+            "completed": true
+        },
+        "telephone-check": {
+            "completed": false
+        },
+        "rot13": {
+            "completed": false
+        },
+        "get-index-to-ins": {
+            "completed": true
+        },
+        "repeat-string-num-times": {
+            "completed": false
+        },
+        "binary-agent": {
+            "completed": true
+        },
+        "bouncer": {
+            "completed": true
+        },
+        "sum-all": {
+            "completed": true
+        },
+        "pairwise": {
+            "completed": false
+        },
+        "convert-to-roman": {
+            "completed": false
+        },
+        "large-of-four": {
+            "completed": true
+        },
+        "steamroll-array": {
+            "completed": false
+        },
+        "rotated-string": {
+            "completed": false
+        }
     }
-  }
 }
