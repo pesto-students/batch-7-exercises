@@ -1,4 +1,3 @@
-import { ERROR } from "jest-validate/build/utils";
 
 function applyOperator(operator, ...numbers) {
 
@@ -46,8 +45,7 @@ function applyOperator(operator, ...numbers) {
     return modulusOfNumbers
   }
   if (operator === ""){
-    throw ERROR
-    
+    throw new Error("No Operator specified")
   }
 }
 export {
