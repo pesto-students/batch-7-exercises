@@ -1,45 +1,45 @@
 {
-  "day": "day-10",
-  "segmentName": "segment-1",
-  "exercises": {
-    "levenshtein-distance": {
-      "completed": false
-    },
-    "cartesian-product": {
-      "completed": false
-    },
-    "center-text": {
-      "completed": false
-    },
-    "cornered-string": {
-      "completed": false
-    },
-    "counting-anagrams": {
-      "completed": false
-    },
-    "cool-information-box-start": {
-      "completed": false
-    },
-    "debugging-css": {
-      "completed": false
-    },
-    "fundamental-css-comprehension": {
-      "completed": false
-    },
-    "letterheaded-paper-start": {
-      "completed": false
-    },
-    "positioning-(information-only)": {
-      "completed": false
-    },
-    "positioning-(tutorial)": {
-      "completed": false
-    },
-    "positioning-practical": {
-      "completed": false
-    },
-    "styling-tables": {
-      "completed": false
+    "day": "day-10",
+    "segmentName": "segment-1",
+    "exercises": {
+        "levenshtein-distance": {
+            "completed": false
+        },
+        "cartesian-product": {
+            "completed": false
+        },
+        "center-text": {
+            "completed": false
+        },
+        "cornered-string": {
+            "completed": false
+        },
+        "counting-anagrams": {
+            "completed": false
+        },
+        "cool-information-box-start": {
+            "completed": true
+        },
+        "debugging-css": {
+            "completed": true
+        },
+        "fundamental-css-comprehension": {
+            "completed": false
+        },
+        "letterheaded-paper-start": {
+            "completed": false
+        },
+        "positioning-(information-only)": {
+            "completed": false
+        },
+        "positioning-(tutorial)": {
+            "completed": false
+        },
+        "positioning-practical": {
+            "completed": false
+        },
+        "styling-tables": {
+            "completed": false
+        }
     }
-  }
 }
