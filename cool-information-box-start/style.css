@@ -1,5 +1,20 @@
 html {
   font-family: sans-serif;
 }
+.coolBox{
+  background-color: #c5342a;
+  padding: 16px 45px;
+  border-radius: 10px;
+  color: #E43D32;
+  text-shadow: 2px 2px 3px #1d1b1b;
+  /* background-color: white; */
+  box-shadow: 3px 2px 2px 1px #3e3b3b;
+  font-size: 26px;
+  /* box-shadow: 2px 2px 2px #fff inset; */
+  box-shadow: inset 3px 2px 6px #dcdcdc, 2px 2px 4px #000;
+  border: 2px solid #9E2E27;
+  width: 230px;
+  text-align: center;
+}
 
 /* Your CSS below here */
