@@ -1,12 +1,12 @@
 /* General styles */
 
 html {
-  font-family: 'Helvetica neue', Arial, 'sans serif';
+  font-family: "Helvetica neue", Arial, "sans serif";
   font-size: 10px;
 }
 
 body {
-  width: 80em;
+  width: 64em;
   margin: 0 auto;
 }
 
@@ -20,27 +20,30 @@ h2 {
   font-size: 3.2em;
 }
 
-pli {
-  font-size: 1.7em;
+main p,
+main li {
+  font-size: 1.3em;
+}
+
+footer p {
+  font-weight: bold;
+  font-size: 1.2em;
+  
 }
 
 /*+++ more specific section styles +++*/
 
 /* header and footer */
 
-header, footer {
-  background-colour: teal;
+header,
+footer {
+  background-color: teal;
   height: 10em;
-  padding: 2em;
-}
-
-h1, footer p {
-  margin: -70px;
+  padding: 1em;
 }
 
 h1 {
   text-align: center;
-  padding: 0.5em 0;
 }
 
 /* main content */
@@ -49,11 +52,13 @@ main {
   padding: 2em;
 }
 
-main p, main li {
+main p,
+main li {
   line-height: 2;
 }
 
 img {
-  float: right
+  float: right;
+  width: 20em;
   margin: 1.2em 2em;
 }
