@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fruit Pattern</title>
+    <style>
+        input:invalid {
+          border: 2px dashed red;
+        }
+  
+        input:valid {
+          border: 2px solid black;
+        }
+      </style>
+</head>
+<body>
+    <form>
+        <label for="choose">Would you prefer a banana or a cherry?</label>
+        <input type="text" name="i_like" id="choose" pattern="banana|cherry" title="Enter either banana or cherry" required autofocus />
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

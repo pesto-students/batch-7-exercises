@@ -1,7 +1,3 @@
-<!-- CHoose your favourite image from the internet.
-Define different clickable areas on the image.
-Clicking on the areas should open different link in a new tab. -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +7,10 @@ Clicking on the areas should open different link in a new tab. -->
   <title>Document</title>
 </head>
 <body>
-  
+  <map name="pastfuture-map">
+    <area shape="rect" coords="0, 0, 385, 502" href="https://en.wikipedia.org/wiki/Nostalgia" target="_blank" alt="Go to past"/>
+    <area shape="rect" coords="385, 0, 770, 502" href="https://en.wikipedia.org/wiki/Time_travel" target="_blank" alt="Go to future"/>
+  </map>
+  <img usemap="#pastfuture-map" src="past-future.png" alt="Past/Future" />
 </body>
 </html>

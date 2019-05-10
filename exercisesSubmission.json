@@ -1,45 +1,45 @@
 {
-  "day": "day-9",
-  "segmentName": "segment-2",
-  "exercises": {
-    "least-common-multiple": {
-      "completed": false
-    },
-    "integer-partition": {
-      "completed": false
-    },
-    "linked-list": {
-      "completed": false
-    },
-    "linked-list-node": {
-      "completed": false
-    },
-    "bizarre-string-incrementer": {
-      "completed": false
-    },
-    "adding-vector-graphics-to-web": {
-      "completed": false
-    },
-    "canvas": {
-      "completed": false
-    },
-    "form-validation": {
-      "completed": false
-    },
-    "map": {
-      "completed": false
-    },
-    "svg": {
-      "completed": false
-    },
-    "table": {
-      "completed": false
-    },
-    "html-video": {
-      "completed": false
-    },
-    "whatsapp": {
-      "completed": false
+    "day": "day-9",
+    "segmentName": "segment-2",
+    "exercises": {
+        "least-common-multiple": {
+            "completed": false
+        },
+        "integer-partition": {
+            "completed": false
+        },
+        "linked-list": {
+            "completed": false
+        },
+        "linked-list-node": {
+            "completed": false
+        },
+        "bizarre-string-incrementer": {
+            "completed": false
+        },
+        "adding-vector-graphics-to-web": {
+            "completed": true
+        },
+        "canvas": {
+            "completed": false
+        },
+        "form-validation": {
+            "completed": true
+        },
+        "map": {
+            "completed": true
+        },
+        "svg": {
+            "completed": true
+        },
+        "table": {
+            "completed": true
+        },
+        "html-video": {
+            "completed": true
+        },
+        "whatsapp": {
+            "completed": false
+        }
     }
-  }
 }
