@@ -3,17 +3,24 @@
 html {
   font-family: 'Helvetica neue', Arial, 'sans serif';
   font-size: 10px;
+  padding-left: 20em;
+  padding-right: 20em;
 }
 
 body {
-  width: 80em;
+  width: auto;
   margin: 0 auto;
 }
 
 /* Typography */
 
 h1 {
-  font-size: 4em;
+  font-size: 2.5em; 
+  text-align: center;
+  padding: 1em;
+  background-color: teal;
+  padding-left: 10em;
+  padding-right: 10em;
 }
 
 h2 {
@@ -29,19 +36,21 @@ pli {
 /* header and footer */
 
 header, footer {
-  background-colour: teal;
-  height: 10em;
+  height: 20em;
   padding: 2em;
 }
-
-h1, footer p {
-  margin: -70px;
+footer p {
+  text-align: left;
 }
 
-h1 {
+footer p {
+  margin: 40px;
   text-align: center;
-  padding: 0.5em 0;
+  background-color: teal;
+  padding: 2em;
+  text-align: left;
 }
+
 
 /* main content */
 
@@ -50,10 +59,12 @@ main {
 }
 
 main p, main li {
-  line-height: 2;
+  line-height: 2em;
+  text-align: left;
+  font-size: 1.8em;
 }
 
 img {
-  float: right
-  margin: 1.2em 2em;
+  float: right;
+  margin: 0em 1em;
 }

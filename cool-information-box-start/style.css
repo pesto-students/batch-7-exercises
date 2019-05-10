@@ -3,3 +3,16 @@ html {
 }
 
 /* Your CSS below here */
+.Box {
+  text-align: center;
+  text-size-adjust: 80%;
+  /* font-size: 2 vw; */
+  background-color: rgb(187, 6, 6);
+  width: 130px;
+  border-radius: 25px;
+  border-color: rgb(168, 2, 2);
+  color: rgb(168, 2, 2);
+  padding: 50px;
+  margin: 20px;
+  text-shadow: 2px 2px #0f0d0d;
+}
