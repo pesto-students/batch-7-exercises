@@ -21,7 +21,8 @@ h2 {
 }
 
 pli {
-  font-size: 1.7em;
+  font-size: 2.7em;
+  float: left
 }
 
 /*+++ more specific section styles +++*/
@@ -29,13 +30,16 @@ pli {
 /* header and footer */
 
 header, footer {
-  background-colour: teal;
+  background-color: teal;
   height: 10em;
   padding: 2em;
+  margin-top: 20px;
 }
 
 h1, footer p {
-  margin: -70px;
+  float: center;
+  margin-top: 20px;
+  text-align: left;
 }
 
 h1 {
@@ -51,9 +55,10 @@ main {
 
 main p, main li {
   line-height: 2;
+  font-size: medium;
 }
 
 img {
-  float: right
   margin: 1.2em 2em;
+  float: right;
 }
