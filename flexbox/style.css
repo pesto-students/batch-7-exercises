@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+header {
+  color: white;
+  background-color: #812e7f;
+  display: flex;
+  justify-content: center;
+    padding: 27px;
+}
+
+section {
+  display: flex;
+  flex-flow: row;
+}
+
+article {
+    height: 323px;
+  background-color: #76f9fb;
+  margin: 10px;
+  padding: 10px
+}
+
+article h2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.article-button {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.imagebuttons {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row;
+}
+.imagebuttons p {
+    background-color: gainsboro;
+    border: 1px solid gray;
+    padding: 4px 36px;
+    margin-right: 10px;
+    
+}
