@@ -1,33 +1,33 @@
 {
-  "day": "day-10",
-  "segmentName": "segment-2",
-  "exercises": {
-    "power-set": {
-      "completed": false
-    },
-    "longest-common-subsequnce": {
-      "completed": false
-    },
-    "eval-reverse-polish-notation": {
-      "completed": false
-    },
-    "deep-copy-object": {
-      "completed": false
-    },
-    "advanced-box-effects": {
-      "completed": false
-    },
-    "animation": {
-      "completed": false
-    },
-    "flexbox": {
-      "completed": false
-    },
-    "floats": {
-      "completed": false
-    },
-    "grids": {
-      "completed": false
+    "day": "day-10",
+    "segmentName": "segment-2",
+    "exercises": {
+        "power-set": {
+            "completed": false
+        },
+        "longest-common-subsequnce": {
+            "completed": false
+        },
+        "eval-reverse-polish-notation": {
+            "completed": false
+        },
+        "deep-copy-object": {
+            "completed": false
+        },
+        "advanced-box-effects": {
+            "completed": false
+        },
+        "animation": {
+            "completed": false
+        },
+        "flexbox": {
+            "completed": false
+        },
+        "floats": {
+            "completed": false
+        },
+        "grids": {
+            "completed": true
+        }
     }
-  }
 }
