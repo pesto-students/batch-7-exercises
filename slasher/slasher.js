@@ -1,8 +1,3 @@
+const slasher = (array, untilIndex) => array.slice(untilIndex);
 
-function slasher(...args) {
-  return args;
-}
-
-export {
-  slasher,
-};
+export { slasher };
