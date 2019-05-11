@@ -6,7 +6,7 @@ function isOdd(numberToCheck) {
   else{
     return false
   }
-}
+
 }
 
 export {
