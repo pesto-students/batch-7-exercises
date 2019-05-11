@@ -1,6 +1,10 @@
 
-function tripleAndFilter(...args) {
-  return args;
+function tripleAndFilter(arr) {
+  arr = arr.filter(el => {
+    if(el%5 === 0) {
+      return el;
+    }
+  })
 }
 
 export {
