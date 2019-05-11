@@ -13,28 +13,28 @@ function applyOperator(operator, ...numbers) {
     });
     return sumOfNumbers;
   }
-  if (operator === '-')
+  else if (operator === '-')
     {
     numbers.map((number) => {
       differenceOfNumbers -= number;
     });
     return differenceOfNumbers
   }
-  if (operator === '*')
+  else if (operator === '*')
     {
     numbers.map((number) => {
       productOfNumbers *= number;
     });
     return productOfNumbers
   }
-  if (operator === '/')
+  else if (operator === '/')
     {
     numbers.map((number) => {
       quotientOfNumbers /= number;
     });
-    return quotientOfNumbers
+    return Number(quotientOfNumbers.toFixed(4))
   }
-  if (operator === '%')
+  else if (operator === '%')
   {
     if (numbers.length === 1) {
       return numbers     
@@ -42,9 +42,9 @@ function applyOperator(operator, ...numbers) {
     numbers.map((number) => {
       modulusOfNumbers %= number;
     });
-    return modulusOfNumbers
+    return Number(modulusOfNumbers[0])
   }
-  if (operator === ""){
+  else {
     throw new Error("No Operator specified")
   }
 }

@@ -21,10 +21,10 @@
             "completed": true
         },
         "limit-function-call-count": {
-            "completed": false
+            "completed": true
         },
         "cache-function": {
-            "completed": false
+            "completed": true
         },
         "apply-operator": {
             "completed": false
