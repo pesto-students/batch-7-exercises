@@ -9,7 +9,7 @@
             "completed": true
         },
         "json-parse": {
-            "completed": false
+            "completed": true
         },
         "lowercase-keys": {
             "completed": true
@@ -18,7 +18,7 @@
             "completed": true
         },
         "parse-ms": {
-            "completed": false
+            "completed": true
         },
         "round-to": {
             "completed": false
@@ -27,10 +27,10 @@
             "completed": false
         },
         "abbreviate-string": {
-            "completed": false
+            "completed": true
         },
         "add-big-integers": {
-            "completed": false
+            "completed": true
         },
         "alien-alphabet": {
             "completed": false
@@ -39,7 +39,7 @@
             "completed": false
         },
         "throw-errors": {
-            "completed": false
+            "completed": true
         }
     }
 }
