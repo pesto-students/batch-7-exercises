@@ -1,8 +1,6 @@
 
-//[WIP]:
-
 function isPromise(promise) {
-  console.log(promise instanceof Promise);
+  return promise instanceof Promise;
 }
 
 export {

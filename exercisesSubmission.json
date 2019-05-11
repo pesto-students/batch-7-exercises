@@ -9,7 +9,7 @@
             "completed": true
         },
         "greet": {
-            "completed": false
+            "completed": true
         },
         "reject-promise": {
             "completed": false
@@ -24,13 +24,13 @@
             "completed": false
         },
         "timeout": {
-            "completed": false
+            "completed": true
         },
         "is-promise": {
-            "completed": false
+            "completed": true
         },
         "promise-all-props": {
-            "completed": false
+            "completed": true
         },
         "sleep-promise": {
             "completed": false
