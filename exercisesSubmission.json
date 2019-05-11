@@ -3,7 +3,7 @@
     "segmentName": "segment-2",
     "exercises": {
         "built-in-iterables": {
-            "completed": false
+            "completed": true
         },
         "ackermann": {
             "completed": true
@@ -24,7 +24,7 @@
             "completed": false
         },
         "array-cube-root-to-json": {
-            "completed": false
+            "completed": true
         },
         "object-assign": {
             "completed": false
