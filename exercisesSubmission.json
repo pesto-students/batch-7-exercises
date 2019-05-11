@@ -12,7 +12,7 @@
             "completed": true
         },
         "memoize": {
-            "completed": false
+            "completed": true
         },
         "curry": {
             "completed": true
