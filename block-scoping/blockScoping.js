@@ -1,6 +1,6 @@
 
 function blockScoping(n) {
-  let callbacks = [];
+  const callbacks = [];
   for (let i = 0; i <= 10; i += 1) {
     callbacks.push(() => i);
   }
