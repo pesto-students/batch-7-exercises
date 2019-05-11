@@ -1,18 +1,19 @@
 
-function createStudent(obj) {
-  if(obj === undefined) {
-    return ('The student likes JavaScript and ES2015');
+function createStudent({ likesJavaScript = true , likesES2015 = true } = {}) {
+  if (likesES2015 && likesJavaScript) {
+    return 'The student likes JavaScript and ES2015';
   }
-   if(obj.likesES2015 === false && (obj.likesJavascript === undefined || obj.likesJavascript === true)) {
-    return ('The student likes JavaScript!');
+  else if (!likesES2015 && likesJavaScript) {
+    return 'The student likes JavaScript!';
   }
-   if((obj.likesES2015 === undefined || obj.likesES2015 === true) && obj.likesJavascript === false) {
-    return ('The student likes ES2015!');
+  else if (!likesJavaScript && likesES2015) {
+    return 'The student likes ES2015!';
   }
-   if(obj.likesES2015 === undefined && obj.likesJavascript === false) {
-    return ('The student does not like much...');
+  else {
+    return 'The student does not like much...'
   }
 }
+
 
 export {
   createStudent,
