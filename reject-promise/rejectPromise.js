@@ -1,6 +1,9 @@
 
-function rejectPromise(...args) {
-  return args;
+function rejectPromise() {
+  const promise = new Promise(() => {
+    throw new Error('Error Occured');
+  });
+  return promise.catch(() => 'REJECTED!');
 }
 
 export {

@@ -1,6 +1,15 @@
+function promiseAllProps(object) {
+  const resultPromise = new Promise(() => {
+    const reultObject = {};
+    for (const key in object) {
+      object[key].then((result) => {
+        reultObject[key] = result;
+        return reultObject;
+      });
+    }
+  });
 
-function promiseAllProps(...args) {
-  return args;
+  return resultPromise;
 }
 
 export {
