@@ -1,0 +1,27 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 50px);
+  column-gap: 20px;
+  row-gap: 20px;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.col {
+  background-color: #ef9495;
+}
+.span6 {
+  grid-column-start: 2;
+  grid-column-end: 8;
+}
+
+.span2 {
+  grid-column-start: 11;
+  grid-column-end: 13;
+}
+
+.span3 {
+  grid-column-start: 8;
+  grid-column-end: 11;
+}
