@@ -1,8 +1,5 @@
-
 function longestCommonSubsequnce(...args) {
   return args;
 }
 
-export {
-  longestCommonSubsequnce,
-};
+export { longestCommonSubsequnce };
