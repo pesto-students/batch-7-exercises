@@ -1,8 +1,14 @@
+function getIndexToIns(array, valueToInsert) {
+  const sortedArray = array.sort((element1, element2) => element1 - element2);
+  let expetedIndex = sortedArray.length;
+  sortedArray.some((element, index) => {
+    if (element >= valueToInsert) {
+      expetedIndex = index;
+      return true;
+    }
+  });
 
-function getIndexToIns(...args) {
-  return args;
+  return expetedIndex;
 }
 
-export {
-  getIndexToIns,
-};
+export { getIndexToIns };

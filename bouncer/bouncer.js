@@ -1,12 +1,5 @@
-
-function bouncer(...args) {
-  let inputArray = args[0];
-  let answerArray = inputArray.filter(function(element) {
-    if (element != false) {
-      return element;
-    }
-  });
-  return answerArray;
+function bouncer(array) {
+  return array.filter(element => (typeof element === 'string' || typeof element === 'number') && element);
 }
 
 export {

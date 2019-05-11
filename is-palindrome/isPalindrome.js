@@ -1,8 +1,15 @@
+function isPalindrome(input) {
+  const inputString = input.toString();
 
-function isPalindrome(...args) {
-  return args;
+  // Removes unnecessary charecters from inputString
+  const filteredInputString = inputString.toLowerCase().replace(/[\W_]/g, '');
+
+  const reversedInputString = filteredInputString
+    .split('')
+    .reverse()
+    .join('');
+
+  return filteredInputString === reversedInputString;
 }
 
-export {
-  isPalindrome,
-};
+export { isPalindrome };
