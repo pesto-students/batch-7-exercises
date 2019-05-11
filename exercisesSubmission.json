@@ -15,7 +15,7 @@
             "completed": true
         },
         "update-inventory": {
-            "completed": false
+            "completed": true
         },
         "smallest-commons": {
             "completed": false
