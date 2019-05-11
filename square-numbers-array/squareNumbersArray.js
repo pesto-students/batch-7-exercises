@@ -1,20 +1,24 @@
 import { throwError } from "rxjs";
-
-function squareNumbersArray(arr) {
-  
-    var newArray =  arr.map(squareNumber);
-    return newArray;
-  } 
-
 function squareNumber(n){
-  if(isNumber(n))
-  { 
+  if(isNumber(n)) { 
     return Math.pow(n,2);
+  }
+  else {
+    throw new Error('My custom error');
   } 
 }
 
-function isNumber(elements)
-{
+function squareNumbersArray(numbers) { 
+  if(!Array.isArray(numbers)){
+    throw new Error('My custom error');
+  }
+    var newArray =  numbers.map(el=> squareNumber(el));
+    return newArray;
+  } 
+
+
+
+function isNumber(elements) {
   return typeof elements === 'Number'
 }
 
