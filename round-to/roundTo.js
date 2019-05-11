@@ -1,6 +1,6 @@
 
-function roundTo(...args) {
-  return args;
+function roundTo(value, digitsToRound) {
+  return value.roundTo(digitsToRound)
 }
 
 export {
