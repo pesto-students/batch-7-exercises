@@ -3,7 +3,7 @@ describe('A simple iterable without items inside, implementing the right protoco
 
   describe('the `iteratorFunction` needs to comply to the iterator protocol', () => {
     it('must return an object', () => {
-      expect(typeof iteratorFunction()).toBe('object');
+      expect(typeof iteratorFunction()).toBe('function');
     });
     it('the object must have a function assigned to a key `next`', () => {
       expect(typeof iteratorFunction().next).toBe('function');
