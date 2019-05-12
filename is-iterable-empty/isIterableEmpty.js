@@ -1,6 +1,9 @@
 
-function isIterableEmpty(...args) {
-  return args;
+function isIterableEmpty(args) {
+  for(let key of args) {
+    return false
+  }
+  return true
 }
 
 export {
