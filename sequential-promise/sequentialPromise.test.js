@@ -35,7 +35,7 @@ describe("sequentialPromise", () => {
       new Promise(resolve => {
         setTimeout(() => {
           resolve("Godfather");
-        }, 500);
+        }, 1000);
       });
 
     const p2 = movieName =>
