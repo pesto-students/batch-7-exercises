@@ -2,16 +2,6 @@ import { ConsumableUsers } from './ConsumableUsers';
 
 describe('Iterator usages', () => {
   let usersIterable = new ConsumableUsers();
-
-  // function iteratorFunction() {
-  //   return {
-  //     next: () => ({
-  //       value: consumableUsers.nextUser,
-  //       done: consumableUsers.done,
-  //     }),
-  //   };
-  // }
-
   describe('create an iterator/iterable', () => {
     it('the `usersIterable` should be iterable', () => {
       const iterable = Symbol.iterator in usersIterable;
