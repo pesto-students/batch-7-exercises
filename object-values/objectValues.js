@@ -1,8 +1,3 @@
+const objectValues = obj => Object.values(obj);
 
-function objectValues(...args) {
-  return args;
-}
-
-export {
-  objectValues,
-};
+export { objectValues };
