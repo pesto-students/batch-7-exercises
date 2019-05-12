@@ -1,6 +1,6 @@
 
-function timeout(...args) {
-  return args;
+function timeout(name) {
+  return new Promise(resolve => `Hello $name`);
 }
 
 export {
