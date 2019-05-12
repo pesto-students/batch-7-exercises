@@ -6,7 +6,7 @@ describe('Array is a built-in iterable object', () => {
       const iterator = arr[Symbol.iterator];
       const theType = typeof iterator;
 
-      expect(theType).toBe('iterator'); // 1) typeof iterator === 'iterator'?
+      expect(theType).toBe('function'); // 1) typeof iterator === 'iterator'?
     });
 
     it('can be looped with `for-of`, which expects an iterable', () => {
@@ -22,7 +22,7 @@ describe('Array is a built-in iterable object', () => {
   describe('the iterator protocol', () => {
     it('calling `next()` on an iterator returns an object according to the iterator protocol', () => {
       const iterator = arr[Symbol.iterator]();
-      const firstItem = iterator.xyz(); // 3) What is the method to iterate to the next iteration?
+      const firstItem = iterator.next(); // 3) What is the method to iterate to the next iteration?
 
       expect(firstItem).toEqual({
         done: false,
@@ -34,7 +34,7 @@ describe('Array is a built-in iterable object', () => {
     it('the after-last element has done=true', () => {
       const array = [];
       const iterator = array[Symbol.iterator]();
-      const afterLast = iterator.next;
+      const afterLast = iterator.next();
 
       expect(afterLast).toEqual({
         done: true,
