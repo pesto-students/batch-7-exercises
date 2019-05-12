@@ -1,6 +1,6 @@
 
-function timeout(...args) {
-  return args;
+function timeout(helloTo) {
+  return Promise.resolve(`Hello ${helloTo}`);
 }
 
 export {

@@ -24,7 +24,7 @@
             "completed": true
         },
         "timeout": {
-            "completed": false
+            "completed": true
         },
         "is-promise": {
             "completed": true
