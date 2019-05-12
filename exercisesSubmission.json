@@ -24,7 +24,7 @@
             "completed": false
         },
         "orbital-period": {
-            "completed": false
+            "completed": true
         },
         "object-keys": {
             "completed": true
