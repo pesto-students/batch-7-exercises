@@ -3,18 +3,26 @@ class Cycled {
     this.array = _array;
     this._index = 0;
     this.isReversed = false;
+    this.array[Symbol.iterator] = () => {
+      const that = this;
+      return Object.create({
+        next() {
+          return { value: that.next(), done: false };
+        },
+      });
+    };
   }
 
   set index(value) {
     if (value < 0) {
-      value = -1 * value % this.array.length;
+      value = (-1 * value) % this.array.length;
       if (value === 0) {
         this._index = 0;
       } else {
         this._index = this.array.length - value;
       }
     } else {
-      this._index = (value % this.array.length);
+      this._index = value % this.array.length;
     }
   }
 
@@ -22,34 +30,28 @@ class Cycled {
     return this._index;
   }
 
-  [Symbol.iterator]() {
-    return {
-      next() {
-        return { value: this._next(), done: false };
-      }
-    };
-  }
   next() {
     if (!this.isReversed) {
       return this._next();
     }
-    else {
-      return this._previous();
-    }
+    return this._previous();
   }
+
   current() {
     return this.array[this.index];
   }
+
   previous() {
     if (!this.isReversed) {
       return this._previous();
     }
-    else {
-      return this._next();
-    }
+    return this._next();
   }
+
   reversed() {
     this.isReversed = !this.isReversed;
+
+    return this.array[Symbol.iterator]();
   }
 
   indexOf(value) {
@@ -70,9 +72,6 @@ class Cycled {
     this.index += moveBy;
     return this.array[this.index];
   }
-
 }
 
-export {
-  Cycled,
-};
+export { Cycled };
