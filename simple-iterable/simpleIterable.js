@@ -1,20 +1,21 @@
 
-const simpleIterable = {
-  
-}
-simpleIterable[Symbol.iterator] = function() {
-  let count = 1 ;
+function simpleIterable() {
+  let count = 0;
   return {
-    next : function() {
-      if( count < 5) {
+    [Symbol.iterator]() {
+      
+    }
+    next: () => {
+      if (count < 5) {
         count += 1;
-        return {value : count ,done : false};
+        return { value: count, done: false };
       } else {
-        return {done : true};
+        return { done: true };
       }
     }
   }
 }
+
 
 export {
   simpleIterable,
