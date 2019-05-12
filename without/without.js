@@ -1,11 +1,14 @@
 
 function without(valuesToBeDeleted, array) {
-  const map = new Map();
-  map = array;
-  console.log (map.forEach(array));
+  let set = new Set(valuesToBeDeleted);
+  array = array.filter ((el) => {
+     if (!set.has(el)) {
+       return el;
+     }
+  });
+  return array;
 }
 
-// export {
-//   without,
-// };
-without([1, 2], [1, 2, 1, 4, 5]);
+export {
+  without,
+};

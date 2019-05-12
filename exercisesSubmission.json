@@ -9,13 +9,13 @@
             "completed": false
         },
         "known-prop": {
-            "completed": false
+            "completed": true
         },
         "negative-index": {
             "completed": false
         },
         "set-default-property": {
-            "completed": false
+            "completed": true
         },
         "private-props": {
             "completed": false
