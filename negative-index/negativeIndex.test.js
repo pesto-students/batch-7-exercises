@@ -1,7 +1,7 @@
 import { negativeIndex } from './negativeIndex';
 
 describe('negativeIndex', () => {
-  test('behaves like an array', () => {
+  test.only('behaves like an array', () => {
     const fixture = negativeIndex(['foo', 'bar', 'baz']);
     expect(fixture.length).toBe(3);
     expect(fixture.toString()).toBe('foo,bar,baz');

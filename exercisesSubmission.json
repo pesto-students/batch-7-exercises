@@ -1,36 +1,36 @@
 {
-  "day": "day-8",
-  "segmentName": "segment-1",
-  "exercises": {
-    "on-change": {
-      "completed": false
-    },
-    "proxy-iterable": {
-      "completed": false
-    },
-    "known-prop": {
-      "completed": false
-    },
-    "negative-index": {
-      "completed": false
-    },
-    "set-default-property": {
-      "completed": false
-    },
-    "private-props": {
-      "completed": false
-    },
-    "xprod": {
-      "completed": false
-    },
-    "without": {
-      "completed": false
-    },
-    "values-in": {
-      "completed": false
-    },
-    "values": {
-      "completed": false
+    "day": "day-8",
+    "segmentName": "segment-1",
+    "exercises": {
+        "on-change": {
+            "completed": false
+        },
+        "proxy-iterable": {
+            "completed": false
+        },
+        "known-prop": {
+            "completed": true
+        },
+        "negative-index": {
+            "completed": false
+        },
+        "set-default-property": {
+            "completed": false
+        },
+        "private-props": {
+            "completed": false
+        },
+        "xprod": {
+            "completed": false
+        },
+        "without": {
+            "completed": true
+        },
+        "values-in": {
+            "completed": false
+        },
+        "values": {
+            "completed": false
+        }
     }
-  }
 }
