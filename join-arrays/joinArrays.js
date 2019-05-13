@@ -1,6 +1,7 @@
 
 function joinArrays(...args) {
-  return args;
+  let joinedArray = [] = args.flat()
+  return joinedArray
 }
 
 export {
