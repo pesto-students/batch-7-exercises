@@ -4,10 +4,10 @@ function mapFilterAndReduce(personArray) {
   personArray.map((person) => {
       let firstNameLength = person.firstName.length
       if(firstNameLength < 5) {
-        firstNameObject.firstName = person.firstName
-        firstNameObject.firstNameLength = person.length
-      }
+      return firstNameObject[person.firstName] = person.firstName.length  
+    }
   })
+  return firstNameObject
 }
 
 export {
