@@ -1,8 +1,5 @@
-
-function daysInMonth(...args) {
-  return args;
+function daysInMonth(year, monthNumber) {
+  return new Date(year, monthNumber, 0).getDate();
 }
 
-export {
-  daysInMonth,
-};
+export { daysInMonth };
