@@ -5,9 +5,11 @@ function addBigIntegers(addString) {
   var sum = 0
   splittedStringArray.map((element)=> {
      element = Number(element)
-     return sum += element   
+     sum = (sum + element)  
+     return sum.toPrecision()
+     
   })
-  return sum.toFixed()
+  return sum.toString()
 }
 
 export {
