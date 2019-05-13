@@ -1,5 +1,6 @@
 
-function savingsAccount(...accountDetails) {
+function savingsAccount(accountDetails) {
+  
   const myAccount = {
     _accountNumber: accountDetails[0],
     _email: accountDetails[1],

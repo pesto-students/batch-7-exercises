@@ -9,7 +9,7 @@
             "completed": false
         },
         "request-validator": {
-            "completed": false
+            "completed": true
         },
         "memoize": {
             "completed": false
