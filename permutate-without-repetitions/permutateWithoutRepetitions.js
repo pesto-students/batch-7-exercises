@@ -1,8 +1,20 @@
+//[WIP]:
+function factorial(number) {
+  let result = 1;
 
-function permutateWithoutRepetitions(...args) {
-  return args;
+  for (let i = 1; i <= number; i += 1) {
+    result *= i;
+  }
+
+  return result;
 }
 
-export {
-  permutateWithoutRepetitions,
-};
+function permutateWithoutRepetitions(arr) {
+  let length = factorial(arr.length);
+}
+
+// export {
+//   permutateWithoutRepetitions,
+// };
+
+const permutations1 = permutateWithoutRepetitions(['A', 'B']);
