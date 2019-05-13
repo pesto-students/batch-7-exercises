@@ -1,0 +1,42 @@
+{
+    "day": "day-2",
+    "segmentName": "segment-2",
+    "exercises": {
+        "array-sum-test": {
+            "completed": true
+        },
+        "create-object-test": {
+            "completed": true
+        },
+        "every-nth-test": {
+            "completed": true
+        },
+        "factorial-test": {
+            "completed": true
+        },
+        "get-name-test": {
+            "completed": true
+        },
+        "logical-operators": {
+            "completed": true
+        },
+        "number-sum-test": {
+            "completed": true
+        },
+        "return-a-function-test": {
+            "completed": true
+        },
+        "return-a-string-test": {
+            "completed": true
+        },
+        "return-true-test": {
+            "completed": true
+        },
+        "stack-test": {
+            "completed": true
+        },
+        "sum-test": {
+            "completed": true
+        }
+    }
+}

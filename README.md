@@ -1,37 +1,127 @@
-# Pesto Exercises Repository
+<p align="center">
+  <a href="https://pesto.tech/">
+    <img alt="PESTO" src="https://www.pesto.tech/assets/pestoblack.svg" width="500">
+  </a>
+</p>
 
-- This repository contains exercises.
-- The branches are named using the convention **DAY**-**SEGMENT**. For example, `day-4-segment-2`
-- You can see all the branches using `git branch -a`
+# Questions:
 
-## How to do the exercises
+## Instructions:
+All the answers should be written in proper English.
 
-- Click on 'Fork' and make an repository in your account.
-- Clone your version of the exercise repository.
+---
+
+**1) Why should we write tests?**
+
+**2) How much code coverage is required? Comment.**
+
+**3) What kind of test is this? Explain your choice of answer.**
+  #### Options:
+  - End to end (E2E)
+  - Integration
+  - Unit
+
+      ```js
+        var request = require('supertest');
+        var app = require('../server');
+
+        describe('API Tests', function() {
+          var task  = {
+            name: 'test',
+          };
+
+          describe('Get all tasks', function() {
+            it('should get all tasks', function(done) {
+              request(app)
+                .get('/tasks')
+                .end(function(err, res) {
+                  expect(res.statusCode).toBe(200);
+                  expect(Array.isArray(res.body)).toBe(true);
+                  done();
+                });
+            });
+          });
+
+          describe('Create task ', function() {
+            it('should create a task', function(done) {
+              request(app)
+                .post('/tasks')
+                .send(task)
+                .end(function(err, res) {
+                  expect(res.statusCode).toBe(200);
+                  expect(res.body.name).toBe('test');
+                  task = res.body;
+                  done();
+                });
+            });
+          });
+        });
+      ```
+
+**4) Below are 2 snippets of code which achieve the same functionality. Which snippet of code is better testable and WHY?**
+
+  ```js
+    // 1
+    function valIncrementer(val, disabled) {
+      var nextVal = val + 1;
+      function clipToUpperLimit() {
+        if (val >= 10) {
+          nextVal = v10;
+          secondStageSetter()
+        }
+      }
+      function clipToLowerLimit() {
+        if (val <= 0) {
+          nextVal = 0;
+          secondStageSetter()
+        }
+      }
+      function secondStageSetter() {
+        if (disabled) {
+          nextVal = val
+        }
+      }
+      function run() {
+        clipToUpperLimit()
+        clipToLowerLimit()
+      }
+      run()
+      return nextVal
+    }
+
+    // 2
+    const incrementedVal = (val) => val + 1;
+    function substituteVal(val, low, high) {
+      if (val >= high) return high
+      else if (val <= low) return low
+      else return val
+    }
+    function shouldIncrement(val, disabled) {
+      return val >= 0 && val < 10 && !disabled
+    }
+    function valIncrementer(val, disabled) {
+      if (shouldIncrement(val, disabled)) {
+        return incrementedVal(val)
+      }
+      return substituteVal(val, 0, 10)
+    }
   ```
-    git clone <link to forked repo>
+
+  **5) Describe the difference between the two tests below. Which one is ideal and WHY?**
+
+  ```js
+      // 1
+      it('should send the profile data to the server and update the profile view properly', function() {
+        expect(...)to(...);
+        expect(...)to(...);
+      });
+
+      // 2
+      it('should send the profile data to the server', function() {
+        expect(...)to(...);
+      });
+
+      it('should update the profile view properly', function() {
+        expect(...)to(...);
+      });
   ```
-- Install all dependencies
-  ```
-    yarn
-  ```
-- To do the exercises in branch `day-2-segment-1`
-  ```
-    git checkout day-2-segment-1
-  ```
-- Do all the questions of a particular segment and make sure that all the tests pass.
-- For example, if the folder name is `your-name`, then it will contain one file `yourName.test.js`. 
-- You need to create another file `yourName.js`. (**Make sure that the filename is correct.**)
-- Make the required function or class and export it. **Don't use default exports. Only named exports are allowed.**
-- Do your work and then push to the branch
-  ```
-    git add .
-    git commit -m "your commit message"
-    git push origin segment-1
-  ```
-- The commit message should be in the format 
-```
-Complete Day 3 Segment 1
-```
-- Push your code to your version of the exercise repository.
-- Make a Pull Request to the original repository. **Ensure that you are setting up the correct base.**
