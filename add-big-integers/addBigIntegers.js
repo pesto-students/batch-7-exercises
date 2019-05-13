@@ -1,8 +1,12 @@
-
-function addBigIntegers(...args) {
-  return args;
+//[WIP]:
+function addBigIntegers(...arr) {
+  return arr;
 }
 
-export {
-  addBigIntegers,
-};
+// export {
+//   addBigIntegers,
+// };
+addBigIntegers(`3
+539
+8
+201`);
