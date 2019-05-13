@@ -21,7 +21,7 @@
             "completed": false
         },
         "truth-check": {
-            "completed": false
+            "completed": true
         },
         "orbital-period": {
             "completed": false
@@ -45,7 +45,7 @@
             "completed": true
         },
         "user-check-password": {
-            "completed": false
+            "completed": true
         }
     }
 }
