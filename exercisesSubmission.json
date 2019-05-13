@@ -6,7 +6,7 @@
             "completed": true
         },
         "savings-account": {
-            "completed": false
+            "completed": true
         },
         "request-validator": {
             "completed": false
