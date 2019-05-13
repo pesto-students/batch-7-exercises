@@ -1,0 +1,51 @@
+{
+    "day": "day-4",
+    "segmentName": "segment-1",
+    "exercises": {
+        "slasher": {
+            "completed": true
+        },
+        "chunk-array-in-groups": {
+            "completed": true
+        },
+        "find-element": {
+            "completed": true
+        },
+        "drop-elements": {
+            "completed": true
+        },
+        "update-inventory": {
+            "completed": true
+        },
+        "smallest-commons": {
+            "completed": true
+        },
+        "truth-check": {
+            "completed": true
+        },
+        "orbital-period": {
+            "completed": true
+        },
+        "object-keys": {
+            "completed": true
+        },
+        "object-values": {
+            "completed": true
+        },
+        "map-object": {
+            "completed": true
+        },
+        "object-pairs": {
+            "completed": true
+        },
+        "object-invert": {
+            "completed": true
+        },
+        "object-defaults": {
+            "completed": true
+        },
+        "user-check-password": {
+            "completed": true
+        }
+    }
+}
