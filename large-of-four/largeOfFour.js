@@ -1,8 +1,16 @@
+function largeOfFour(arrayOfNumericArray) {
+  var conatinsMaxOfSubArray = [];
 
-function largeOfFour(...args) {
-  return args;
+  arrayOfNumericArray.forEach(numericArray => {
+    var max = Number.MIN_VALUE;
+    numericArray.forEach(number => {
+      if (number > max) {
+        max = number;
+      }
+    });
+    conatinsMaxOfSubArray.push(max);
+  });
+  return conatinsMaxOfSubArray;
 }
 
-export {
-  largeOfFour,
-};
+export { largeOfFour };

@@ -1,8 +1,18 @@
+function rot13(encodedString) {
+  var decodeString = "";
+  var letters = /^[A-Za-z]+$/;
+  var shift = 13;
+  for (var i = 0; i < encodedString.length; i++) {
+    if (encodedString[i].match(letters)) {
+      decodeString += String.fromCharCode(
+        ((encodedString.charCodeAt(i) - 65 + shift + 26) % 26) + 65
+      );
+    } else {
+      decodeString += encodedString[i];
+    }
+  }
 
-function rot13(...args) {
-  return args;
+  return decodeString;
 }
 
-export {
-  rot13,
-};
+export { rot13 };
