@@ -9,7 +9,7 @@
             "completed": true
         },
         "fibonacci-iter": {
-            "completed": false
+            "completed": true
         },
         "generator-iterable": {
             "completed": false
