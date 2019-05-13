@@ -6,10 +6,10 @@
             "completed": false
         },
         "ackermann": {
-            "completed": false
+            "completed": true
         },
         "aperture": {
-            "completed": false
+            "completed": true
         },
         "animal-sort": {
             "completed": true
@@ -24,7 +24,7 @@
             "completed": false
         },
         "array-cube-root-to-json": {
-            "completed": false
+            "completed": true
         },
         "object-assign": {
             "completed": false
