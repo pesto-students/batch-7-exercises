@@ -1,51 +1,51 @@
 {
-  "day": "day-6",
-  "segmentName": "segment-1",
-  "exercises": {
-    "bind": {
-      "completed": false
-    },
-    "block-scoping": {
-      "completed": false
-    },
-    "const-immutable": {
-      "completed": false
-    },
-    "create-student": {
-      "completed": false
-    },
-    "double-odd-numbers": {
-      "completed": false
-    },
-    "instructor": {
-      "completed": false
-    },
-    "join-arrays": {
-      "completed": false
-    },
-    "map-filter-and-reduce": {
-      "completed": false
-    },
-    "place-in-middle": {
-      "completed": false
-    },
-    "print-full-name": {
-      "completed": false
-    },
-    "sum-even-args": {
-      "completed": false
-    },
-    "template-literals": {
-      "completed": false
-    },
-    "template-tag-function": {
-      "completed": false
-    },
-    "triple-and-filter": {
-      "completed": false
-    },
-    "all-of-conditions": {
-      "completed": false
+    "day": "day-6",
+    "segmentName": "segment-1",
+    "exercises": {
+        "bind": {
+            "completed": true
+        },
+        "block-scoping": {
+            "completed": false
+        },
+        "const-immutable": {
+            "completed": false
+        },
+        "create-student": {
+            "completed": false
+        },
+        "double-odd-numbers": {
+            "completed": false
+        },
+        "instructor": {
+            "completed": false
+        },
+        "join-arrays": {
+            "completed": false
+        },
+        "map-filter-and-reduce": {
+            "completed": false
+        },
+        "place-in-middle": {
+            "completed": false
+        },
+        "print-full-name": {
+            "completed": true
+        },
+        "sum-even-args": {
+            "completed": true
+        },
+        "template-literals": {
+            "completed": true
+        },
+        "template-tag-function": {
+            "completed": false
+        },
+        "triple-and-filter": {
+            "completed": true
+        },
+        "all-of-conditions": {
+            "completed": false
+        }
     }
-  }
 }
