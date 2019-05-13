@@ -1,12 +1,13 @@
 
 function memoize(inputFunction) {
   var cache = {}
-  return (n) =>{
+  return (...args) =>{
+      let n = args.toString()
       if(n in cache) {
         return cache[n]
       } 
       else {
-        var result = inputFunction(n)
+        var result = inputFunction(...args)
         cache[n] = result
         return result
       }
