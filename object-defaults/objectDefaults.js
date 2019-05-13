@@ -1,10 +1,7 @@
 
-function objectDefaults(...args) {
-  var obj1 = args[0];
-  var obj2 = args[1];
-
-
-    return(Object.assign(obj1,obj2));
+function objectDefaults(obj1, obj2) {
+  Object.freeze(obj1);
+    return(Object.assign(obj2,obj1));
 }
 
 export {

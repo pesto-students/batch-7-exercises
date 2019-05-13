@@ -1,25 +1,14 @@
 
-function objectInvert(args) {
-  
-//   var newData = Object.keys(args).reduce(function(obj,key){
-//     obj[args[key]] = key;
-//  },{});
-var temp;
-
-for( var keys in args) {
-  temp = keys;
-  keys = args[keys];
-  args[keys] = temp;
-}
-console.log(args);
+function objectInvert(obj) {
+  let invertedObject = {};
+  Object.keys(obj).forEach ((key) => {
+    let property = obj[key];
+    invertedObject[property] = key;
+  });
+  return invertedObject;
 }
 
-// export {
-//   objectInvert,
-// };
-const obj = {
-  x: 'hi',
-  y: 'sup',
-  z: 'yo',
+export {
+  objectInvert,
 };
-const result = objectInvert(obj);
+

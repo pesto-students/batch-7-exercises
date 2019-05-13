@@ -1,8 +1,14 @@
+import { template } from "handlebars";
 
-function objectPairs(...args) {
- var obj = args[0];
+function objectPairs(obj) {
  var arr = [];
- console.log(arr.push(obj));
+ let arrayOfObjectPairs = [];
+ for (let key in obj) {
+   arr.push(key,obj[key]);
+   arrayOfObjectPairs.push(arr);
+   arr = [];
+ }
+ return arrayOfObjectPairs;
 }
 
 export {
