@@ -1,6 +1,6 @@
 
 function unnest(...args) {
-  return args;
+  return args.flat();
 }
 
 export {
