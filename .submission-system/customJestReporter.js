@@ -21,6 +21,7 @@ const extractFolderNameFrom = (filepath) => {
 class PestoCustomJestReporter {
   onTestResult(test, testResult, aggregateResult) {
     const { testFilePath, numFailingTests, numTotalTests } = testResult;
+    console.log(testFilePath)
     const folderName = extractFolderNameFrom(testFilePath);
     if (numFailingTests === 0) {
       log(bgGreen.bold(`\n${'='.repeat(10)} ${'Auto marking'.toUpperCase()} ${folderName} in ${SUBMISSION_FILE}`));
@@ -34,6 +35,7 @@ class PestoCustomJestReporter {
       }
 
       const jsObject = JSON.parse(fileContent);
+      console.log(jsObject);
       const actualExerciseObj = jsObject[EXERCISES_KEY][folderName];
       const folderNameFound = actualExerciseObj !== undefined;
 
