@@ -31,7 +31,7 @@ class FavoriteMovie extends Component {
   constructor(props) {
     // Properties object is called `props`. You can access it with `this.props`.
     super(props);
-    this.state = { movie: '' };
+    this.state = { movie: 'Hey there. Enter your favorite movie.' };
 
     // Warning! If we don't bind this method - we would not be able to update state.
   }
@@ -49,14 +49,14 @@ class FavoriteMovie extends Component {
   /* eslint-disable no-unused-vars, react/no-unused-state */
   onMovieChange(event) {
     // Huh... There's something wrong here...
-    this.setState({ badAttribute: 'ChangeME!' });
+    this.setState({ movie: '' });
   }
 
   render() {
     return (
       <div>
-        <p>My favorite movie is <span style={{ color: 'blue' }}>{this.state.movie}</span></p>
-        <input type="text" name="name" onChange={this.onMovieChange} />
+        <p>My favorite movie is <span style={{ color: 'blue' }}></span></p>
+        <input type="text" value={this.state.movie} name="name" onChange={this.onMovieChange} />
       </div>
     );
   }
