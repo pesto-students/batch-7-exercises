@@ -1,3 +1,4 @@
+
 import { privateProps } from './privateProps';
 
 describe('privateProps', () => {
