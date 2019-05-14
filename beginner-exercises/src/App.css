@@ -22,5 +22,6 @@ ul {
 
 .movie-list {
   list-style: none;
-  color: black;
+  font-size: 24px;
+  color: green;
 }
