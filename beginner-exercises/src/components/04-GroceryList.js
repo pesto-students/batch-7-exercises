@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 /*
   In this exercises, you'll will make a reactive grocery list.
@@ -23,9 +23,19 @@ class GroceryList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      groceries: [{ name: 'Apples' }, { name: 'KitKat' }, { name: 'Red Bull' }],
+      groceries: [{ name: "Apples" }, { name: "KitKat" }, { name: "Red Bull" }],
+      newGrocery: ""
     };
   }
+  onGroceryInputChange = event => {
+    this.state.newGrocery = event.target.value;
+  };
+  onAddGroceryClick = event => {
+    this.state.groceries.push({ name: this.state.newGrocery });
+    this.setState({
+      groceries: this.state.groceries
+    });
+  };
 
   render() {
     const { groceries } = this.state;
@@ -37,13 +47,28 @@ class GroceryList extends React.Component {
       Below you can see how to pass properties to child components.
       We have defined a `grocery` property for each `GroceryListItem`.
     */
-    const groceriesComponents = groceries.map(item => ( // eslint-disable-line no-unused-vars
-      <GroceryListItem grocery={item} />
-    ));
+    const groceriesComponents = groceries.map((
+      item // eslint-disable-line no-unused-vars
+    ) => <GroceryListItem grocery={item} />);
     // Hint: Don't forget about putting items into `ul`
     return (
       <div>
-        Put your code here
+        <form>
+          <label>Grocery: </label>
+          <input
+            type="text"
+            name="grocery"
+            onChange={this.onGroceryInputChange}
+          />
+          <button
+            name="addGrocery"
+            type="submit"
+            onClick={this.onAddGroceryClick}
+          >
+            Add
+          </button>
+        </form>
+        <ul>{groceriesComponents}</ul>
       </div>
     );
   }
@@ -55,14 +80,11 @@ class GroceryList extends React.Component {
 class GroceryListItem extends React.Component {
   constructor(props) {
     super(props);
+    this.state = { name: props.grocery.name };
   }
 
   render() {
-    return (
-      <li>
-        Put your code here.
-      </li>
-    );
+    return <li key={this.state.name}>{this.state.name}</li>;
   }
 }
 
