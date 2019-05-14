@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 // Task: Render "Hello World" text.
 class HelloWorld extends Component {
@@ -9,9 +9,7 @@ class HelloWorld extends Component {
   // JavaScript code. It is here just for readability purposes.
 
   render() {
-    return (
-      <h1>Fill this h1 tag with your heading!</h1>
-    );
+    return <h1>Hello World</h1>;
   }
 }
 
