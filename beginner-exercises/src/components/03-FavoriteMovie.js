@@ -24,7 +24,7 @@ class FavoriteMovie extends Component {
   If we don't set an initial state, we will get an error. It's impossible to fetch
   an object key from `null`. (null.movie!!! => Error)
 
-  Think about it: you can set movie from a cookie on component initialization!
+  Think about it: you can set movie from a cookie on component initialization!  ??
   What else could you do here?
 */
 
@@ -32,7 +32,7 @@ class FavoriteMovie extends Component {
     // Properties object is called `props`. You can access it with `this.props`.
     super(props);
     this.state = { movie: '' };
-
+    this.onMovieChange = this.onMovieChange.bind(this);
     // Warning! If we don't bind this method - we would not be able to update state.
   }
 
@@ -49,13 +49,16 @@ class FavoriteMovie extends Component {
   /* eslint-disable no-unused-vars, react/no-unused-state */
   onMovieChange(event) {
     // Huh... There's something wrong here...
-    this.setState({ badAttribute: 'ChangeME!' });
+    console.log(event.target.value);
+    this.setState({ movie: event.target.value });
   }
 
   render() {
+    const promtMessage =  'Hey there. Enter your favorite movie.';
+    const favoriteMovie = this.state.movie ? this.state.movie : promtMessage;
     return (
       <div>
-        <p>My favorite movie is <span style={{ color: 'blue' }}>{this.state.movie}</span></p>
+        <p>My favorite movie is <span style={{ color: 'blue' }}>{favoriteMovie}</span></p>
         <input type="text" name="name" onChange={this.onMovieChange} />
       </div>
     );
