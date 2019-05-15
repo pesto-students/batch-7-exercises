@@ -30,10 +30,39 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 
 // import getAddressFromCoords from './utils/getAddressFromCoords';
+import throttledGetAddressFromCoords from './utils/getAddressFromCoords';
+class GeoAddress extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      address: ''
+    }
+    this.getAddress = this.getAddress.bind(this);
+  }
+  componentDidMount() {
+    this.getAddress();
+  }
+  getAddress() {
+    const latitude = this.props.latitude;
+    const longitude = this.props.longitude;
+    throttledGetAddressFromCoords(latitude, longitude).then((address) => {
+      console.log(address);
+      this.setState({
+        address: address,
+      });
+    });
+  }
 
-class App extends React.Component {
-  constructor() {
-    super();
+  render() {
+    const { address } = this.state;
+    return (
+      <h2>{this.props.addr(address)}</h2>
+    )
+  }
+}
+class GeoPosition extends React.Component {
+  constructor(props) {
+    super(props);
     this.state = {
       coords: {
         latitude: null,
@@ -42,7 +71,6 @@ class App extends React.Component {
       error: null,
     };
   }
-
   componentDidMount() {
     this.geoId = navigator.geolocation.watchPosition(
       (position) => {
@@ -64,19 +92,35 @@ class App extends React.Component {
   }
 
   render() {
+    const { error, coords } = this.state;
+    return (
+      error ? this.props.error(error) : this.props.position(coords.latitude, coords.longitude)
+    )
+  }
+
+}
+class App extends React.Component {
+  render() {
     return (
       <div>
         <h1>Geolocation</h1>
-        {this.state.error ? (
-          <div>Error: {this.state.error.message}</div>
-        ) : (
+        <GeoPosition position={(lat, long) => (
+          <div>
           <dl>
             <dt>Latitude</dt>
-            <dd>{this.state.coords.latitude || <p>create a loader and show here...</p>}</dd>
+            <dd>{lat || <p>create a loader and show here...</p>}</dd>
             <dt>Longitude</dt>
-            <dd>{this.state.coords.longitude || <p>create a loader and show here...</p>}</dd>
-          </dl>
-        )}
+            <dd>{long || <p>create a loader and show here...</p>}</dd>
+          </dl> 
+          {(lat!== null && long!==null) ? 
+          (<GeoAddress latitude={lat} longitude={long} addr={(address) => (
+            <h1>{address} </h1>
+          )} ></GeoAddress>) : ' '}
+         </div> 
+        )} error={err => (<div>Error: {err.message}</div>)}
+        >
+
+        </GeoPosition>
       </div>
     );
   }
