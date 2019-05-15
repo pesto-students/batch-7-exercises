@@ -21,23 +21,42 @@ class StopWatch extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      timeElapsed: 0,
+      timer: 0,
       stopTimer: true,
       clearTimer: false
     };
+    let timerVal;
   }
 
   componentDidMount() {
     this.setState({ timeElapsed: 0 });
   }
 
+  incrementTimer() {
+    const currentTime = this.state.timer + 1;
+    this.setState({ timer: currentTime });
+  }
+
+  startTimer() {
+    this.timerVal = setInterval(this.incrementTimer.bind(this), 1000);
+  }
+
+  stopTimer() {
+    clearInterval(this.timerVal);
+  }
+
+  resetTimer() {
+    clearInterval(this.timerVal);
+    this.setState({ timer: 0 });
+  }
+
   render() {
     return (
       <div>
-        <h1>Timer : {this.state.timeElapsed}</h1>
-        <button onClick="">Start</button>
-        <button>Stop</button>
-        <button>Clear</button>
+        <h1>Timer : {this.state.timer}</h1>
+        <button onClick={() => this.startTimer()}>Start</button>
+        <button onClick={() => this.stopTimer()}>Stop</button>
+        <button onClick={() => this.resetTimer()}>Clear</button>
       </div>
     );
   }

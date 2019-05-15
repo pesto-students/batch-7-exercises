@@ -34,14 +34,16 @@ class LifeCycle extends React.Component {
     console.log("Good night, Pesto!");
   }
 
+  triggerUpdate() {
+    this.setState({ name: "Change" });
+  }
+
   // Task 4: Create a button which triggers ComponentDidUpdate lifecycle method on click.
   render() {
     return (
       <div>
         <p>Good morning, {this.state.name}!</p>
-        <button onClick={() => this.setState({ name: "Change" })}>
-          Trigger
-        </button>
+        <button onClick={() => this.triggerUpdate()}>Trigger</button>
       </div>
     );
   }
