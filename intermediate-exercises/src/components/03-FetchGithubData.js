@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
-// import axios from 'axios';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import axios from "axios";
 
 /**
  * Axios is a promise based HTTP client for the browser and node.js.
@@ -23,41 +23,54 @@ import React, { Component } from 'react';
 const GithubRepos = ({ repos }) => {
   return (
     <ul>
-      {/* Task: The list of repos here */}
+      {repos.map(repoName => (
+        <li key={repoName}>{repoName}</li>
+      ))}
     </ul>
   );
-}
+};
 
 // Task: Open the console in the browser. There will be a warning
 // about incorrect prop type for user.
 // Define the correct prop type for the prop `repos`
-GithubRepos.propTypes = {
-
-};
+GithubRepos.propTypes = {};
 
 /* eslint-disable react/no-multi-comp */
 class UsernameForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: '',
-      repos: [],
+      username: "amitbadala",
+      repos: []
     };
   }
+
+  getGithubRepoByUser() {
+    const gitUserUrl =
+      "https://api.github.com/users/" + this.state.username + "/repos";
+    axios
+      .get(gitUserUrl)
+      .then(response => {
+        if (response) {
+          let repoNames = response.data.map(repoDetails => repoDetails.name);
+          this.setState({ repos: repoNames });
+        }
+      })
+      .catch(function(error) {
+        // handle error
+        console.log(error);
+      })
+      .finally(function() {
+        // always executed
+      });
+  }
+
   render() {
     return (
       <div>
-        <input
-          type="text"
-          name="username"
-        />
-        <button
-          onClick={() => {}}
-        >
-          Get Repos
-        </button>
-        {/* Task: Display the results here. Use GithubRepos Component.
-          It should be a list of repos of the user entered */}
+        <input type="text" name="username" />
+        <button onClick={() => this.getGithubRepoByUser()}>Get Repos</button>
+        <GithubRepos repos={this.state.repos} />
       </div>
     );
   }
