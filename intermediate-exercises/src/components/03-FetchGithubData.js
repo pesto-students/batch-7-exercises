@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios'
 // import PropTypes from 'prop-types';
 // import axios from 'axios';
 
@@ -23,7 +24,7 @@ import React, { Component } from 'react';
 const GithubRepos = ({ repos }) => {
   return (
     <ul>
-      {/* Task: The list of repos here */}
+     {repos.map((name) => (<li> {name} </li>))}
     </ul>
   );
 }
@@ -43,21 +44,49 @@ class UsernameForm extends Component {
       username: '',
       repos: [],
     };
+    this.fetchRepositories = this.fetchRepositories.bind(this);
+    this.updateUserName = this.updateUserName.bind(this);
+  }
+
+  updateUserName(event) {
+    this.setState({
+      username: event.target.value,
+    })
+  }
+  fetchRepositories() {
+    const { username } = this.state;
+    axios.get(`https://api.github.com/users/${username}/repos`)
+      .then((response) => {
+        console.log(response);
+        const repositoriesNames = response.data.map((repo => repo.name));
+        console.log(repositoriesNames);
+        this.setState({
+          repos: repositoriesNames,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      }); 
   }
   render() {
+    const {repos} = this.state;
     return (
       <div>
         <input
           type="text"
           name="username"
+          onChange={this.updateUserName}
         />
         <button
-          onClick={() => {}}
+          onClick= { this.fetchRepositories }
         >
           Get Repos
         </button>
         {/* Task: Display the results here. Use GithubRepos Component.
-          It should be a list of repos of the user entered */}
+          It should be a list of repos of the user entered */
+          <GithubRepos repos={ repos ? repos : []} ></GithubRepos>
+          }
+          
       </div>
     );
   }
