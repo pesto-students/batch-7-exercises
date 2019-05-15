@@ -1,17 +1,11 @@
-import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
-// import axios from 'axios';
+//[WIP]:
 
-/**
- * Axios is a promise based HTTP client for the browser and node.js.
- * Refer to their github page to see how to use it to make HTTP requests.
- * Axios: https://github.com/axios/axios
- *
- * It is best not to fetch data from a server in the `render` method.
- * Any change to the state of a component can cause a re-render of the
- * component. This will likely happen more often than we want.
- * Use the appropriate lifecycle method to make the axios request.
- *
+import React, { Component } from 'react';
+//import PropTypes from 'prop-types';
+import axios from 'axios';
+
+
+ /*
  * Exercise:
  *
  *  Create a `GithubRepos` component that lists all the GitHub repos for a user.
@@ -21,6 +15,7 @@ import React, { Component } from 'react';
  */
 /* eslint-disable react/no-unused-state */
 const GithubRepos = ({ repos }) => {
+ // axios.get('http://api/github.com/users/'+ this.state.username +'/repos').then((data) => console.log(data)).catch((err) => console.log(err));
   return (
     <ul>
       {/* Task: The list of repos here */}
@@ -43,21 +38,37 @@ class UsernameForm extends Component {
       username: '',
       repos: [],
     };
+    this.getUserName = this.getUserName.bind(this);
+    this.fetchGitRepos = this.fetchGitRepos.bind(this);
   }
+
+  getUserName(event) {
+    this.setState({ username: event.target.value });
+    }
+
+    fetchGitRepos () {
+      axios.get('https://api.github.com/users/' + this.state.username +'/repos')
+      .then((res) => console.log(res.data))
+      .then((r) => console.log(r));
+    }
+
   render() {
     return (
       <div>
         <input
           type="text"
           name="username"
+          value={this.state.username}
+          onChange={this.getUserName}
         />
         <button
-          onClick={() => {}}
+          onClick={this.fetchGitRepos}
         >
           Get Repos
         </button>
         {/* Task: Display the results here. Use GithubRepos Component.
           It should be a list of repos of the user entered */}
+          <GithubRepos />
       </div>
     );
   }
