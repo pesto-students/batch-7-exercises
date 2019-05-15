@@ -16,31 +16,37 @@
     - Arrow left, arrow up should select the previous option
 */
 
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 class RadioGroup extends React.Component {
   static propTypes = {
     // defaultValue: PropTypes.string,                UN-COMMENT THIS LINE
-    children: PropTypes.shape().isRequired,
+    children: PropTypes.shape().isRequired
   };
   render() {
-    return (
-      <div>{this.props.children}</div>
-    );
+    return <div>{this.props.children}</div>;
   }
 }
 
 class RadioOption extends React.Component {
   static propTypes = {
     // value: PropTypes.string,                       UN-COMMENT THIS LINE
-    children: PropTypes.shape().isRequired,
+    children: PropTypes.shape().isRequired
   };
+
+  updatedSelected() {
+    //
+  }
 
   render() {
     return (
       <div>
-        <RadioIcon isSelected={false} /> {this.props.children}
+        <RadioIcon
+          isSelected={false}
+          updateSelected={() => this.updatedSelected()}
+        />{" "}
+        {this.props.children}
       </div>
     );
   }
@@ -48,21 +54,21 @@ class RadioOption extends React.Component {
 
 class RadioIcon extends React.Component {
   static propTypes = {
-    isSelected: PropTypes.bool.isRequired,
+    isSelected: PropTypes.bool.isRequired
   };
 
   render() {
     return (
       <div
         style={{
-          borderColor: '#ccc',
+          borderColor: "#ccc",
           borderWidth: 3,
-          borderStyle: this.props.isSelected ? 'inset' : 'outset',
+          borderStyle: this.props.isSelected ? "inset" : "outset",
           height: 16,
           width: 16,
-          display: 'inline-block',
-          cursor: 'pointer',
-          background: this.props.isSelected ? 'rgba(0, 0, 0, 0.05)' : '',
+          display: "inline-block",
+          cursor: "pointer",
+          background: this.props.isSelected ? "rgba(0, 0, 0, 0.05)" : ""
         }}
       />
     );
