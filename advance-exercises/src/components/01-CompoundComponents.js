@@ -16,54 +16,75 @@
     - Arrow left, arrow up should select the previous option
 */
 
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
+import { createStore } from "redux";
+
+function dispatcher(state, action) {
+  if (action.type === "CLICKED") {
+    return { isSelected: action.isSelected, value: action.value };
+  }
+  return state;
+}
+const store = createStore(dispatcher);
 
 class RadioGroup extends React.Component {
   static propTypes = {
-    // defaultValue: PropTypes.string,                UN-COMMENT THIS LINE
-    children: PropTypes.shape().isRequired,
+    defaultValue: PropTypes.string,
+    children: PropTypes.shape().isRequired
   };
   render() {
-    return (
-      <div>{this.props.children}</div>
-    );
+    return <div>{this.props.children}</div>;
   }
 }
 
 class RadioOption extends React.Component {
   static propTypes = {
-    // value: PropTypes.string,                       UN-COMMENT THIS LINE
-    children: PropTypes.shape().isRequired,
+    value: PropTypes.string,
+    children: PropTypes.shape().isRequired
   };
 
   render() {
     return (
       <div>
-        <RadioIcon isSelected={false} /> {this.props.children}
+        <RadioIcon isSelected={false} value={this.props.value} />{" "}
+        {this.props.children}
       </div>
     );
   }
 }
 
 class RadioIcon extends React.Component {
+  constructor(props) {
+    super(props);
+    console.log(props);
+    this.handleOnClick = this.handleOnClick.bind(this);
+  }
   static propTypes = {
-    isSelected: PropTypes.bool.isRequired,
+    isSelected: PropTypes.bool.isRequired
+  };
+  handleOnClick = function() {
+    store.dispatch({
+      isSelected: !this.props.isSelected,
+      value: this.props.value,
+      type: "CLICKED"
+    });
   };
 
   render() {
     return (
       <div
         style={{
-          borderColor: '#ccc',
+          borderColor: "#ccc",
           borderWidth: 3,
-          borderStyle: this.props.isSelected ? 'inset' : 'outset',
+          borderStyle: this.props.isSelected ? "inset" : "outset",
           height: 16,
           width: 16,
-          display: 'inline-block',
-          cursor: 'pointer',
-          background: this.props.isSelected ? 'rgba(0, 0, 0, 0.05)' : '',
+          display: "inline-block",
+          cursor: "pointer",
+          background: this.props.isSelected ? "rgba(0, 0, 0, 0.05)" : ""
         }}
+        onClick={this.handleOnClick}
       />
     );
   }
