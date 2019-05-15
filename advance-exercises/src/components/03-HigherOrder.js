@@ -7,17 +7,26 @@
 */
 import React from 'react';
 import PropTypes from 'prop-types';
+//import { createStore } from 'redux';
 
-function withMouse(Component) {
+
+const withMouse = (Component) => {
   return Component;
 }
 
+
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { x:0, y:0 };
+  }
+
   render() {
     const { mouse } = this.props;
+    console.log(mouse);
 
     return (
-      <div className="container">
+      <div className="container" onChange={}>
         {mouse ? (
           <h1>
             The mouse position is ({mouse.x}, {mouse.y})
