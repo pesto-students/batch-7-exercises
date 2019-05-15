@@ -7,25 +7,30 @@ class FavoriteMovie extends Component {
   }
 
   onMovieChange = event => {
-    this.state.movie = event.target.value;
-    this.state.enteredMovie = true;
-    if (this.state.movie.length === 0) {
-      this.state.enteredMovie = false;
-      this.state.movie = "Hey there. Enter your favorite movie.";
+    const movieName = event.target.value;
+    let enteredMovie = true;
+    if (movieName.length === 0) {
+      enteredMovie = false;
     }
     this.setState({
-      movie: this.state.movie,
-      enteredMovie: this.state.enteredMovie
+      movie: movieName,
+      enteredMovie: enteredMovie
     });
   };
 
   render() {
+    const { movie, enteredMovie } = this.state;
     return (
       <div>
-        <p>
-          {this.state.enteredMovie ? <label>My favorite movie is</label> : " "}{" "}
-          <span style={{ color: "blue" }}>{this.state.movie}</span>
-        </p>
+        {enteredMovie ? (
+          <p>
+            <label>My favorite movie is</label>
+            <span style={{ color: "blue" }}> {movie}</span>
+          </p>
+        ) : (
+          <p> Hey there. Enter your favorite movie. </p>
+        )}
+
         <input type="text" name="name" onChange={this.onMovieChange} />
       </div>
     );
