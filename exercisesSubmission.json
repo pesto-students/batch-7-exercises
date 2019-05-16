@@ -1,21 +1,21 @@
 {
-  "day": "day-14",
-  "segmentName": "segment-1",
-  "exercises": {
-    "merge-all": {
-      "completed": false
-    },
-    "nth-arg": {
-      "completed": false
-    },
-    "one-through-six": {
-      "completed": false
-    },
-    "omit": {
-      "completed": false
-    },
-    "setup-router": {
-      "completed": false
+    "day": "day-14",
+    "segmentName": "segment-1",
+    "exercises": {
+        "merge-all": {
+            "completed": false
+        },
+        "nth-arg": {
+            "completed": false
+        },
+        "one-through-six": {
+            "completed": false
+        },
+        "omit": {
+            "completed": false
+        },
+        "setup-router": {
+            "completed": true
+        }
     }
-  }
 }
