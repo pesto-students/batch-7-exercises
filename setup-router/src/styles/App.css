@@ -24,11 +24,17 @@ body {
   justify-content: center;
 }
 
-.active {
-  background-color: #ff8e00;
+.nav li a {
   height: 100%;
   display: flex;
   align-items: center;
   flex: 1;
   justify-content: center;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.active {
+  background-color: #ff8e00;
+  font-weight: 700;
 }
