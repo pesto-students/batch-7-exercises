@@ -12,7 +12,7 @@
             "completed": false
         },
         "omit": {
-            "completed": false
+            "completed": true
         },
         "setup-router": {
             "completed": true
