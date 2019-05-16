@@ -3,7 +3,7 @@
     "segmentName": "segment-1",
     "exercises": {
         "merge-all": {
-            "completed": false
+            "completed": true
         },
         "nth-arg": {
             "completed": false
