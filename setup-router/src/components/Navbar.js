@@ -1,8 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Home from "../components/Home";
-import About from "../components/About";
-import Contact from "../components/Contact";
+import { NavLink } from "react-router-dom";
 
 import "../styles/App.css";
 
@@ -10,12 +7,21 @@ export default class Navbar extends Component {
   render() {
     return (
       <ul className="nav">
-        {/* <li className="active">Home</li> 
-        <li>About Us</li>
-        <li>Contact</li> */}
-        <Link to="/Home/">Home</Link>
-        <Link to="/About">About</Link>
-        <Link to="/Contact/">Contact</Link>
+        <li>
+          <NavLink exact to="/Home" activeClassName="active">
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink exact to="/About" activeClassName="active">
+            About
+          </NavLink>
+        </li>
+        <li>
+          <NavLink exact to="/Contact" activeClassName="active">
+            Contact
+          </NavLink>
+        </li>
       </ul>
     );
   }
