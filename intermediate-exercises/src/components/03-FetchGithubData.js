@@ -1,41 +1,38 @@
+/* eslint-disable react/jsx-filename-extension */
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
-// import axios from 'axios';
+import PropTypes from 'prop-types';
+import axios from 'axios';
 
-/**
- * Axios is a promise based HTTP client for the browser and node.js.
- * Refer to their github page to see how to use it to make HTTP requests.
- * Axios: https://github.com/axios/axios
- *
- * It is best not to fetch data from a server in the `render` method.
- * Any change to the state of a component can cause a re-render of the
- * component. This will likely happen more often than we want.
- * Use the appropriate lifecycle method to make the axios request.
- *
- * Exercise:
- *
- *  Create a `GithubRepos` component that lists all the GitHub repos for a user.
- *  Allow the repos to be provided as a prop.
- *
- *  https://api.github.com/users/{username}/repos
- */
-/* eslint-disable react/no-unused-state */
-const GithubRepos = ({ repos }) => {
-  return (
-    <ul>
-      {/* Task: The list of repos here */}
-    </ul>
-  );
-}
-
-// Task: Open the console in the browser. There will be a warning
-// about incorrect prop type for user.
-// Define the correct prop type for the prop `repos`
-GithubRepos.propTypes = {
-
+const repoListStyle = {
+  backgroundColor: '#fffff',
+  boxShadow: '3px 5px 5px rgba(0,0,0,0.3)',
+  margin: '4px auto',
+  border: '1px solid rgba(0,0,0,0.3)',
+  padding: '8px',
+  maxWidth: '320px',
 };
 
-/* eslint-disable react/no-multi-comp */
+const GithubRepos = ({ repos }) => {
+  const listRepos = repos.map(repo => (
+    <li style={repoListStyle} key={repo.id}>
+      {repo.name}
+    </li>
+  ));
+  return <ul>{listRepos}</ul>;
+};
+
+GithubRepos.propTypes = {
+  repos: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string,
+  })),
+};
+
+GithubRepos.defaultProps = {
+  repos: [],
+};
+
+const getGitRepoURL = username => `https://api.github.com/users/${username}/repos`;
+
 class UsernameForm extends Component {
   constructor(props) {
     super(props);
@@ -43,21 +40,29 @@ class UsernameForm extends Component {
       username: '',
       repos: [],
     };
+    this.fetchRepos = this.fetchRepos.bind(this);
+    this.handleOnInputChange = this.handleOnInputChange.bind(this);
   }
+
+  fetchRepos() {
+    const { username } = this.state;
+    axios.get(getGitRepoURL(username))
+      .then(({ data }) => this.setState({ repos: data }));
+  }
+
+  handleOnInputChange({ target }) {
+    this.setState({
+      username: target.value,
+    });
+  }
+
   render() {
+    const { repos } = this.state;
     return (
       <div>
-        <input
-          type="text"
-          name="username"
-        />
-        <button
-          onClick={() => {}}
-        >
-          Get Repos
-        </button>
-        {/* Task: Display the results here. Use GithubRepos Component.
-          It should be a list of repos of the user entered */}
+        <input type="text" name="username" onChange={this.handleOnInputChange} />
+        <button type="button" onClick={this.fetchRepos}>Get Repos</button>
+        <GithubRepos repos={repos} />
       </div>
     );
   }
