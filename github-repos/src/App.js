@@ -1,9 +1,11 @@
-import React from 'react';
-
-import './App.css';
+import React from "react";
+import GithubRepo from "./components/gitHubRepos/gitHubRepo";
+import "./App.css";
 
 const App = () => (
-  <div>App</div>
+  <div>
+    <GithubRepo />
+  </div>
 );
 
 export default App;
