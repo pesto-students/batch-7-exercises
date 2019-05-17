@@ -8,11 +8,36 @@ class App extends Component {
     on: false,
     input: '',
     mainColor: 'blue',
-  }
+    message: 'No!',
+    organisationName: '',
+  };
   render() {
+    const {
+      on, input, mainColor, message, organisationName,
+    } = this.state;
+    console.log(this.state);
     return (
       <div className="App">
-        Welcome to React
+        <h1 className={mainColor}>Welcome to React</h1>
+        <p className="button-state">{message}</p>
+        <button
+          onClick={() => {
+            this.setState({ message: 'Yes!' });
+          }}
+        >
+          Click Me
+        </button>
+
+        <div>
+          <h2>{organisationName}</h2>
+          <input
+            type="text"
+            name="organisationName"
+            onChange={(event) => {
+              this.setState({ organisationName: event.target.value });
+            }}
+          />
+        </div>
       </div>
     );
   }
