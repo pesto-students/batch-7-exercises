@@ -1,21 +1,4 @@
-import React, { Component } from "react";
-
-/*
- * Exercise 2:
- *
- *  Create a `StopWatch` component that has a Start/Stop button and a Clear
- *  button.
- *
- *  Pressing Start will start a timer and the lapsed time in
- *  milliseconds should be displayed above the buttons.
- *
- *  Once started the Start button should change to Stop. Clicking Stop
- *  will stop the timer but lapsed time will be preserved.
- *
- *  Clicking Start again will resume the timer from where it left off.
- *
- *  Clicking Clear will stop the timer if it's running and reset the lapsed time to 0.
- */
+import React, { Component } from 'react';
 
 class StopWatch extends Component {
   constructor(props) {
@@ -24,39 +7,53 @@ class StopWatch extends Component {
       timerRunning: false,
       timer: 0
     };
+    this.intervalId = null;
+    this.incrementTimer = this.incrementTimer.bind(this);
   }
 
-  intervalId = null;
+  componentWillUnmount() {
+    this.stopTimer();
+  }
 
   incrementTimer() {
-    let currentTime = this.state.timer;
-    this.setState({ timer: ++currentTime });
+    this.setState(state => {
+      return { ...state, timer: state.timer + 1 };
+    });
   }
 
   startTimer() {
     this.setState({ timerRunning: true });
-    intervalId = setInterval(this.incrementTimer, 1000);
+    this.intervalId = setInterval(this.incrementTimer, 1000);
   }
 
   clearTimer() {
+    this.stopTimer();
     this.setState({ timer: 0 });
   }
 
   stopTimer() {
-    if (intervalId !== null) {
-      clearInterval(intervalId);
+    if (this.intervalId !== null) {
+      clearInterval(this.intervalId);
+      this.setState({ timerRunning: false });
     }
   }
 
   render() {
-    const { timerRunning } = this.state;
-    const buttonState = timerRunning ? Start : Stop;
-    const buttonOnClickHandler = timerRunning ? startTimer : stopTimer;
-    return <div>
-    Stop Watch
-    <button type="button" onClick={() => buttonOnClickHandler()}>{buttonState}</button>
-    <button type="button" onClick={() => this.clearTimer()}>Clear</button>
-    </div>;
+    const { timerRunning, timer } = this.state;
+    const buttonState = !timerRunning ? 'Start' : 'Stop';
+    const buttonOnClickHandler = !timerRunning ? 'startTimer' : 'stopTimer';
+    return (
+      <div>
+        Stop Watch
+        <p>{timer}</p>
+        <button type="button" onClick={() => this[buttonOnClickHandler]()}>
+          {buttonState}
+        </button>
+        <button type="button" onClick={() => this.clearTimer()}>
+          Clear
+        </button>
+      </div>
+    );
   }
 }
 
