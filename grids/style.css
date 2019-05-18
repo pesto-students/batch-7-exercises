@@ -1,0 +1,34 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(12,50px);
+    column-gap: 15px;
+    row-gap: 15px;
+    margin-left : 186px;
+    margin-top : 7px;
+
+}
+.col {
+    background-color: #ef9494
+  }
+.span2 {
+    grid-column-start: 11;
+    grid-column-end: 13;
+    grid-row-start: 2;
+    grid-row-end :7;
+}
+.span6 {
+    grid-column-start: 2;
+    grid-column-end: 8;
+    grid-row-start: 2;
+    grid-row-end :7;
+}
+.span3 {
+    grid-column-start: 8;
+    grid-column-end: 11;
+    grid-row-start: 2;
+    grid-row-end :7;
+}
+.span1 {
+    grid-row-start: 2;
+    grid-row-end :7;    
+}
