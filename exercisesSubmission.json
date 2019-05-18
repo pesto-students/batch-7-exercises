@@ -3,7 +3,7 @@
     "segmentName": "segment-2",
     "exercises": {
         "square-numbers-array": {
-            "completed": false
+            "completed": true
         },
         "savings-account": {
             "completed": false

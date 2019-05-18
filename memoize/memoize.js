@@ -1,11 +1,14 @@
 
 function memoize(fn) {
   let cache = {};
-  return function(...num) {
-    if (num in cache) {
-      return cache[num];
+  return function(...args) {
+    const stringifiedArgs = args.toString();
+    if (cache.hasOwnProperty(stringifiedArgs)) {
+      return cache[stringifiedArgs];
     }
-    return cache[num] = fn.apply(this,num);
+    const functionOutput = fn(...args);
+    cache[stringifiedArgs] = functionOutput;
+    return functionOutput;
   }
 }
 
