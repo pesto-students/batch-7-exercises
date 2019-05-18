@@ -1,6 +1,6 @@
 
-function reject(...args) {
-  return args;
+function reject(predicateFunction, array) {
+  return array.filter((element) => !predicateFunction(element));
 }
 
 export {

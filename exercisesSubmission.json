@@ -6,7 +6,7 @@
             "completed": false
         },
         "reject": {
-            "completed": false
+            "completed": true
         },
         "test-basics": {
             "completed": true
