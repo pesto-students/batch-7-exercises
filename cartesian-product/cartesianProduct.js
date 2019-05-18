@@ -1,6 +1,15 @@
+function cartesianProduct(setA, setB) {
+  if (setA === null || setB === null) return null;
 
-function cartesianProduct(...args) {
-  return args;
+  const cartesianProductSet = [];
+
+  setA.forEach((a) => {
+    setB.forEach((b) => {
+      cartesianProductSet.push([a, b]);
+    });
+  });
+
+  return cartesianProductSet;
 }
 
 export {
