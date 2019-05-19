@@ -1,8 +1,8 @@
-
-function instructor(...args) {
-  return args;
-}
-
-export {
-  instructor,
+let instructor = {
+  firstName: "",
+  sayHi: function() {
+    this.firstName = "Ram";
+  }
 };
+
+export { instructor };
