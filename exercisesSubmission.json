@@ -9,7 +9,7 @@
             "completed": false
         },
         "greet": {
-            "completed": false
+            "completed": true
         },
         "reject-promise": {
             "completed": true
