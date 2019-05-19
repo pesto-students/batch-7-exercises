@@ -1,33 +1,33 @@
 {
-  "day": "day-7",
-  "segmentName": "segment-1",
-  "exercises": {
-    "consumable-users": {
-      "completed": false
-    },
-    "cycled": {
-      "completed": false
-    },
-    "fibonacci-iter": {
-      "completed": false
-    },
-    "generator-iterable": {
-      "completed": false
-    },
-    "iterable-protocol": {
-      "completed": false
-    },
-    "is-iterable": {
-      "completed": false
-    },
-    "is-iterable-empty": {
-      "completed": false
-    },
-    "range-iter": {
-      "completed": false
-    },
-    "simple-iterable": {
-      "completed": false
+    "day": "day-7",
+    "segmentName": "segment-1",
+    "exercises": {
+        "consumable-users": {
+            "completed": false
+        },
+        "cycled": {
+            "completed": true
+        },
+        "fibonacci-iter": {
+            "completed": true
+        },
+        "generator-iterable": {
+            "completed": true
+        },
+        "iterable-protocol": {
+            "completed": false
+        },
+        "is-iterable": {
+            "completed": true
+        },
+        "is-iterable-empty": {
+            "completed": true
+        },
+        "range-iter": {
+            "completed": false
+        },
+        "simple-iterable": {
+            "completed": true
+        }
     }
-  }
 }

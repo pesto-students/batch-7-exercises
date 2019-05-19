@@ -1,44 +1,29 @@
 import { ConsumableUsers } from './ConsumableUsers';
 
 describe('Iterator usages', () => {
-  let usersIterable;
-  beforeEach(() => {
-    const consumableUsers = new ConsumableUsers();
 
-    function iteratorFunction() {
-      return {
-        next: () => ({
-          value: consumableUsers.nextUser,
-          done: consumableUsers.done,
-        }),
-      };
-    }
-
-    usersIterable = {};
-  });
+  let usersIterable = new ConsumableUsers();
 
   describe('create an iterator/iterable', () => {
     it('the `usersIterable` should be iterable', () => {
       const iterable = Symbol.iterator in usersIterable;
       expect(iterable).toBe(true); // do not change this line!
     });
-
+    
     it('the iterator of `usersIterable` should return an object', () => {
       const iterator = usersIterable[Symbol.iterator]();
       expect(typeof iterator).toBe('object'); // do not change this line!
     });
-
     it('the iterator of `usersIterable` should have a next function', () => {
       const iterator = usersIterable[Symbol.iterator]();
       expect(typeof iterator.next).toBe('function'); // do not change this line!
     });
   });
-
   describe('fill the iterable with content using `ConsumableUsers`', () => {
     describe('using the iterator', () => {
       let iterator;
       beforeEach(() => {
-        iterator = usersIterable[Symbol.iterator];
+        iterator = usersIterable[Symbol.iterator]();
       });
 
       it('should return `Alice` as first user', () => {

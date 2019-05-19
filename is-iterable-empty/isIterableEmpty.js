@@ -1,6 +1,7 @@
 
-function isIterableEmpty(...args) {
-  return args;
+function isIterableEmpty(args) {
+  const iterator = args[Symbol.iterator]();
+  return iterator.next().done;
 }
 
 export {
