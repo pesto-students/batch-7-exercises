@@ -1,12 +1,12 @@
 import { GET_GITREPO_LIST } from "./constants";
 
 const initialState = {
-  repository: []
+  repositoryList: []
 };
 function rootReducer(state = initialState, action) {
-  if (action.type === GET_GITREPO_LIST) {
+  if (action.type === "GET_GITREPO_LIST") {
     return Object.assign({}, state, {
-      repository: state.repository.concat(action.payload)
+      repositoryList: state.repositoryList.concat(action.payload.repositoryList)
     });
   }
   return state;

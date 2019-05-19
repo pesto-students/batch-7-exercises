@@ -1,49 +1,66 @@
 import React from "react";
 import { connect } from "react-redux";
+import * as action from "../../redux/actions";
 
 const mapStateToProps = state => {
-  return { repository: state.repository };
+  return { repositoryList: state.repositoryList };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    getRepository: username => dispatch(action.getRepository(username))
+  };
 };
 
 class GithubRepo extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      repository: [],
-      userName: ""
-    };
-  }
-  getRepositoryList = event => {
-    const { userName } = this.state;
-    this.props.getRepository({ userName });
-    this.setState({ userName: "" });
+  state = {
+    userName: ""
   };
+  // getRepositoryList = event => {
+  //   const { userName } = this.state;
+  //   this.props.getRepository({ userName });
+  //   // this.setState({ userName: "" });
+  // };
   handleChange = event => {
-    this.setState({ [event.target.id]: [event.target.value] });
+    // console.log(this.state.userName, event.target);
+    this.setState({ userName: [event.target.value] });
   };
   render() {
     const { userName } = this.state;
     return (
       <div>
-        <form onSubmit={this.getRepositoryList}>
+        <form>
           <input
             type="text"
-            id="username"
-            name="username"
+            id="userName"
             placeholder="Enter Git Username"
             value={userName}
             onChange={this.handleChange}
           />
           <br />
-          <input type="submit" value="Get Git Repo" />
+          <input
+            type="submit"
+            onClick={(username = this.state.userName) =>
+              this.props.getRepository(userName)
+            }
+            value="Get Git Repo"
+          />
         </form>
         <h6>Repo List</h6>
-        <ul />
+        <ul>
+          {/* Task: The list of repos here */}{" "}
+          {this.props.repositoryList.map(repos => (
+            <li key={repos.id}>{repos.name}</li>
+          ))}
+        </ul>
       </div>
     );
   }
 }
 
-let reposList = connect(mapStateToProps)(GithubRepo);
+let reposList = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(GithubRepo);
 
 export default reposList;
