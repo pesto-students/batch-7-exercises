@@ -3,9 +3,9 @@ function simpleIterable() {
   let count = 0;
   return {
     [Symbol.iterator]() {
-      
-    }
-    next: () => {
+      return this;
+    },
+    next() {
       if (count < 5) {
         count += 1;
         return { value: count, done: false };
