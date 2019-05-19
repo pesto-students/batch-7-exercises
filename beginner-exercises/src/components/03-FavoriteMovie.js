@@ -1,23 +1,33 @@
+/* eslint-disable react/jsx-filename-extension */
 import React, { Component } from 'react';
 
 class FavoriteMovie extends Component {
   constructor(props) {
     super(props);
     this.state = { movie: '' };
+    this.onMovieChange = this.onMovieChange.bind(this);
   }
 
-  onMovieChange = event => {
-    this.setState({ movie: event.currentTarget.value });
-  };
+  onMovieChange({ currentTarget }) {
+    this.setState({ movie: currentTarget.value });
+  }
 
   render() {
+    const { movie } = this.state;
     return (
       <div>
-        <p>
-          My favorite movie is <span style={{ color: 'blue' }}>{this.state.movie}</span>
-        </p>
-        <label htmlFor="name"> My Favorite Movie</label>
-        <input type="text" name="name" onChange={this.onMovieChange} />
+        {movie.length > 0 ? (
+          <p>
+            My favorite movie is
+            <span style={{ color: 'blue' }}>{movie}</span>
+          </p>
+        ) : (
+          <p>Hey there. Enter your favorite movie. </p>
+        )}
+        <label htmlFor="name">
+          My Favorite Movie:
+          <input type="text" name="name" value={movie} onChange={this.onMovieChange} />
+        </label>
       </div>
     );
   }
