@@ -1,18 +1,10 @@
-
 function constImmutable() {
-  const account = {
-    username: 'pesto',
-    password: 'initialPassword',
-  };
-
-  Object.defineProperty(account, 'password', {
-    value:'initialPassword',
-    writable:false
-  })
-  // account.password = 's3cret';
+  const account = { username: "pesto" };
+  Object.defineProperty(account, "password", {
+    value: "initialPassword",
+    writable: false
+  });
   return account.password;
 }
 
-export {
-  constImmutable,
-};
+export { constImmutable };
