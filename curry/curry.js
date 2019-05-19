@@ -1,35 +1,13 @@
+function curry(func) {
+  return function curried(...args) {
+    if (args.length >= func.length) {
+      return func.apply(this, args);
+    } else {
+      return function(...args2) {
+        return curried.apply(this, args.concat(args2));
+      };
+    }
+  };
+}
 
-function curry(a) {
-  return (b) => {
-    return (c) => {function curry(a) {
-      return (b) => {function curry(a) {
-  return (b) => {
-    return (c) => {
-      return a + b + c;
-    }
-  } 
-}
-        return (c) =>function curry(a) {
-  return (b) => {
-    return (c) => {
-      return a + b + c;
-    }
-  } 
-}
-          return a + function curry(a) {
-  return (b) => {
-    return (c) => {
-      return a + b + c;
-    }
-  } 
-}
-        }
-      } 
-    }
-      return a + b + c;
-    }
-  }  
-
-export {
-  curry,
-};
+export { curry };
