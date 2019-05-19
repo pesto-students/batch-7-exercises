@@ -1,4 +1,6 @@
+/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
+import PropTypes from 'prop-types';
 
 /*
   In this exercises, you'll will make a reactive grocery list.
@@ -23,49 +25,126 @@ class GroceryList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      newItem: '',
       groceries: [{ name: 'Apples' }, { name: 'KitKat' }, { name: 'Red Bull' }],
     };
+    this.addNewItem = this.addNewItem.bind(this);
+    this.handleOnChange = this.handleOnChange.bind(this);
+    this.clearAll = this.clearAll.bind(this);
+  }
+
+  addNewItem(e) {
+    e.preventDefault();
+    const { newItem, groceries } = this.state;
+    if (newItem.length > 0) {
+      this.setState({
+        groceries: [...groceries, { name: newItem }],
+        newItem: '',
+      });
+    }
+  }
+
+  handleOnChange({ currentTarget }) {
+    this.setState({ newItem: currentTarget.value });
+  }
+
+  clearAll() {
+    this.setState({ groceries: [] });
   }
 
   render() {
-    const { groceries } = this.state;
-    /*
-      Properties are a way to pass parameters to your React components.
-      We mentioned this in the third exercise. Properties are to React
-      components what attributes are to HTML elements.
-
-      Below you can see how to pass properties to child components.
-      We have defined a `grocery` property for each `GroceryListItem`.
-    */
-    const groceriesComponents = groceries.map(item => ( // eslint-disable-line no-unused-vars
-      <GroceryListItem grocery={item} />
+    const { newItem, groceries } = this.state;
+    const groceriesComponents = groceries.map(item => (
+      <GroceryListItem key={item.name} grocery={item} />
     ));
-    // Hint: Don't forget about putting items into `ul`
+    const ulStyle = { padding: '0px' };
+    const buttonStyle = {
+      cursor: 'pointer',
+      border: '0',
+      color: '#ffffff',
+      fontSize: '16px',
+    };
+    const dangerButtonStyle = {
+      ...buttonStyle,
+      padding: '16px',
+      backgroundColor: '#f44336',
+    };
+
+    const primaryButtonStyle = {
+      ...buttonStyle,
+      marginLeft: '8px',
+      backgroundColor: '#4caf50',
+    };
+
     return (
       <div>
-        Put your code here
+        <form onSubmit={this.addNewItem}>
+          <label htmlFor="newItem">
+            New Item:
+            <input type="text" value={newItem} onChange={this.handleOnChange} name="newItem" />
+          </label>
+          <button style={primaryButtonStyle} type="submit">
+            Add
+          </button>
+        </form>
+        <ul style={ulStyle}>{groceriesComponents}</ul>
+        <button type="button" onClick={this.clearAll} style={dangerButtonStyle}>
+          Clear All
+        </button>
       </div>
     );
   }
 }
 
-// Render grocery name from component's properties.
-// If you have a problem, check `this.props` in the console.
-/* eslint-disable react/no-multi-comp, no-useless-constructor */
+// eslint-disable-next-line react/no-multi-comp
 class GroceryListItem extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      purchased: false,
+    };
+    this.handleOnClick = this.handleOnClick.bind(this);
+  }
+
+  handleOnClick() {
+    const { purchased } = this.state;
+    this.setState({ purchased: !purchased });
   }
 
   render() {
+    const { grocery } = this.props;
+    const { purchased } = this.state;
+    const itemStyle = { margin: '8px' };
+    const buttonStyle = {
+      cursor: 'pointer',
+      padding: '16px 32px',
+      backgroundColor: '#f5f5f5',
+      width: '320px',
+      border: '0',
+      fontSize: '1em',
+    };
+    const purchasedItemStyle = { ...buttonStyle, color: 'red' };
+
     return (
-      <li>
-        Put your code here.
+      <li style={itemStyle}>
+        <button
+          type="button"
+          style={purchased ? purchasedItemStyle : buttonStyle}
+          onClick={this.handleOnClick}
+        >
+          {grocery.name}
+        </button>
       </li>
     );
   }
 }
 
-// Do prop validation here using the package `prop-types`
+GroceryListItem.defaultProps = {
+  grocery: '',
+};
+
+GroceryListItem.propTypes = {
+  grocery: PropTypes.objectOf(PropTypes.string),
+};
 
 export default GroceryList;
