@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 
@@ -32,6 +33,7 @@ const App = () => (
       <hr />
       {routes.map(route => (
         <Route
+          key={route.path}
           path={route.path}
           render={props => (
             <route.component {...props} routes={route.routes} />
