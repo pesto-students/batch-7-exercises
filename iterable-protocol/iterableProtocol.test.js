@@ -1,5 +1,14 @@
 describe('A simple iterable without items inside, implementing the right protocol', () => {
-  function iteratorFunction() {}
+  function iteratorFunction() {
+    return {
+      [Symbol.iterator]() {
+        return this;
+      }, 
+      next() {
+        return {done : true};
+      }
+    }
+  }
 
   describe('the `iteratorFunction` needs to comply to the iterator protocol', () => {
     it('must return an object', () => {
@@ -17,7 +26,9 @@ describe('A simple iterable without items inside, implementing the right protoco
 
   let iterable;
   beforeEach(() => {
-    iterable = 'iterable';
+    iterable = {
+      [Symbol.iterator]:iteratorFunction,
+    };
   });
 
   describe('the iterable', () => {
@@ -31,7 +42,7 @@ describe('A simple iterable without items inside, implementing the right protoco
 
   describe('using the iterable', () => {
     it('it contains no values', () => {
-      let values;
+      let values = '';
       for (const value of iterable) {
         values += value;
       }
@@ -39,18 +50,18 @@ describe('A simple iterable without items inside, implementing the right protoco
     });
 
     it('has no `.length` property', () => {
-      const hasLengthProperty = iterable;
-      expect(hasLengthProperty).toBe(false);
+      const hasLengthProperty = iterable.length;
+      expect(hasLengthProperty).toBe(undefined);
     });
 
     describe('can be converted to an array', () => {
       it('using `Array.from()`', () => {
-        const arr = iterable;
+        const arr = Array.from(iterable);
         expect(Array.isArray(arr)).toBe(true);
       });
 
       it('where `.length` is still 0', () => {
-        const arr = iterable;
+        const arr = Array.from(iterable);
         const {
           length,
         } = arr;
