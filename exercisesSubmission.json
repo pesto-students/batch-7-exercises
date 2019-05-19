@@ -3,13 +3,13 @@
     "segmentName": "segment-1",
     "exercises": {
         "balanced-braces": {
-            "completed": false
+            "completed": true
         },
         "duplicate-letters": {
             "completed": false
         },
         "does-end-with": {
-            "completed": false
+            "completed": true
         },
         "isomorphic": {
             "completed": false
