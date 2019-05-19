@@ -21,7 +21,7 @@
             "completed": false
         },
         "sequential-promise": {
-            "completed": false
+            "completed": true
         },
         "timeout": {
             "completed": true

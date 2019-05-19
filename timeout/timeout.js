@@ -1,6 +1,6 @@
 
 function timeout(value) {
-  return new Promise((resolve, reject)=> {
+  return new Promise((resolve) => {
     resolve(value);
   }).then((result)=> {
     if (result === 'Pesto') {
