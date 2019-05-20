@@ -1,8 +1,9 @@
 
 function accountDataset(...args) {
-  return args;
+  console.log(args);
 }
 
-export {
-  accountDataset,
-};
+// export {
+//   accountDataset,
+// };
+//hundredThousandairs().length;
