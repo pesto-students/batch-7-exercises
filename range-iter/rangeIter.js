@@ -1,19 +1,24 @@
-
-function rangeIter(rangeVal,rangeVal2) {
-  [Symbol.iterator]=function() {
-    this.current = this.from;
-    return this;
-  },
-
-  next() =function() {
-    if (this.current <= this.to) {
-      return { done: false, value: this.current++ };
-    } else {
-      return { done: true };
-    }
+function rangeIter(from, to) {
+  const isNumber = n => typeof n === "number";
+  if (!isNumber(from) || !isNumber(to)) {
+    throw new TypeError("Enter valid number");
   }
+  let currIndex = from;
+  return {
+    [Symbol.iterator]: function() {
+      currIndex = from;
+      return this;
+    },
+    next() {
+      if (currIndex <= to) {
+        let val = { done: false, value: currIndex };
+        currIndex++;
+        return val;
+      } else {
+        return { done: true };
+      }
+    }
+  };
 }
 
-export {
-  rangeIter,
-};
+export { rangeIter };
