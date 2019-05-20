@@ -1,24 +1,24 @@
 {
-  "day": "day-12",
-  "segmentName": "segment-1",
-  "exercises": {
-    "balanced-braces": {
-      "completed": false
-    },
-    "duplicate-letters": {
-      "completed": false
-    },
-    "does-end-with": {
-      "completed": false
-    },
-    "isomorphic": {
-      "completed": false
-    },
-    "is-empty": {
-      "completed": false
-    },
-    "beginner-exercises": {
-      "completed": false
+    "day": "day-12",
+    "segmentName": "segment-1",
+    "exercises": {
+        "balanced-braces": {
+            "completed": true
+        },
+        "duplicate-letters": {
+            "completed": false
+        },
+        "does-end-with": {
+            "completed": false
+        },
+        "isomorphic": {
+            "completed": false
+        },
+        "is-empty": {
+            "completed": false
+        },
+        "beginner-exercises": {
+            "completed": false
+        }
     }
-  }
 }
