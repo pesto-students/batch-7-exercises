@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 /*
   In this exercises, you'll will make a reactive grocery list.
@@ -23,7 +23,7 @@ class GroceryList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      groceries: [{ name: 'Apples' }, { name: 'KitKat' }, { name: 'Red Bull' }],
+      groceries: [{ name: "Apples" }, { name: "KitKat" }, { name: "Red Bull" }]
     };
   }
 
@@ -37,15 +37,11 @@ class GroceryList extends React.Component {
       Below you can see how to pass properties to child components.
       We have defined a `grocery` property for each `GroceryListItem`.
     */
-    const groceriesComponents = groceries.map(item => ( // eslint-disable-line no-unused-vars
-      <GroceryListItem grocery={item} />
-    ));
+    const groceriesComponents = groceries.map((
+      item // eslint-disable-line no-unused-vars
+    ) => <GroceryListItem grocery={item} />);
     // Hint: Don't forget about putting items into `ul`
-    return (
-      <div>
-        Put your code here
-      </div>
-    );
+    return <div>{this.groceriesComponents}</div>;
   }
 }
 
@@ -58,11 +54,7 @@ class GroceryListItem extends React.Component {
   }
 
   render() {
-    return (
-      <li>
-        Put your code here.
-      </li>
-    );
+    return <li>{this.props.grocery.name}</li>;
   }
 }
 

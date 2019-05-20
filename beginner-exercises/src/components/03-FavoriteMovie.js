@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 /*
 You can pass props to components using JSX attributes.
@@ -18,7 +18,7 @@ Further reading on task #2: https://facebook.github.io/react/tips/if-else-in-JSX
 */
 
 class FavoriteMovie extends Component {
-/*
+  /*
   By default `this.state` is `null`. In `render` we are referring to
   a specific element from the `state` object - `this.state.movie`.
   If we don't set an initial state, we will get an error. It's impossible to fetch
@@ -31,7 +31,8 @@ class FavoriteMovie extends Component {
   constructor(props) {
     // Properties object is called `props`. You can access it with `this.props`.
     super(props);
-    this.state = { movie: '' };
+    this.state = { movie: "" };
+    console.log(this.state.movie);
 
     // Warning! If we don't bind this method - we would not be able to update state.
   }
@@ -47,15 +48,22 @@ class FavoriteMovie extends Component {
   */
 
   /* eslint-disable no-unused-vars, react/no-unused-state */
-  onMovieChange(event) {
+  onMovieChange = event => {
     // Huh... There's something wrong here...
-    this.setState({ badAttribute: 'ChangeME!' });
-  }
+    if (event.target.value.length != 0) {
+      this.setState({ movie: event.target.value });
+    } else {
+      this.setState({ movie: "Hey there. Enter your favorite movie." });
+    }
+  };
 
   render() {
     return (
       <div>
-        <p>My favorite movie is <span style={{ color: 'blue' }}>{this.state.movie}</span></p>
+        <p>
+          My favorite movie is{" "}
+          <span style={{ color: "blue" }}>{this.state.movie}</span>
+        </p>
         <input type="text" name="name" onChange={this.onMovieChange} />
       </div>
     );
