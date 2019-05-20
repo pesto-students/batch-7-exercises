@@ -1,5 +1,5 @@
 
-function memoize(args) {
+function memoize(args,unused) {
   let cache = {};
   return (el) => {
     if (!cache[el]) {

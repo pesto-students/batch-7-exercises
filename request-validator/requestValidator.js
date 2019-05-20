@@ -14,7 +14,10 @@ function requestValidator(httpObject) {
   else if (!hasValidUri(httpObject.uri)) {
     throw new Error('Invalid request header: Invalid URI');
   }
-  else if (!httpObject.hasOwnProperty('message')) {
+  else if (httpObject.message === '') {
+    throw new Error('Invalid request header: Invalid Message');
+  }
+  else if (!(httpObject.hasOwnProperty(message))) {
     throw new Error('Invalid request header: Invalid Message');
   }
   return httpObject;
