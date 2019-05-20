@@ -19,36 +19,103 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+const RadioContext = React.createContext();
+
+class RadioContextProvider extends React.Component {
+  state = {
+    selectedOption: 'fm'
+  };
+
+  render() {
+    console.log(this.state.selectedOption);
+    return (
+      <RadioContext.Provider
+        value={{
+          state: this.state,
+          setSelectedTo: newValue => this.setState({ selectedOption: newValue }),
+          setNextOption: which => {
+            let indexToSelect;
+            const children = React.Children.toArray(this.props.children);
+            React.Children.forEach(this, (radioOption, index) => {
+              if (radioOption.props.value === this.state.selectedOption) {
+                if (which === 'next') {
+                  indexToSelect = index + 1;
+                } else {
+                  indexToSelect = index - 1;
+                }
+              }
+            });
+            const childrenCount = React.Children.count(this);
+            if (indexToSelect < 0) {
+              indexToSelect = childrenCount - 1;
+            }
+            if (indexToSelect === childrenCount) {
+              indexToSelect = 0;
+            }
+            const child = children[indexToSelect].props.value;
+            console.log(child);
+            this.setState({ selectedOption: child });
+          }
+        }}
+      >
+        {this.props.children}
+      </RadioContext.Provider>
+    );
+  }
+}
+
 class RadioGroup extends React.Component {
   static propTypes = {
-    // defaultValue: PropTypes.string,                UN-COMMENT THIS LINE
-    children: PropTypes.shape().isRequired,
+    defaultValue: PropTypes.string,
+    children: PropTypes.shape().isRequired
   };
   render() {
-    return (
-      <div>{this.props.children}</div>
-    );
+    return <div>{this.props.children}</div>;
   }
 }
 
 class RadioOption extends React.Component {
   static propTypes = {
-    // value: PropTypes.string,                       UN-COMMENT THIS LINE
-    children: PropTypes.shape().isRequired,
+    value: PropTypes.string,
+    children: PropTypes.shape().isRequired
   };
 
   render() {
     return (
-      <div>
-        <RadioIcon isSelected={false} /> {this.props.children}
-      </div>
+      <RadioContext.Consumer>
+        {({ state, setSelectedTo, setNextOption }) => {
+          let isSelected = false;
+          if (state.selectedOption === this.props.value) {
+            isSelected = true;
+          }
+          return (
+            <div
+              onClick={() => setSelectedTo(this.props.value)}
+              tabIndex={0}
+              onKeyPress={event => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                  setSelectedTo(this.props.value);
+                }
+              }}
+              onKeyDown={event => {
+                console.log(event.keyCode)
+                if (event.keyCode === 39 || event.keyCode === 40) {
+                  setNextOption('next');
+                }
+              }}
+            >
+              <RadioIcon isSelected={isSelected} /> {this.props.children}
+            </div>
+          );
+        }}
+      </RadioContext.Consumer>
     );
   }
 }
 
 class RadioIcon extends React.Component {
   static propTypes = {
-    isSelected: PropTypes.bool.isRequired,
+    isSelected: PropTypes.bool.isRequired
   };
 
   render() {
@@ -62,7 +129,7 @@ class RadioIcon extends React.Component {
           width: 16,
           display: 'inline-block',
           cursor: 'pointer',
-          background: this.props.isSelected ? 'rgba(0, 0, 0, 0.05)' : '',
+          background: this.props.isSelected ? 'rgba(0, 0, 0, 0.05)' : ''
         }}
       />
     );
@@ -75,12 +142,14 @@ class CompoundComponents extends React.Component {
       <div>
         <h1>♬ It is about time that we all turned off the radio ♫</h1>
 
-        <RadioGroup defaultValue="fm">
-          <RadioOption value="am">AM</RadioOption>
-          <RadioOption value="fm">FM</RadioOption>
-          <RadioOption value="tape">Tape</RadioOption>
-          <RadioOption value="aux">Aux</RadioOption>
-        </RadioGroup>
+        <RadioContextProvider>
+          <RadioGroup defaultValue="fm">
+            <RadioOption value="am">AM</RadioOption>
+            <RadioOption value="fm">FM</RadioOption>
+            <RadioOption value="tape">Tape</RadioOption>
+            <RadioOption value="aux">Aux</RadioOption>
+          </RadioGroup>
+        </RadioContextProvider>
       </div>
     );
   }
