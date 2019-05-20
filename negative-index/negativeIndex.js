@@ -11,11 +11,19 @@ function negativeIndex(target) {
           prop += target.length;
         }
       }
-      return target[prop];
-    } 
-  }
-  set () {
+      return Reflect.get(target, prop);
+    },
     
+    set (target, prop, value) {
+      if (!isNaN(prop)) {
+        prop = parseInt(prop,10);
+        if ( prop < 0) {
+          prop += target.length;
+          target[prop] = value;
+        }
+      }
+      return Reflect.set(target,prop, value);
+    }
   }
   );
   return proxy;
