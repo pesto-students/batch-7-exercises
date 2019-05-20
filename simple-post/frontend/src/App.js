@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 
 import Post from "./components/Post";
 import "./App.css";
+import * as Constants from "./constants.js";
 
 class App extends Component {
   constructor(props) {
@@ -12,8 +13,6 @@ class App extends Component {
     this.fetchPosts = this.fetchPosts.bind(this);
     this.getLocalStoragePageNumber = this.getLocalStoragePageNumber.bind(this);
     this.setLocalStoragePageNumber = this.setLocalStoragePageNumber.bind(this);
-
-    this.PASSWORD = "darth vader";
     this.handleNextClick = this.handleNextClick.bind(this);
     this.handlePrevClick = this.handlePrevClick.bind(this);
 
@@ -57,7 +56,7 @@ class App extends Component {
 
   fetchPosts() {
     const header = new Headers();
-    header.append("pesto-password", this.PASSWORD);
+    header.append("pesto-password", Constants.headers["pesto-password"]);
     fetch(`http://localhost:3001/posts/${this.getLocalStoragePageNumber()}`, {
       headers: header
     })
