@@ -3,7 +3,7 @@
     "segmentName": "segment-1",
     "exercises": {
         "filtered-names": {
-            "completed": false
+            "completed": true
         },
         "filtered-names-recursive": {
             "completed": false
