@@ -1,8 +1,11 @@
+import http from 'http';
 
-function jsonResponseServer(...args) {
-  return args;
-}
+const data = { data: 'Pesto Bootcamp!' };
 
-export {
-  jsonResponseServer,
-};
+const jsonResponseServer = http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'application/json' });
+  res.write(JSON.stringify(data));
+  res.end();
+});
+
+export { jsonResponseServer };
