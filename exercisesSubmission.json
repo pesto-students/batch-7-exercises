@@ -1,45 +1,45 @@
 {
-  "day": "day-17",
-  "segmentName": "segment-1",
-  "exercises": {
-    "filtered-names": {
-      "completed": false
-    },
-    "filtered-names-recursive": {
-      "completed": false
-    },
-    "http-server": {
-      "completed": false
-    },
-    "is-stream": {
-      "completed": false
-    },
-    "json-response-server": {
-      "completed": false
-    },
-    "lines-in-file": {
-      "completed": false
-    },
-    "lines-in-file-async": {
-      "completed": false
-    },
-    "node-event": {
-      "completed": false
-    },
-    "slug-url": {
-      "completed": false
-    },
-    "strip-eof": {
-      "completed": false
-    },
-    "to-readable-stream": {
-      "completed": false
-    },
-    "unused-filename": {
-      "completed": false
-    },
-    "valid-filename": {
-      "completed": false
+    "day": "day-17",
+    "segmentName": "segment-1",
+    "exercises": {
+        "filtered-names": {
+            "completed": false
+        },
+        "filtered-names-recursive": {
+            "completed": false
+        },
+        "http-server": {
+            "completed": true
+        },
+        "is-stream": {
+            "completed": false
+        },
+        "json-response-server": {
+            "completed": false
+        },
+        "lines-in-file": {
+            "completed": true
+        },
+        "lines-in-file-async": {
+            "completed": false
+        },
+        "node-event": {
+            "completed": false
+        },
+        "slug-url": {
+            "completed": false
+        },
+        "strip-eof": {
+            "completed": false
+        },
+        "to-readable-stream": {
+            "completed": false
+        },
+        "unused-filename": {
+            "completed": false
+        },
+        "valid-filename": {
+            "completed": false
+        }
     }
-  }
 }
