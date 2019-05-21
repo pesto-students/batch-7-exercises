@@ -5,18 +5,17 @@ const getExtension = (fileName) => {
   return index === -1 ? '' : fileName.substr(index + 1);
 };
 
-function filteredNamesRecursive(dirname, fileExtension) {
-  // TODO check for dir and recursive logic 
-  // const listOfFileNames = fs.readdirSync(dirname);
+function filteredNamesRecursive(rootDir, fileExtension) {
+  const dirs = [rootDir];
+  const listOfFileNames = [];
 
-  let dirs = [dirname];
-  const listOfFileNames 
-
-  while(dirs) {
-    const dirName = dirs.pop()
+  while (dirs.length) {
+    const dirName = dirs.pop();
     const newFiles = fs.readdirSync(dirName);
     listOfFileNames.push(...newFiles);
-    listOfFileNames.filter(files => )
+    const fullPaths = newFiles.map(file => `${dirName}/${file}`);
+    const newFoundDirs = fullPaths.filter(file => fs.statSync(file).isDirectory());
+    dirs.push(...newFoundDirs);
   }
 
   const filteredFiles = listOfFileNames.filter(
