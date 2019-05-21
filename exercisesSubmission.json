@@ -15,7 +15,7 @@
             "completed": false
         },
         "json-response-server": {
-            "completed": false
+            "completed": true
         },
         "lines-in-file": {
             "completed": true
