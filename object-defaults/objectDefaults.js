@@ -1,10 +1,12 @@
+function objectDefaults(mainObject, defaultValues) {
+  const outputObject = mainObject;
 
-function objectDefaults(object1,object2) {
-  var defaultsObject = Object.assign(object2,object1)
-  return defaultsObject
+  Object.keys(defaultValues).forEach((prop) => {
+    if (!(prop in mainObject)) {
+      outputObject[prop] = defaultValues[prop];
+    }
+  });
+  return outputObject;
 }
 
-
-export {
-  objectDefaults,
-};
+export { objectDefaults };

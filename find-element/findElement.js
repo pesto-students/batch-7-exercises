@@ -1,9 +1,5 @@
-
-function findElement(array,inputFunction) {
-  var filteredArray = array.filter(inputFunction)
-  return filteredArray[0]
+function findElement(array, findFn) {
+  return array.find(findFn);
 }
 
-export {
-  findElement,
-};
+export { findElement };

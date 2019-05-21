@@ -1,8 +1,5 @@
-
-function dropElements(array,inputFunction) {
-  return array.filter(inputFunction)
+function dropElements(array, filterFn) {
+  return array.filter(filterFn);
 }
 
-export {
-  dropElements,
-};
+export { dropElements };

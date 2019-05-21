@@ -1,13 +1,10 @@
+function mapObject(inputObj, mapFn) {
+  const outputObj = {};
+  Object.keys(inputObj).forEach((element) => {
+    const newValue = mapFn(inputObj[element]);
+    outputObj[element] = newValue;
+  });
+  return outputObj;
+}
 
-function mapObject(inputObject,inputFunction) {
-
-  for( var key in inputObject) {
-    inputObject[key] = inputFunction(inputObject[key])
-  }
-  return inputObject
- }
- 
-
-export {
-  mapObject,
-};
+export { mapObject };

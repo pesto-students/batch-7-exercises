@@ -1,8 +1,3 @@
+const slasher = (array, untilIndex) => array.slice(untilIndex);
 
-function slasher(arr,numberToSlash) {
-  return arr.slice(numberToSlash)
-}
-
-export {
-  slasher,
-};
+export { slasher };

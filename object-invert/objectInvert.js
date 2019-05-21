@@ -1,18 +1,10 @@
-
-function objectInvert(obj) {
-  var invertedObject = {}
-  var temp = {}
-  temp = Object.values(obj)
-  Object.values(obj) = Object.keys(obj)
-  Object.keys(obj) = temp
-  for(i = 0;i <= obj.length;i++){
-      invertedObject{Object.keys(obj) : Object.values(obj)}
-  }
-  return invertedObject
-  }
+function objectInvert(Obj) {
+  const outputObj = {};
+  Object.keys(Obj).forEach((property) => {
+    const propValue = Obj[property];
+    outputObj[propValue] = property;
+  });
+  return outputObj;
 }
 
-
-export {
-  objectInvert,
-};
+export { objectInvert };
