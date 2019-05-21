@@ -1,0 +1,344 @@
+
+{
+  "header": {
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20190520.162355.25360.0.001.json",
+    "dumpEventTime": "2019-05-20T16:23:55Z",
+    "dumpEventTimeStamp": "1558349635464",
+    "processId": 25360,
+    "cwd": "/home/amitbadala/Documents/AmitPesto/batch-7-exercises",
+    "commandLine": [
+      "/home/amitbadala/.nvm/versions/node/v12.1.0/bin/node",
+      "/home/amitbadala/Documents/AmitPesto/batch-7-exercises/node_modules/.bin/jest",
+      "range-iter/rangeIter.test"
+    ],
+    "nodejsVersion": "v12.1.0",
+    "glibcVersionRuntime": "2.27",
+    "glibcVersionCompiler": "2.17",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "linux",
+    "componentVersions": {
+      "node": "12.1.0",
+      "v8": "7.4.288.21-node.16",
+      "uv": "1.28.0",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "72",
+      "nghttp2": "1.38.0",
+      "napi": "4",
+      "llhttp": "1.1.1",
+      "http_parser": "2.8.0",
+      "openssl": "1.1.1b",
+      "cldr": "35.1",
+      "icu": "64.2",
+      "tz": "2019a",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "headersUrl": "https://nodejs.org/download/release/v12.1.0/node-v12.1.0-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.1.0/node-v12.1.0.tar.gz"
+    },
+    "osName": "Linux",
+    "osRelease": "4.18.0-20-generic",
+    "osVersion": "#21~18.04.1-Ubuntu SMP Wed May 8 08:43:37 UTC 2019",
+    "osMachine": "x86_64",
+    "host": "amitbadala"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x0000000000aa766d",
+      "symbol": "report::TriggerNodeReport(v8::Isolate*, node::Environment*, char const*, char const*, std::string const&, v8::Local<v8::String>) [/home/amitbadala/.nvm/versions/node/v12.1.0/bin/node]"
+    },
+    {
+      "pc": "0x000000000098c903",
+      "symbol": "node::OnFatalError(char const*, char const*) [/home/amitbadala/.nvm/versions/node/v12.1.0/bin/node]"
+    },
+    {
+      "pc": "0x0000000000b050de",
+      "symbol": "v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [/home/amitbadala/.nvm/versions/node/v12.1.0/bin/node]"
+    },
+    {
+      "pc": "0x0000000000b05459",
+      "symbol": "v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [/home/amitbadala/.nvm/versions/node/v12.1.0/bin/node]"
+    },
+    {
+      "pc": "0x0000000000f10515",
+      "symbol": " [/home/amitbadala/.nvm/versions/node/v12.1.0/bin/node]"
+    },
+    {
+      "pc": "0x00000000011bcad6",
+      "symbol": "v8::internal::Runtime_FatalProcessOutOfMemoryInvalidArrayLength(int, unsigned long*, v8::internal::Isolate*) [/home/amitbadala/.nvm/versions/node/v12.1.0/bin/node]"
+    },
+    {
+      "pc": "0x0000000001a80fe2",
+      "symbol": " [/home/amitbadala/.nvm/versions/node/v12.1.0/bin/node]"
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 930013184,
+    "totalCommittedMemory": 928184240,
+    "usedMemory": 887421032,
+    "availableMemory": 1300521568,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 524288,
+        "committedMemory": 32024,
+        "capacity": 523976,
+        "used": 31712,
+        "available": 492264
+      },
+      "new_space": {
+        "memorySize": 33554432,
+        "committedMemory": 33553896,
+        "capacity": 16767232,
+        "used": 1307272,
+        "available": 15459960
+      },
+      "old_space": {
+        "memorySize": 39444480,
+        "committedMemory": 38701584,
+        "capacity": 30950360,
+        "used": 30950360,
+        "available": 0
+      },
+      "code_space": {
+        "memorySize": 688128,
+        "committedMemory": 560544,
+        "capacity": 430144,
+        "used": 430144,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 2625536,
+        "committedMemory": 2159872,
+        "capacity": 1580960,
+        "used": 1580960,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 853127168,
+        "committedMemory": 853127168,
+        "capacity": 853117128,
+        "used": 853117128,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 49152,
+        "committedMemory": 49152,
+        "capacity": 3456,
+        "used": 3456,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 16767232,
+        "used": 0,
+        "available": 16767232
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 7.72611,
+    "kernelCpuSeconds": 1.17821,
+    "cpuConsumptionPercent": 74.2027,
+    "maxRss": 1533128704,
+    "pageFaults": {
+      "IORequired": 0,
+      "IONotRequired": 663237
+    },
+    "fsActivity": {
+      "reads": 20648,
+      "writes": 8
+    }
+  },
+  "uvthreadResourceUsage": {
+    "userCpuSeconds": 6.83579,
+    "kernelCpuSeconds": 1.06044,
+    "cpuConsumptionPercent": 65.8019,
+    "fsActivity": {
+      "reads": 20648,
+      "writes": 8
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "GJS_DEBUG_TOPICS": "JS ERROR;JS LOG",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "npm_package_devDependencies_babel_core": "^7.0.0-bridge",
+    "USER": "amitbadala",
+    "LANGUAGE": "en_IN:en",
+    "npm_package_devDependencies_jest": "*",
+    "npm_config_version_commit_hooks": "true",
+    "npm_config_user_agent": "yarn/1.16.0 npm/? node/v12.1.0 linux x64",
+    "TEXTDOMAIN": "im-config",
+    "XDG_SEAT": "seat0",
+    "npm_package_dependencies_graphql_request": "*",
+    "npm_config_bin_links": "true",
+    "SSH_AGENT_PID": "1231",
+    "XDG_SESSION_TYPE": "x11",
+    "npm_node_execpath": "/home/amitbadala/.nvm/versions/node/v12.1.0/bin/node",
+    "npm_package_dependencies_node_fetch": "*",
+    "npm_config_init_version": "1.0.0",
+    "SHLVL": "2",
+    "CHROME_DESKTOP": "code-url-handler.desktop",
+    "QT4_IM_MODULE": "xim",
+    "HOME": "/home/amitbadala",
+    "DESKTOP_SESSION": "ubuntu",
+    "TERM_PROGRAM_VERSION": "1.33.1",
+    "NVM_BIN": "/home/amitbadala/.nvm/versions/node/v12.1.0/bin",
+    "GIO_LAUNCHED_DESKTOP_FILE": "/usr/share/applications/code.desktop",
+    "npm_package_engines_node": ">=10.15",
+    "npm_config_init_license": "MIT",
+    "GNOME_SHELL_SESSION_MODE": "ubuntu",
+    "GTK_MODULES": "gail:atk-bridge",
+    "YARN_WRAP_OUTPUT": "false",
+    "npm_config_version_tag_prefix": "v",
+    "DBUS_SESSION_BUS_ADDRESS": "unix:path=/run/user/1000/bus",
+    "npm_package_devDependencies_husky": "*",
+    "npm_package_dependencies_dotenv": "*",
+    "GIO_LAUNCHED_DESKTOP_FILE_PID": "2106",
+    "NVM_DIR": "/home/amitbadala/.nvm",
+    "npm_package_readmeFilename": "README.md",
+    "npm_package_devDependencies__babel_preset_env": "*",
+    "MANDATORY_PATH": "/usr/share/gconf/ubuntu.mandatory.path",
+    "IM_CONFIG_PHASE": "2",
+    "npm_package_devDependencies_babel_jest": "*",
+    "LOGNAME": "amitbadala",
+    "GTK_IM_MODULE": "ibus",
+    "npm_package_devDependencies_eslint_plugin_import": "*",
+    "_": "/usr/bin/yarn",
+    "DEFAULTS_PATH": "/usr/share/gconf/ubuntu.default.path",
+    "npm_config_registry": "https://registry.yarnpkg.com",
+    "USERNAME": "amitbadala",
+    "XDG_SESSION_ID": "1",
+    "TERM": "xterm-256color",
+    "npm_package_devDependencies__babel_core": "*",
+    "GNOME_DESKTOP_SESSION_ID": "this-is-deprecated",
+    "npm_config_ignore_scripts": "",
+    "WINDOWPATH": "1",
+    "npm_package_author_email": "giney.paradise@gmail.com",
+    "PATH": "/tmp/yarn--1558349622633-0.4430120171856098:/home/amitbadala/Documents/AmitPesto/batch-7-exercises/node_modules/.bin:/home/amitbadala/.config/yarn/link/node_modules/.bin:/home/amitbadala/.yarn/bin:/home/amitbadala/.nvm/versions/node/v12.1.0/libexec/lib/node_modules/npm/bin/node-gyp-bin:/home/amitbadala/.nvm/versions/node/v12.1.0/lib/node_modules/npm/bin/node-gyp-bin:/home/amitbadala/.nvm/versions/node/v12.1.0/bin/node_modules/npm/bin/node-gyp-bin:/home/amitbadala/.nvm/versions/node/v12.1.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "NODE": "/home/amitbadala/.nvm/versions/node/v12.1.0/bin/node",
+    "SESSION_MANAGER": "local/amitbadala:@/tmp/.ICE-unix/1115,unix/amitbadala:/tmp/.ICE-unix/1115",
+    "npm_package_name": "pesto-exercise-repository",
+    "XDG_MENU_PREFIX": "gnome-",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "npm_package_devDependencies_eslint_plugin_jsx_a11y": "*",
+    "DISPLAY": ":0",
+    "npm_package_devDependencies_eslint_config_airbnb": "*",
+    "LANG": "en_GB.UTF-8",
+    "XDG_CURRENT_DESKTOP": "Unity",
+    "npm_package_lint_staged_____test__js_0": "eslint",
+    "npm_package_devDependencies_eslint": "*",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "TERM_PROGRAM": "vscode",
+    "XDG_SESSION_DESKTOP": "ubuntu",
+    "XMODIFIERS": "@im=ibus",
+    "XAUTHORITY": "/run/user/1000/gdm/Xauthority",
+    "npm_lifecycle_script": "jest",
+    "npm_package_main": "index.js",
+    "SSH_AUTH_SOCK": "/run/user/1000/keyring/ssh",
+    "npm_package_dependencies_chalk": "*",
+    "npm_package_scripts_test": "jest",
+    "npm_config_version_git_message": "v%s",
+    "SHELL": "/bin/bash",
+    "npm_lifecycle_event": "test",
+    "npm_package_husky_hooks_pre_commit": "lint-staged",
+    "npm_package_version": "1.0.0",
+    "NO_AT_BRIDGE": "1",
+    "QT_ACCESSIBILITY": "1",
+    "GDMSESSION": "ubuntu",
+    "npm_config_argv": "{\"remain\":[],\"cooked\":[\"run\",\"test\"],\"original\":[\"test\",\"range-iter/rangeIter.test\"]}",
+    "npm_package_devDependencies_lint_staged": "*",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "npm_package_scripts_test_coverage": "jest --coverage",
+    "npm_config_version_git_tag": "true",
+    "npm_config_version_git_sign": "",
+    "TEXTDOMAINDIR": "/usr/share/locale/",
+    "GJS_DEBUG_OUTPUT": "stderr",
+    "GPG_AGENT_INFO": "/run/user/1000/gnupg/S.gpg-agent:0:1",
+    "npm_package_devDependencies_eslint_plugin_react": "*",
+    "npm_package_license": "MIT",
+    "npm_config_strict_ssl": "true",
+    "XDG_VTNR": "1",
+    "QT_IM_MODULE": "xim",
+    "PWD": "/home/amitbadala/Documents/AmitPesto/batch-7-exercises",
+    "npm_execpath": "/usr/share/yarn/bin/yarn.js",
+    "CLUTTER_IM_MODULE": "xim",
+    "NVM_CD_FLAGS": "",
+    "XDG_DATA_DIRS": "/usr/share/ubuntu:/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "XDG_CONFIG_DIRS": "/etc/xdg/xdg-ubuntu:/etc/xdg",
+    "npm_package_author_name": "Arfat Salman",
+    "npm_config_save_prefix": "^",
+    "npm_config_ignore_optional": "",
+    "INIT_CWD": "/home/amitbadala/Documents/AmitPesto/batch-7-exercises",
+    "NODE_ENV": "test",
+    "JEST_WORKER_ID": "1"
+  },
+  "userLimits": {
+    "core_file_size_blocks": {
+      "soft": 0,
+      "hard": "unlimited"
+    },
+    "data_seg_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "file_size_blocks": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_locked_memory_bytes": {
+      "soft": 16777216,
+      "hard": 16777216
+    },
+    "max_memory_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "open_files": {
+      "soft": 1048576,
+      "hard": 1048576
+    },
+    "stack_size_bytes": {
+      "soft": 8388608,
+      "hard": "unlimited"
+    },
+    "cpu_time_seconds": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_user_processes": {
+      "soft": 30414,
+      "hard": 30414
+    },
+    "virtual_memory_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    }
+  },
+  "sharedObjects": [
+    "linux-vdso.so.1",
+    "/lib/x86_64-linux-gnu/libdl.so.2",
+    "/lib/x86_64-linux-gnu/librt.so.1",
+    "/usr/lib/x86_64-linux-gnu/libstdc++.so.6",
+    "/lib/x86_64-linux-gnu/libm.so.6",
+    "/lib/x86_64-linux-gnu/libgcc_s.so.1",
+    "/lib/x86_64-linux-gnu/libpthread.so.0",
+    "/lib/x86_64-linux-gnu/libc.so.6",
+    "/lib64/ld-linux-x86-64.so.2"
+  ]
+}

@@ -1,8 +1,7 @@
-import http from 'http';
-import { httpServer } from './httpServer';
+import http from "http";
+import { httpServer } from "./httpServer";
 
-
-describe('httpServer', () => {
+describe("httpServer", () => {
   beforeAll(() => {
     httpServer.listen(3000);
   });
@@ -11,24 +10,24 @@ describe('httpServer', () => {
     httpServer.close();
   });
 
-  describe('/', () => {
-    test('should return 200', (done) => {
-      http.get('http://localhost:3000', (res) => {
+  describe("/", () => {
+    test("should return 200", done => {
+      http.get("http://localhost:3000", res => {
         expect(res.statusCode).toBe(200);
         done();
       });
     });
 
-    it('should say "Pesto Bootcamp!"', (done) => {
-      http.get('http://localhost:3000', (res) => {
-        let data = '';
+    it('should say "Pesto Bootcamp!"', done => {
+      http.get("http://localhost:3000", res => {
+        let data = "";
 
-        res.on('data', (chunk) => {
+        res.on("data", chunk => {
           data += chunk;
         });
 
-        res.on('end', () => {
-          expect('Pesto Bootcamp!\n').toBe(data);
+        res.on("end", () => {
+          expect("Pesto Bootcamp!\n").toBe(data);
           done();
         });
       });
