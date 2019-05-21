@@ -1,36 +1,33 @@
 {
-  "day": "day-8",
-  "segmentName": "segment-1",
-  "exercises": {
-    "on-change": {
-      "completed": false
-    },
-    "proxy-iterable": {
-      "completed": false
-    },
-    "known-prop": {
-      "completed": false
-    },
-    "negative-index": {
-      "completed": false
-    },
-    "set-default-property": {
-      "completed": false
-    },
-    "private-props": {
-      "completed": false
-    },
-    "xprod": {
-      "completed": false
-    },
-    "without": {
-      "completed": false
-    },
-    "values-in": {
-      "completed": false
-    },
-    "values": {
-      "completed": false
+    "day": "day-7",
+    "segmentName": "segment-2",
+    "exercises": {
+        "built-in-iterables": {
+            "completed": true
+        },
+        "ackermann": {
+            "completed": true
+        },
+        "aperture": {
+            "completed": true
+        },
+        "animal-sort": {
+            "completed": true
+        },
+        "args-string": {
+            "completed": true
+        },
+        "arithmetic-expression-evaluator": {
+            "completed": false
+        },
+        "array-addition": {
+            "completed": false
+        },
+        "array-cube-root-to-json": {
+            "completed": false
+        },
+        "object-assign": {
+            "completed": false
+        }
     }
-  }
 }
