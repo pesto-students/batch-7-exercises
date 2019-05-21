@@ -13,7 +13,7 @@ class App extends Component {
     this.getPost();
   }
 
-  getPost = _ => {
+  getPost = () => {
     let fetchData = {
       method: "GET",
       headers: new Headers({ "pesto-password": "darth vader" })
