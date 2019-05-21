@@ -1,8 +1,8 @@
+const http = require('http');
 
-function jsonResponseServer(...args) {
-  return args;
-}
+const jsonResponseServer = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.end({ data: 'Pesto Bootcamp!' });
+});
 
-export {
-  jsonResponseServer,
-};
+export { jsonResponseServer };
