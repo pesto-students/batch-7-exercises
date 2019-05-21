@@ -1,8 +1,8 @@
+const http = require('http');
 
-function httpServer(...args) {
-  return args;
-}
+const httpServer = http.createServer((req, res) => {
+  res.write('Pesto Bootcamp!\n');
+  res.end();
+});
 
-export {
-  httpServer,
-};
+export { httpServer };
