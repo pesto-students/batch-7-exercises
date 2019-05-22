@@ -18,7 +18,7 @@
             "completed": false
         },
         "home-dir": {
-            "completed": false
+            "completed": true
         },
         "parse-json": {
             "completed": false
