@@ -33,7 +33,7 @@
             "completed": true
         },
         "to-readable-stream": {
-            "completed": false
+            "completed": true
         },
         "unused-filename": {
             "completed": false
