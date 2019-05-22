@@ -24,7 +24,7 @@
             "completed": false
         },
         "strip-path": {
-            "completed": false
+            "completed": true
         }
     }
 }
