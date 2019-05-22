@@ -1,18 +1,18 @@
 {
-  "day": "day-18",
-  "segmentName": "segment-1",
-  "exercises": {
-    "express-101": {
-      "completed": false
-    },
-    "templating-engine": {
-      "completed": false
-    },
-    "express-forms": {
-      "completed": false
-    },
-    "express-router": {
-      "completed": false
+    "day": "day-18",
+    "segmentName": "segment-1",
+    "exercises": {
+        "express-101": {
+            "completed": true
+        },
+        "templating-engine": {
+            "completed": false
+        },
+        "express-forms": {
+            "completed": false
+        },
+        "express-router": {
+            "completed": false
+        }
     }
-  }
 }
