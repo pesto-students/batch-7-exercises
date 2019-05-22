@@ -1,8 +1,13 @@
+const events = require('events');
 
-function nodeEvent(...args) {
-  return args;
+const greetEmitter = new events.EventEmitter();
+
+function greet(name) {
+  if (typeof name !== 'string') {
+    greetEmitter.emit('error');
+  } else {
+    greetEmitter.emit('greet', name);
+  }
 }
 
-export {
-  nodeEvent,
-};
+export { greet, greetEmitter };
