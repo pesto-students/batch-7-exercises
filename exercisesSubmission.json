@@ -12,7 +12,7 @@
             "completed": true
         },
         "is-stream": {
-            "completed": false
+            "completed": true
         },
         "json-response-server": {
             "completed": true
