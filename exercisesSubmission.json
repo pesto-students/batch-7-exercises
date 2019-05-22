@@ -3,7 +3,7 @@
     "segmentName": "segment-1",
     "exercises": {
         "express-101": {
-            "completed": false
+            "completed": true
         },
         "templating-engine": {
             "completed": true
