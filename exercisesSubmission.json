@@ -12,7 +12,7 @@
             "completed": false
         },
         "csv-to-json": {
-            "completed": false
+            "completed": true
         },
         "date-format-tz": {
             "completed": false
