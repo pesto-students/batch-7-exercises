@@ -1,30 +1,30 @@
 {
-  "day": "day-17",
-  "segmentName": "segment-2",
-  "exercises": {
-    "bitcoin-ticker": {
-      "completed": false
-    },
-    "convert-to-file-url": {
-      "completed": false
-    },
-    "create-app-script": {
-      "completed": false
-    },
-    "csv-to-json": {
-      "completed": false
-    },
-    "date-format-tz": {
-      "completed": false
-    },
-    "home-dir": {
-      "completed": false
-    },
-    "parse-json": {
-      "completed": false
-    },
-    "strip-path": {
-      "completed": false
+    "day": "day-17",
+    "segmentName": "segment-2",
+    "exercises": {
+        "bitcoin-ticker": {
+            "completed": true
+        },
+        "convert-to-file-url": {
+            "completed": false
+        },
+        "create-app-script": {
+            "completed": false
+        },
+        "csv-to-json": {
+            "completed": true
+        },
+        "date-format-tz": {
+            "completed": false
+        },
+        "home-dir": {
+            "completed": true
+        },
+        "parse-json": {
+            "completed": false
+        },
+        "strip-path": {
+            "completed": true
+        }
     }
-  }
 }
