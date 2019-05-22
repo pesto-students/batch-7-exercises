@@ -30,7 +30,7 @@
             "completed": false
         },
         "strip-eof": {
-            "completed": false
+            "completed": true
         },
         "to-readable-stream": {
             "completed": false
