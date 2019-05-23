@@ -24,7 +24,7 @@
             "completed": false
         },
         "without": {
-            "completed": false
+            "completed": true
         },
         "values-in": {
             "completed": true
