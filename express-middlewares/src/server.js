@@ -8,10 +8,11 @@ app.set('view engine', 'ejs');
 
 app.use((req, res, next) => {
   const { originalUrl } = req;
+  res.setHeader('middleware-header', originalUrl);
+
+  // logging to Console on every Request made to server
   console.log(`time:- ${timeNow()}`);
   console.log(`middleware-header=${originalUrl}`);
-
-  res.setHeader('middleware-header', originalUrl);
 
   next();
 });
