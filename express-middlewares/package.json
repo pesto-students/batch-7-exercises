@@ -1,0 +1,16 @@
+{
+  "name": "express-middlewares",
+  "version": "1.0.0",
+  "description": "Into to middleware",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./src/server.js"
+  },
+  "author": "Vikalp Panseriya",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.17.0",
+    "nodemon": "^1.19.0"
+  }
+}
