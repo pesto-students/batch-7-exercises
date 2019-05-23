@@ -6,7 +6,7 @@
             "completed": true
         },
         "templating-engine": {
-            "completed": false
+            "completed": true
         },
         "express-forms": {
             "completed": false
