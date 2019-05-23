@@ -1,12 +1,12 @@
 {
-  "day": "day-18",
-  "segmentName": "segment-2",
-  "exercises": {
-    "express-middlewares": {
-      "completed": false
-    },
-    "auth-token-dummy": {
-      "completed": false
+    "day": "day-18",
+    "segmentName": "segment-2",
+    "exercises": {
+        "express-middlewares": {
+            "completed": true
+        },
+        "auth-token-dummy": {
+            "completed": false
+        }
     }
-  }
 }
