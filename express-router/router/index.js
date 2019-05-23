@@ -6,23 +6,21 @@ const languages = [];
 let idCounter = 1;
 
 router.get('/', (req, res) => {
-  res.render('index', { languages: languages });
+  res.render('index', { languages });
 });
 router.get('/new', (req, res) => {
   res.render('new');
 });
 router.post('/', (req, res) => {
   const { name } = req.body;
-  languages.push({ name: name, id: idCounter });
+  languages.push({ name, id: idCounter });
   idCounter += 1;
   res.redirect('/');
 });
 
 router.get('/:id/edit', (req, res) => {
   const { id } = req.params;
-  const language = languages.filter((language) => {
-    return language.id === parseInt(id, 10);
-  });
+  const language = languages.filter(language => language.id === parseInt(id, 10));
   return res.render('edit', { language: language[0] });
 });
 
