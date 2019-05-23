@@ -18,7 +18,7 @@
             "completed": false
         },
         "slice": {
-            "completed": false
+            "completed": true
         },
         "split-every": {
             "completed": false
