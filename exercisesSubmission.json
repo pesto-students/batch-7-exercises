@@ -3,7 +3,7 @@
     "segmentName": "segment-1",
     "exercises": {
         "on-change": {
-            "completed": false
+            "completed": true
         },
         "proxy-iterable": {
             "completed": false
