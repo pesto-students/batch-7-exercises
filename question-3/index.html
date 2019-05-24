@@ -7,6 +7,20 @@ get the value of the href, hreflang, rel, target, and type attributes of the spe
 <head>
   <meta charset=utf-8 />
 </head>
+<script>
+  function getAttributes() {
+    const href = document.getElementById('w3r').href;
+    alert ('href :'+href);
+    const hreflang = document.getElementById('w3r').hreflang;
+    alert ('hreflang :'+hreflang);
+    const rel = document.getElementById('w3r').rel;
+    alert ('rel :'+rel);
+    const target = document.getElementById('w3r').target;
+    alert ('target :'+target);
+    const type = document.getElementById('w3r').type;
+    alert ('type :'+type);
+  }
+</script>
 
 <body>
   <p>
