@@ -9,6 +9,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "express": "^4.17.0",
     "mongodb": "*"
   },
   "devDependencies": {
