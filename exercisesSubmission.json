@@ -3,7 +3,7 @@
     "segmentName": "segment-1",
     "exercises": {
         "hamming-distance": {
-            "completed": false
+            "completed": true
         },
         "knuth-morris-pratt": {
             "completed": false
