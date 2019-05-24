@@ -1,6 +1,9 @@
+function makeRandom(lowerBound, upperBound) {
+  return Math.floor(Math.random() * upperBound) + lowerBound;
+}
 
-function uniqueRandom(...args) {
-  return args;
+function uniqueRandom(lowerBound, upperBound) {
+  return makeRandom(lowerBound, upperBound);
 }
 
 export {
