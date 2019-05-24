@@ -1,23 +1,27 @@
-<!-- Write a JavaScript program to remove items from a dropdown list. -->
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Remove items from a dropdown list</title>
+  </head>
 
-<head>
-  <meta charset=utf-8 />
-  <title>Remove items from a dropdown list</title>
-</head>
-
-<body>
-  <form>
-    <select id="colorSelect">
-      <option>Red</option>
-      <option>Green</option>
-      <option>White</option>
-      <option>Black</option>
-    </select>
-    <input type="button" onclick="removecolor()" value="Select and Remove">
-  </form>
-</body>
-
+  <body>
+    <form>
+      <select id="colorSelect">
+        <option>Red</option>
+        <option>Green</option>
+        <option>White</option>
+        <option>Black</option>
+      </select>
+      <input type="button" onclick="removecolor()" value="Select and Remove" />
+    </form>
+  </body>
+  <script>
+    const ddOptions = document.getElementById("colorSelect");
+    function removecolor() {
+      ddOptions.remove(ddOptions.selectedIndex);
+    }
+  </script>
 </html>
