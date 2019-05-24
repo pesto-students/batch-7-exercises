@@ -12,7 +12,7 @@
             "completed": false
         },
         "binary-search": {
-            "completed": false
+            "completed": true
         },
         "primality-test": {
             "completed": false

@@ -4,18 +4,18 @@ function binarySearch(
   comparotor = (a, b) => {
     if (a === b) return 0;
     return a < b ? -1 : 1;
-  }
+  },
 ) {
   let lowerBound = 0;
-  let upperBound = numbers.length;
+  let upperBound = numbers.length - 1;
   while (lowerBound <= upperBound) {
-    const middleIndex = parseInt((lowerBound + upperBound) / 2);
-    console.log(middleIndex);
+    const middleIndex = parseInt((lowerBound + upperBound) / 2, 10);
     const middleValue = numbers[middleIndex];
     const comparotorValue = comparotor(keyToSearch, middleValue);
     if (comparotorValue === 0) {
       return middleIndex;
-    } else if (comparotorValue === 1) {
+    }
+    if (comparotorValue === 1) {
       lowerBound = middleIndex + 1;
     } else {
       upperBound = middleIndex - 1;
