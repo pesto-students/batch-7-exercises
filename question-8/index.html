@@ -1,29 +1,44 @@
-<!-- Write a JavaScript program to count and display the items of a dropdown list, in an alert window. -->
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style type="text/css">
+      body {
+        margin: 30px;
+      }
+    </style>
+    <title>Count and display items of a dropdown list - w3resource</title>
+  </head>
 
-<head>
-  <meta charset=utf-8 />
-  <style type="text/css">
-    body {
-      margin: 30px;
+  <body>
+    <form>
+      Select your favorite Color :
+      <select id="mySelect">
+        <option>Red</option>
+        <option>Green</option>
+        <option>Blue</option>
+        <option>White</option>
+      </select>
+      <input
+        type="button"
+        onclick="getOptions()"
+        value="Count and Output all items"
+      />
+    </form>
+  </body>
+
+  <script>
+    function getOptions() {
+      const mySelect = document.getElementById("mySelect");
+      const { length, options } = mySelect;
+      let msg = "Options : ";
+      for (let o = 0; o < length; o += 1) {
+        msg += `\n${options[o].text}`;
+      }
+
+      alert(msg);
     }
-  </style>
-  <title>Count and display items of a dropdown list - w3resource</title>
-</head>
-
-<body>
-  <form>
-    Select your favorite Color :
-    <select id="mySelect">
-      <option>Red</option>
-      <option>Green</option>
-      <option>Blue</option>
-      <option>White</option>
-    </select>
-    <input type="button" onclick="getOptions()" value="Count and Output all items">
-  </form>
-</body>
-
+  </script>
 </html>
