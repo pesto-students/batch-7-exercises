@@ -12,6 +12,24 @@
       margin: 30px;
     }
   </style>
+
+  <script>
+    function createTable()
+      {
+      rowNumber = window.prompt("Input number of rows", 1);
+      colNumber = window.prompt("Input number of columns",1);
+        
+      for(let i = 0;i < parseInt(rowNumber,10); i++)
+        {
+        let x=document.getElementById('myTable').insertRow(i);
+        for(let c = 0;c < parseInt(colNumber,10); c++)  
+          {
+          let y=  x.insertCell(c);
+          y.innerHTML="Row-"+i+" Column-"+c; 
+          }
+        }
+      }
+  </script>
 </head>
 
 <body>

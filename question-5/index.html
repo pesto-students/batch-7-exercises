@@ -8,6 +8,16 @@
   <meta charset=utf-8 />
   <title>Change the content of a cell</title>
 </head>
+<script>
+  function changeContent()
+    {
+    const rowNumber = window.prompt("Input the Row number(0,1,2)", "0");
+    const colNumber = window.prompt("Input the Column number(0,1)","0");
+    const content = window.prompt("Input the Cell content");  
+    const x=document.getElementById('myTable').rows[parseInt(rowNumber,10)].cells;
+    x[parseInt(colNumber,10)].innerHTML=content;
+  }
+</script>
 
 <body>
   <table id="myTable" border="1">
