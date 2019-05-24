@@ -15,7 +15,7 @@
             "completed": false
         },
         "union": {
-            "completed": false
+            "completed": true
         },
         "slice": {
             "completed": true
