@@ -1,15 +1,15 @@
 {
-  "day": "day-20",
-  "segmentName": "segment-1",
-  "exercises": {
-    "titleize": {
-      "completed": false
-    },
-    "unique-random": {
-      "completed": false
-    },
-    "simple-todo-tdd": {
-      "completed": false
+    "day": "day-20",
+    "segmentName": "segment-1",
+    "exercises": {
+        "titleize": {
+            "completed": false
+        },
+        "unique-random": {
+            "completed": true
+        },
+        "simple-todo-tdd": {
+            "completed": false
+        }
     }
-  }
 }
