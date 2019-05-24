@@ -15,7 +15,7 @@
             "completed": true
         },
         "primality-test": {
-            "completed": false
+            "completed": true
         },
         "boolean-expression-evaluator": {
             "completed": false
