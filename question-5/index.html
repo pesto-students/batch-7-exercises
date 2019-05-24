@@ -1,32 +1,64 @@
-<!-- Write a JavaScript function that accept row, column, (to identify a particular cell)
-  and a string to update the content of that cell. -->
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Change the content of a cell</title>
+    <style>
+      #formOfInputs {
+        padding-top: 16px;
+      }
+      #formOfInputs input {
+        margin-top: 16px;
+      }
+    </style>
+  </head>
 
-<head>
-  <meta charset=utf-8 />
-  <title>Change the content of a cell</title>
-</head>
+  <body>
+    <table id="myTable" border="1">
+      <tr>
+        <td>Row1 cell1</td>
+        <td>Row1 cell2</td>
+      </tr>
+      <tr>
+        <td>Row2 cell1</td>
+        <td>Row2 cell2</td>
+      </tr>
+      <tr>
+        <td>Row3 cell1</td>
+        <td>Row3 cell2</td>
+      </tr>
+    </table>
 
-<body>
-  <table id="myTable" border="1">
-    <tr>
-      <td>Row1 cell1</td>
-      <td>Row1 cell2</td>
-    </tr>
-    <tr>
-      <td>Row2 cell1</td>
-      <td>Row2 cell2</td>
-    </tr>
-    <tr>
-      <td>Row3 cell1</td>
-      <td>Row3 cell2</td>
-    </tr>
-  </table>
-  <form>
-    <input type="button" onclick="changeContent()" value="Change content">
-  </form>
-</body>
+    <form id="formOfInputs">
+      <label for="row">Row: </label>
+      <select name="row">
+        <option value="0">1</option>
+        <option value="1">2</option>
+        <option value="2">3</option>
+      </select>
+      <label for="column">Column: </label>
+      <select name="column">
+        <option value="0">1</option>
+        <option value="1">2</option>
+      </select>
+      <br />
+      <label for="text">New content:</label>
+      <input type="text" name="text" />
+      <br />
+      <input type="button" onclick="changeContent()" value="Change content" />
+    </form>
+  </body>
 
+  <script>
+    const table = document.getElementById("myTable");
+    const inputForm = document.getElementById("formOfInputs").elements;
+    const row = inputForm.namedItem("row");
+    const column = inputForm.namedItem("column");
+    const text = inputForm.namedItem("text");
+    function changeContent() {
+      table.rows[row.value].cells[column.value].textContent = text.value;
+    }
+  </script>
 </html>

@@ -1,22 +1,32 @@
-<!-- Write a JavaScript function to get the values of First and Last name of the following form -->
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Return first and last name from a form</title>
+  </head>
 
-<head>
-  <meta charset=utf-8 />
-  <title>Return first and last name from a form</title>
-</head>
+  <body>
+    <form id="form1" onsubmit="getFormvalue(event)">
+      First name:
+      <input type="text" name="fname" value="David" />
+      <br />
+      Last name:
+      <input type="text" name="lname" value="Beckham" />
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
 
-<body>
-  <form id="form1" onsubmit="getFormvalue()">
-    First name:
-    <input type="text" name="fname" value="David">
-    <br> Last name:
-    <input type="text" name="lname" value="Beckham">
-    <br>
-    <input type="submit" value="Submit">
-  </form>
-</body>
-
+  <script>
+    function getFormvalue(event) {
+      event.preventDefault();
+      const form1 = document.getElementById("form1").elements;
+      const fname = form1.namedItem("fname").value;
+      const lname = form1.namedItem("lname").value;
+      console.log("fname: ", fname);
+      console.log("lname: ", lname);
+    }
+  </script>
 </html>

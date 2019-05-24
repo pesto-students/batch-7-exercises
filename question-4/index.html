@@ -1,26 +1,45 @@
-<!-- Write a JavaScript function to add rows to a table -->
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Insert row in a table</title>
+  </head>
 
-<head>
-  <meta charset=utf-8 />
-  <title>Insert row in a table</title>
-</head>
+  <body>
+    <table id="sampleTable" border="1">
+      <tr>
+        <td>Row1 cell1</td>
+        <td>Row1 cell2</td>
+      </tr>
+      <tr>
+        <td>Row2 cell1</td>
+        <td>Row2 cell2</td>
+      </tr>
+    </table>
 
-<body>
-  <table id="sampleTable" border="1">
-    <tr>
-      <td>Row1 cell1</td>
-      <td>Row1 cell2</td>
-    </tr>
-    <tr>
-      <td>Row2 cell1</td>
-      <td>Row2 cell2</td>
-    </tr>
-  </table>
-  <br>
-  <input type="button" onclick="insert_Row()" value="Insert row">
-</body>
+    <br />
+    <input type="button" onclick="insert_Row()" value="Insert row" />
+  </body>
 
+  <script>
+    function insert_Row() {
+      const table = document.getElementById("sampleTable");
+      const rows = table.rows.length;
+      // add row
+      const row = table.insertRow(rows);
+
+      // add cells
+      const cell1 = row.insertCell(0);
+      const rowText = getTextForNextRow();
+      cell1.textContent = `${rowText} cell1`;
+
+      const cell2 = row.insertCell(1);
+      cell2.textContent = `${rowText} cell2`;
+    }
+
+    let rowCount = 3;
+    const getTextForNextRow = () => `Row${rowCount++}`;
+  </script>
 </html>
