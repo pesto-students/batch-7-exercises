@@ -26,57 +26,124 @@
 
 /* eslint-disable react/no-multi-comp */
 
-import React from 'react';
-// import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
+import getAddressFromCoords from "./utils/getAddressFromCoords";
 
-// import getAddressFromCoords from './utils/getAddressFromCoords';
-
-class App extends React.Component {
-  constructor() {
-    super();
+const Loader = () => {
+  return (
+    <p>
+      <span>Loading...</span>
+    </p>
+  );
+};
+class GeoPosition extends React.Component {
+  constructor(props) {
+    super(props);
     this.state = {
       coords: {
         latitude: null,
-        longitude: null,
+        longitude: null
       },
-      error: null,
+      error: null
     };
   }
 
   componentDidMount() {
     this.geoId = navigator.geolocation.watchPosition(
-      (position) => {
+      position => {
+        console.log(position.coords);
         this.setState({
           coords: {
             latitude: position.coords.latitude,
-            longitude: position.coords.longitude,
-          },
+            longitude: position.coords.longitude
+          }
         });
       },
-      (error) => {
+      error => {
         this.setState({ error });
-      },
+      }
     );
   }
 
   componentWillUnmount() {
     navigator.geolocation.clearWatch(this.geoId);
   }
+  render() {
+    const { error, coords } = this.state;
+    return (
+      <React.Fragment>
+        <h2>Geo Position</h2>
+        {error ? (
+          <div>Error: {error.message}</div>
+        ) : (
+          this.props.position(coords.latitude, coords.longitude)
+        )}
+      </React.Fragment>
+    );
+  }
+}
 
+class GeoAddress extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      address: ""
+    };
+    this.getAddress = this.getAddress.bind(this);
+  }
+
+  componentDidMount() {
+    this.getAddress();
+  }
+
+  getAddress() {
+    getAddressFromCoords(this.props.latitude, this.props.longitude).then(
+      response => {
+        console.log(response);
+      }
+    );
+  }
+
+  render() {
+    return <div>{this.props.address(this.state.address)}</div>;
+  }
+}
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
       <div>
         <h1>Geolocation</h1>
-        {this.state.error ? (
-          <div>Error: {this.state.error.message}</div>
-        ) : (
-          <dl>
-            <dt>Latitude</dt>
-            <dd>{this.state.coords.latitude || <p>create a loader and show here...</p>}</dd>
-            <dt>Longitude</dt>
-            <dd>{this.state.coords.longitude || <p>create a loader and show here...</p>}</dd>
-          </dl>
-        )}
+        <GeoPosition
+          position={(latitude, longitude) => (
+            <React.Fragment>
+              <dl>
+                <dt>Latitude</dt>
+                <dd>{latitude || <Loader />}</dd>
+                <dt>Longitude</dt>
+                <dd>{longitude || <Loader />}</dd>
+              </dl>
+              {latitude !== null && longitude !== null ? (
+                <GeoAddress
+                  latitude={latitude}
+                  longitude={longitude}
+                  address={address => (
+                    <div>
+                      <h2>Geo Address Composition</h2>
+                      <p>{address}</p>
+                    </div>
+                  )}
+                />
+              ) : (
+                " "
+              )}
+            </React.Fragment>
+          )}
+        />
       </div>
     );
   }
