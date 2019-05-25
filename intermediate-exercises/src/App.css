@@ -24,3 +24,71 @@ ul {
   list-style: none;
   color: black;
 }
+
+.button {
+  background-color: #4cae9f;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.gameboard {
+  position: relative;
+  background-color: #d3c4ca;
+  width: 580px;
+  height: 430px;
+  padding: 2px;
+  margin-left: -2px;
+  margin-top: -2px;
+  outline: 4px solid rgba(0, 0, 0, 0.75);
+}
+.snakebody {
+  background-color: #612940 !important;
+}
+.cell {
+  float: left;
+  background-color: #d3c4ca;
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+}
+.cell.food {
+  background-image: url(./assets/rat.png);
+  background-size: 100% 100%;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  transition: 0.5s ease;
+  background-color: #ecae8f;
+}
+
+.game-over {
+  color: white;
+  text-align: center;
+  margin-top: 20%;
+  font-size: 40px;
+}
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}

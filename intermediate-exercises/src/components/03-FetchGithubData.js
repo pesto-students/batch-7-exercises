@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
-// import axios from 'axios';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import axios from "axios";
 
 /**
  * Axios is a promise based HTTP client for the browser and node.js.
@@ -21,18 +21,17 @@ import React, { Component } from 'react';
  */
 /* eslint-disable react/no-unused-state */
 const GithubRepos = ({ repos }) => {
-  return (
-    <ul>
-      {/* Task: The list of repos here */}
-    </ul>
-  );
-}
+  const list = repos.map((repo, index) => {
+    return <li key={index}>{repo}</li>;
+  });
+  return <ul>{list}</ul>;
+};
 
 // Task: Open the console in the browser. There will be a warning
 // about incorrect prop type for user.
 // Define the correct prop type for the prop `repos`
 GithubRepos.propTypes = {
-
+  repos: PropTypes.array
 };
 
 /* eslint-disable react/no-multi-comp */
@@ -40,24 +39,35 @@ class UsernameForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: '',
-      repos: [],
+      username: "",
+      repos: []
     };
+    this.handleClick = this.handleClick.bind(this);
+    this.handleUsernameChange = this.handleUsernameChange.bind(this);
   }
+  handleClick = function() {
+    axios
+      .get(`https://api.github.com/users/${this.state.username}/repos`)
+      .then(({ data }) => {
+        const repos = data.map(repo => {
+          return repo["name"];
+        });
+        this.setState({ repos });
+      });
+  };
+  handleUsernameChange = function(event) {
+    this.setState({ username: event.target.value });
+  };
   render() {
     return (
       <div>
         <input
           type="text"
           name="username"
+          onChange={this.handleUsernameChange}
         />
-        <button
-          onClick={() => {}}
-        >
-          Get Repos
-        </button>
-        {/* Task: Display the results here. Use GithubRepos Component.
-          It should be a list of repos of the user entered */}
+        <button onClick={this.handleClick}>Get Repos</button>
+        <GithubRepos repos={this.state.repos} />
       </div>
     );
   }
