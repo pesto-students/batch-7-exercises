@@ -1,0 +1,27 @@
+{
+    "day": "day-4",
+    "segmentName": "segment-2",
+    "exercises": {
+        "square-numbers-array": {
+            "completed": true
+        },
+        "savings-account": {
+            "completed": false
+        },
+        "request-validator": {
+            "completed": true
+        },
+        "memoize": {
+            "completed": true
+        },
+        "curry": {
+            "completed": true
+        },
+        "account-dataset": {
+            "completed": true
+        },
+        "alternating-characters": {
+            "completed": true
+        }
+    }
+}
