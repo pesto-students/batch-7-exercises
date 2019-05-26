@@ -1,4 +1,4 @@
-import http from 'http';
+const http = require('http');
 import { httpServer } from './httpServer';
 
 
