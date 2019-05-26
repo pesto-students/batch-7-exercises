@@ -18,15 +18,6 @@
 
 import React from "react";
 import PropTypes from "prop-types";
-import { createStore } from "redux";
-
-function dispatcher(state, action) {
-  if (action.type === "CLICKED") {
-    return { isSelected: action.isSelected, value: action.value };
-  }
-  return state;
-}
-const store = createStore(dispatcher);
 
 class RadioGroup extends React.Component {
   static propTypes = {
@@ -43,11 +34,24 @@ class RadioOption extends React.Component {
     value: PropTypes.string,
     children: PropTypes.shape().isRequired
   };
-
+  state = {
+    isSelected: false
+  };
+  handleClick = radio => {
+    console.log(this.props);
+    this.props.onChange(this.props.value, this.state.isSelected);
+    this.setState({ isSelected: !this.state.isSelected });
+  };
   render() {
     return (
       <div>
-        <RadioIcon isSelected={false} value={this.props.value} />{" "}
+        <RadioIcon
+          isSelected={this.state.isSelected}
+          value={this.props.value}
+          onClick={radio => {
+            this.handleClick(radio);
+          }}
+        />{" "}
         {this.props.children}
       </div>
     );
@@ -57,23 +61,20 @@ class RadioOption extends React.Component {
 class RadioIcon extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props);
+    console.log("radio icon", props);
     this.handleOnClick = this.handleOnClick.bind(this);
   }
   static propTypes = {
     isSelected: PropTypes.bool.isRequired
   };
   handleOnClick = function() {
-    store.dispatch({
-      isSelected: !this.props.isSelected,
-      value: this.props.value,
-      type: "CLICKED"
-    });
+    this.props.onClick();
   };
 
   render() {
     return (
       <div
+        tabIndex="0"
         style={{
           borderColor: "#ccc",
           borderWidth: 3,
@@ -92,15 +93,48 @@ class RadioIcon extends React.Component {
 
 class CompoundComponents extends React.Component {
   render() {
+    const radio = { am: false, fm: true, tape: false, aux: false };
+    this.handleOnChange = (value, isSelected) => {
+      radio[value] = isSelected;
+    };
     return (
       <div>
         <h1>♬ It is about time that we all turned off the radio ♫</h1>
 
         <RadioGroup defaultValue="fm">
-          <RadioOption value="am">AM</RadioOption>
-          <RadioOption value="fm">FM</RadioOption>
-          <RadioOption value="tape">Tape</RadioOption>
-          <RadioOption value="aux">Aux</RadioOption>
+          <RadioOption
+            value="am"
+            onChange={({ value, isSelected }) =>
+              this.handleOnChange(value, isSelected)
+            }
+            tabIndex="0"
+          >
+            AM
+          </RadioOption>
+          <RadioOption
+            value="fm"
+            onChange={({ value, isSelected }) =>
+              this.handleOnChange(value, isSelected)
+            }
+          >
+            FM
+          </RadioOption>
+          <RadioOption
+            value="tape"
+            onChange={({ value, isSelected }) =>
+              this.handleOnChange(value, isSelected)
+            }
+          >
+            Tape
+          </RadioOption>
+          <RadioOption
+            value="aux"
+            onChange={({ value, isSelected }) =>
+              this.handleOnChange(value, isSelected)
+            }
+          >
+            Aux
+          </RadioOption>
         </RadioGroup>
       </div>
     );
