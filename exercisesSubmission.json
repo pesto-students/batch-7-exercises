@@ -3,16 +3,16 @@
     "segmentName": "segment-1",
     "exercises": {
         "filtered-names": {
-            "completed": false
+            "completed": true
         },
         "filtered-names-recursive": {
-            "completed": false
+            "completed": true
         },
         "http-server": {
             "completed": true
         },
         "is-stream": {
-            "completed": false
+            "completed": true
         },
         "json-response-server": {
             "completed": false
