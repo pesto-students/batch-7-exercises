@@ -24,6 +24,11 @@ body {
   justify-content: center;
 }
 
+.nav a {
+  text-decoration: none;
+  color: white;
+}
+
 .active {
   background-color: #ff8e00;
   height: 100%;
