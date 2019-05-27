@@ -28,7 +28,7 @@
     "eslint-plugin-jsx-a11y": "*",
     "eslint-plugin-react": "*",
     "husky": "*",
-    "jest": "*",
+    "jest": "^24.8.0",
     "lint-staged": "*"
   },
   "husky": {
@@ -37,6 +37,8 @@
     }
   },
   "lint-staged": {
-    "!(*.test).js": ["eslint"]
+    "!(*.test).js": [
+      "eslint"
+    ]
   }
 }
